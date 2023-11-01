@@ -1,0 +1,60 @@
+.gen-banner-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  > h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-family: variables.$formal-font;
+  }
+  > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    > p {
+      margin-left: 15%;
+      color: white;
+      font-size: 15px;
+      font-family: Verdana;
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .gen-banner-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > h1 {
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+    > div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 0;
+      > p {
+        margin-left: 15%;
+        color: white;
+        font-size: 15px;
+        font-family: Verdana;
+      }
+    }
+  }
+}

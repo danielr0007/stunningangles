@@ -1,0 +1,5258 @@
+@use "variables";
+@import "./commonuse";
+@import "./genericbanner";
+@import "aboutMediaQueries/_elevenSixty.scss";
+@import "aboutMediaQueries/_tentwelve.scss";
+@import "aboutMediaQueries/_eightThirty.scss";
+@import "aboutMediaQueries/_sixNineNine.scss";
+@import "servicesMediaQueries/_thirteen85.scss";
+@import "servicesMediaQueries/_nine35.scss";
+@import "servicesMediaQueries/_seven75.scss";
+@import "servicesMediaQueries/_six71.scss";
+@import "portfolioMediaQueries/_thirteen00.scss";
+@import "portfolioMediaQueries/_one00.scss";
+@import "portfolioMediaQueries/_six90.scss";
+@import "portfolioMediaQueries/_four90.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+}
+
+// ?SETTINGS.................................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+// ?MOBILE MENU........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -50%; /* start offscreen */
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(39, 39, 39);
+  transition: right 0.5s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  margin-top: 5rem;
+  > a {
+    > img {
+      width: 350px;
+    }
+  }
+}
+
+/*Phone Number Button*/
+.phone-container {
+  width: 85%;
+  padding: 1rem 0 1rem 0;
+  border-radius: 12px;
+  background-color: #e6b35b;
+  color: black;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  > .icon {
+    font-size: 20px;
+  }
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+/*Close Button*/
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 10px;
+  background-color: #e6b35b;
+  color: black;
+  border: none;
+  padding: 0.5rem;
+  > .icon {
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+/*NAV*/
+.menu-items {
+  padding: 20px 20px 20px 35px;
+  margin-top: 2rem;
+  width: 100%;
+  color: white;
+  // border: solid red;
+}
+
+.menu-items ul {
+  list-style: none;
+  padding: 0;
+  text-align: start;
+  width: 100%;
+}
+
+.menu-items li {
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+// ?TOP NAVIGATION BAR........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem 0 3rem;
+  }
+
+  .logo {
+    width: 380px;
+    margin: -20px 0 -20px 0;
+  }
+
+  ul {
+    display: flex;
+    gap: 5rem;
+    color: white;
+    margin-right: 2.5rem;
+    // border: solid red;
+
+    li {
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+      // transition-delay: 0.3s;
+    }
+    li:hover {
+      color: rgb(221, 221, 221);
+    }
+  }
+  .menu-icon {
+    font-size: 2rem;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+// ?BANNER SECTION.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.banner-image-container {
+  height: 100vh;
+  position: relative;
+  > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.banner-text-container {
+  margin-left: 8rem;
+  color: white;
+
+  h1 {
+    font-size: 3rem;
+    max-width: 70%;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+    font-family: variables.$formal-font;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-family: variables.$informal-font;
+  }
+
+  %button-shared {
+    background-color: variables.$secondary-color;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    font-size: 16px;
+    font-family: variables.$informal-font;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:first-child {
+    @extend %button-shared;
+    margin-right: 1rem;
+  }
+
+  a:first-child:hover {
+    background-color: #f6cf8a;
+  }
+
+  a:last-child {
+    @extend %button-shared;
+    background-color: transparent;
+    border: solid white 1px;
+    color: white;
+  }
+
+  a:last-child:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+%arrows-shared {
+  background-color: transparent;
+  color: variables.$secondary-color;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.banner-previous {
+  @extend %arrows-shared;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+}
+
+.banner-next {
+  @extend %arrows-shared;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+}
+
+// ?SECTION ONE - TEAM.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.team-section-outer-container {
+  position: relative;
+  > div {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 4.5rem;
+    // border: solid red 1px;
+    .left-images-container {
+      display: flex;
+      gap: 1.5rem;
+
+      // Styiling for images of this section
+      %team-images-shared {
+        width: 260px;
+        height: 500px;
+      }
+
+      .image-1 {
+        @extend %team-images-shared;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .image-2 {
+        @extend %team-images-shared;
+        margin-top: 6rem;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .right-text-container {
+      // border: solid red 2px;
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+      justify-content: center;
+
+      .overheading {
+        color: variables.$secondary-color;
+        font-family: variables.$informal-font;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-family: variables.$formal-font;
+      }
+
+      p {
+        color: variables.$text-grey;
+        font-family: variables.$informal-font;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+      }
+
+      // Accordion
+      .accordion-container {
+        margin-bottom: 2rem;
+        min-height: 350px;
+        // border: solid red;
+
+        .indi-accordion {
+          p {
+            padding: 10px 0 10px 0;
+          }
+        }
+      }
+
+      %accordion-shared {
+        background-color: transparent;
+        color: variables.$text-grey;
+        font-family: variables.$informal-font;
+        font-weight: 600;
+        padding: 15px 0 15px 0;
+        width: 100%;
+        border: none;
+        border-bottom: solid rgba(60, 60, 60, 0.349) 1px;
+        text-align: left;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .acc-1 {
+        @extend %accordion-shared;
+      }
+      .acc-2 {
+        @extend %accordion-shared;
+      }
+      .acc-3 {
+        @extend %accordion-shared;
+      }
+
+      .learn-more-button {
+        max-width: 200px;
+        text-align: center;
+        padding: 1rem 0 1rem 0;
+        border: none;
+        font-size: 17px;
+        color: black;
+        background-color: variables.$secondary-color;
+        transition: all 0.3s ease-in-out;
+      }
+      .learn-more-button:hover {
+        background-color: #f6cf8a;
+      }
+    }
+  }
+
+  .vid {
+    position: absolute;
+    top: 55%;
+    left: 11rem;
+    width: 560px;
+    height: 315px;
+  }
+}
+
+// ?SECTION TWO - SERVICES.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.services-section-outer-container {
+  background: linear-gradient(
+      to bottom,
+      rgb(26, 47, 71) 0%,
+      rgba(26, 47, 71, 0.95) 59%,
+      rgba(26, 47, 71, 0.9) 100%
+    ),
+    url("/services-background.jpg");
+  background-position: center;
+  background-size: cover;
+  > div {
+    > div {
+      max-width: 70%;
+      margin: auto;
+      color: white;
+      margin-bottom: 2rem;
+      h3 {
+        font-size: 2.5rem;
+        font-family: variables.$formal-font;
+      }
+      img {
+        width: 100px;
+        padding: 12px 0 5px 0;
+      }
+    }
+  }
+}
+
+.service-cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+// Service card component styles
+.service-card-container {
+  // border: solid red;
+
+  .card-image-container {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 1rem;
+    img {
+      object-fit: fill;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .card-text-container {
+    margin-bottom: 1rem;
+
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: variables.$informal-font;
+
+      span {
+        color: variables.$secondary-color;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: variables.$text-lighter-grey;
+      margin-bottom: 1.5rem;
+      font-family: variables.$informal-font;
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+// ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.gallery-section-outer-container {
+  > div {
+    margin: auto;
+    color: black;
+    // border: solid red;
+    margin-bottom: 3rem;
+    > h3 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-family: variables.$formal-font;
+    }
+    > p {
+      font-size: 1.1rem;
+      width: 55%;
+      line-height: 1.5;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: variables.$informal-font;
+    }
+    > img {
+      width: 100px;
+      padding: 12px 0 5px 0;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+// ?Slider Component Styling...............
+// ?Slider Component Styling...............
+// ?Slider Component Styling...............
+.container {
+  // border: solid red;
+  position: relative;
+}
+.images-container {
+  display: grid !important;
+  // border: solid green;
+  cursor: pointer;
+  grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+  .imagess {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: variables.$secondary-color !important;
+  font-size: 2rem !important;
+  opacity: 1 !important;
+}
+
+// !EXPNADED GALLERY SLIDER......................................................................
+// !........................................................................
+// !........................................................................
+
+.slider {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // height: 100vh;
+  padding: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: solid red;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 9999;
+
+  %arrows-shared-home-gallery {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: variables.$secondary-color;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .right-arrow {
+    @extend %arrows-shared-home-gallery;
+    right: 5rem;
+  }
+
+  .left-arrow {
+    @extend %arrows-shared-home-gallery;
+    left: 5rem;
+  }
+
+  .slide {
+    opacity: 0;
+    transition-duration: 1.5s ease;
+  }
+
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1.5s;
+    transform: scale(1.08);
+  }
+
+  .close-btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    background-color: transparent;
+    color: white;
+    border: solid white 1px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: large;
+    font-family: variables.$informal-font;
+  }
+  .close-btn:hover {
+    background-color: variables.$secondary-color;
+    color: black;
+    border: none;
+    transition: all 0.5s ease;
+  }
+}
+
+.image {
+  // border: solid red;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+// ?SECTION FOUR - WHO WE HELP.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.whowehelp-section-outer-container {
+  padding: 3rem 0;
+  background: linear-gradient(
+      to bottom,
+      rgb(26, 47, 71, 0.95) 0%,
+      rgba(26, 47, 71, 0.95) 59%,
+      rgba(26, 47, 71, 0.95) 100%
+    ),
+    url("/services-background.jpg");
+  background-position: center;
+  background-size: cover;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    // text-transform: uppercase;
+    font-family: variables.$formal-font;
+    text-align: center;
+    color: white;
+    margin-bottom: 2.5rem;
+  }
+  h4 {
+    text-align: center;
+    color: variables.$secondary-color;
+    font-family: variables.$informal-font;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: auto;
+    font-weight: 300;
+    padding: 0 4.5rem 0 4.5rem;
+    transition: 0.4s ease-out;
+  }
+  h4:hover {
+    font-size: 1.6rem;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// ?SECTION FIVE - PROCESS.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.process-section-outer-container {
+  > h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-family: variables.$formal-font;
+  }
+  > p {
+    font-family: variables.$informal-font;
+    // border: solid red;
+    text-align: center;
+    width: 60%;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin: auto;
+    color: #7c7c7c;
+    margin-bottom: 3rem;
+  }
+  .process-cards-container {
+    // border: solid pink;
+    max-width: 75%;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+// !CARD COMPONENT/////////////////////////////...................
+// !CARD COMPONENT/////////////////////////////...................
+// !CARD COMPONENT/////////////////////////////...................
+.card {
+  // max-width: 33.3%;
+  flex-basis: 30%;
+  min-width: 390px;
+  min-height: 420px;
+  // border: solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  .image-container {
+    position: relative;
+    background-color: #ffffff;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-radius: 100%;
+    border: solid rgb(241, 241, 241) 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.3rem;
+    transition: all 0.5s ease-out;
+
+    .number-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-family: variables.$informal-font;
+      position: absolute;
+      top: 12px;
+      left: -8px;
+      border-radius: 100%;
+      width: 28%;
+      height: 28%;
+      background-color: #ffffff;
+      border: solid rgb(241, 241, 241) 1px;
+      transition: all 0.5s ease-out;
+    }
+
+    div {
+      height: 90%;
+      width: 90%;
+      background-color: rgb(245, 245, 245);
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 90px;
+    }
+  }
+  .image-container:hover {
+    background-color: variables.$secondary-color;
+    transition: all 0.3s ease-in;
+  }
+  .number-circle:hover {
+    background-color: variables.$secondary-color;
+    transition: all 0.3s ease-in;
+    color: white;
+  }
+  // .image-container:hover::before {
+  //   background-color: variables.$secondary-color;
+  //   transition: all 0.3s ease-in;
+  // }
+
+  h4 {
+    font-size: 1.3rem;
+    font-family: variables.$informal-font;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 16px;
+    color: #7c7c7c;
+    line-height: 1.7;
+    width: 90%;
+    margin: auto;
+    font-family: variables.$informal-font;
+  }
+}
+
+// ?SECTION SIX - TESTIMONIALS.....................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+
+.testimonial-section-outer-container {
+  background: linear-gradient(
+      to bottom,
+      rgb(26, 47, 71) 0%,
+      rgba(26, 47, 71, 0.95) 59%,
+      rgba(26, 47, 71, 0.9) 100%
+    ),
+    url("/services-background.jpg");
+  background-position: center;
+  background-size: cover;
+  > div {
+    // border: solid green;
+    .text-container {
+      max-width: 70%;
+      margin: auto;
+      color: white;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      // border: solid blue;
+      > h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: variables.$formal-font;
+      }
+      > p {
+        margin-bottom: 0.5rem;
+        font-family: variables.$informal-font;
+        line-height: 1.7;
+      }
+      > img {
+        width: 100px;
+        padding: 12px 0 5px 0;
+      }
+    }
+  }
+}
+
+// !Testimonial card component.......................
+// !Testimonial card component.......................
+// !Testimonial card component.......................
+// !Testimonial card component.......................
+.testi-card {
+  background-color: white;
+  width: 300px;
+  padding: 1.3rem;
+  border-radius: 20px;
+  margin: 0 10px 0 10px;
+  img {
+    border-radius: 100%;
+    width: 50px;
+    margin-bottom: 7px;
+  }
+  h4 {
+    color: rgb(37, 37, 79);
+    margin-bottom: 2px;
+    font-family: variables.$formal-font;
+  }
+  div {
+    color: variables.$secondary-color;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: rgb(37, 37, 79);
+    font-size: 14px;
+    font-family: variables.$informal-font;
+  }
+}
+
+// ?SECTION SEVEN - EXTRA SERVICES........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.extraservices-section-outer-container {
+  .reels-section {
+    // border: solid red;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 2.3rem;
+    min-height: 580px;
+    padding-bottom: 5rem;
+    // background-color: #333;
+
+    .pic-div {
+      position: relative;
+      flex-basis: 50%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      // background-color: transparent;
+      // border: solid blue;
+      .pic-vic-div {
+        position: relative;
+        // border: solid yellow;
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .social-decor {
+          position: absolute;
+          width: 370px;
+          height: 450px;
+          left: -245px;
+          z-index: 9999;
+        }
+        img {
+          // position: absolute;
+          width: 275px;
+          height: 100%;
+          z-index: 10;
+        }
+
+        .lazy {
+          // border: solid red;
+          position: absolute;
+          width: 290px;
+          height: 100%;
+          z-index: -1;
+        }
+        .vid {
+          position: absolute;
+          width: 290px;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    // TODO Text side
+    .text-div {
+      // border: solid red;
+      // padding-right: 3rem;
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      // border: solid red;
+      > h3 {
+        font-size: 1.7rem;
+        // padding: 0 0rem 0 3.5rem;
+        margin-bottom: 3rem;
+        width: 35ch;
+        font-family: variables.$formal-font;
+      }
+      .text {
+        display: flex;
+        gap: 1rem;
+        // padding: 0 3.5rem 0 3.5rem;
+        .icon {
+          font-size: 2rem;
+          color: variables.$secondary-color;
+        }
+        > div {
+          // border: solid pink;
+          max-width: 480px;
+          h4 {
+            font-size: 1.3rem;
+            font-family: variables.$formal-font;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+          p {
+            max-width: 90%;
+            font-size: 15px;
+            line-height: 1.5;
+            font-family: variables.$informal-font;
+          }
+        }
+      }
+
+      .text:first-child {
+        // margin-bottom: 50rem;
+      }
+    }
+  }
+
+  // WEBSITE SECTION.................................................
+  .website-section {
+    // border: solid red;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 4rem;
+    min-height: 580px;
+    padding-bottom: 5rem;
+    // background-color: #333;
+    // TODO Text side
+    .text-div {
+      // padding-left: 3rem;
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      // border: solid pink;
+      // padding-left: 10rem;
+      > h3 {
+        font-family: variables.$formal-font;
+        font-size: 1.7rem;
+        // padding: 0 3.5rem 0 0rem;
+        margin-bottom: 3rem;
+        width: 35ch;
+      }
+      .text {
+        display: flex;
+        gap: 1rem;
+        // padding: 0 3rem 0 3rem;
+        // border: solid red;
+        .icon {
+          font-size: 2rem;
+          color: variables.$secondary-color;
+        }
+        > div {
+          // border: solid pink;
+          max-width: 470px;
+          h4 {
+            font-size: 1.3rem;
+            font-family: variables.$formal-font;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+          p {
+            max-width: 90%;
+            font-size: 15px;
+            line-height: 1.5;
+            font-family: variables.$informal-font;
+          }
+        }
+      }
+    }
+
+    // TODO Image side
+    .pic-div {
+      position: relative;
+      flex-basis: 50%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      // background-color: transparent;
+      // border: solid blue;
+      .pic-vic-div {
+        position: relative;
+        // border: solid yellow;
+        width: 530px;
+        height: 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          // position: absolute;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+          height: 100%;
+          z-index: 9999;
+
+          // background-color: transparent;
+        }
+      }
+    }
+  }
+}
+.first-para {
+  margin-bottom: 2rem;
+}
+
+// ?SECTION EIGHT - PACKAGES........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+.packages-section-outer-container {
+  background-color: #ececec;
+  padding: 4rem 0;
+
+  > h1 {
+    color: rgba(255, 255, 255, 0.889);
+    text-align: center;
+    font-size: 5.5rem;
+    text-shadow: 1px 4px 5px rgb(210, 210, 210);
+    margin-top: -3rem;
+    font-family: variables.$formal-font;
+  }
+
+  > .package-cards-container {
+    margin: auto;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    // border: solid red;
+    width: 70%;
+  }
+}
+
+// ?PACKAGE CARDS..........................
+.package-card-shell {
+  width: 350px;
+  background-color: rgb(26, 47, 71);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid #e6b35b 1px;
+  padding: 25px 10px 25px 10px;
+  color: white;
+  > h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: variables.$formal-font;
+  }
+
+  > p {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-family: variables.$informal-font;
+  }
+
+  > .price {
+    font-size: 2rem;
+    // font-family: variables.$informal-font;
+  }
+
+  > div {
+    border: solid #e6b35b 1px;
+    background-color: white;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    overflow: scroll;
+    > ul {
+      padding: 2rem 0.5rem;
+      height: 100%;
+      > :last-child {
+        padding-bottom: 2rem;
+      }
+      > li {
+        margin-bottom: 0.8rem;
+        font-size: 15px;
+        font-family: variables.$informal-font;
+      }
+    }
+  }
+
+  > a {
+    margin-top: 1rem;
+    background-color: #e6b35b;
+    padding: 13px 28px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-family: variables.$informal-font;
+  }
+  > a:hover {
+    background-color: #f6cf8a;
+  }
+}
+
+// ?Disclaimer div
+.disclaimer-div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 3rem;
+  font-size: 15px;
+  font-family: variables.$informal-font;
+  line-height: 1.7;
+  width: 80%;
+  // border: solid red;
+}
+
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+// ?SECTION NINE - BOOKING FORM........................................................................
+.booking-section-outer-container {
+  > .booking-container {
+    max-width: 70%;
+    margin: auto;
+    > p {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: variables.$informal-font;
+      color: variables.$primary-color;
+      margin-bottom: 1.3rem;
+    }
+    > h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.8rem;
+      font-family: variables.$formal-font;
+    }
+  }
+}
+
+.booking-form-shell {
+  // border: solid pink;
+  .packages-form-sect {
+    background-color: variables.$primary-color;
+    padding: 2rem 1.5rem;
+    color: white;
+    border-radius: 10px;
+    > label {
+      font-size: 1.1rem;
+      font-family: variables.$informal-font;
+      font-weight: 600;
+    }
+    > div {
+      margin: 10px 0 0 0;
+      margin-left: 1rem;
+      > input {
+      }
+      > label {
+        margin-left: 8px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .prospect-info-form-sect {
+    margin-top: 3rem;
+    border: solid variables.$primary-color;
+    border-radius: 10px;
+    padding: 3rem 1.5rem;
+    position: relative;
+    > .title {
+      padding: 1rem 2.5rem;
+      position: absolute;
+      top: -1.5rem;
+      left: 5rem;
+      max-width: 350px;
+      border-radius: 30px;
+      background-color: variables.$primary-color;
+      color: white;
+      font-family: variables.$informal-font;
+    }
+
+    > .user-info-container {
+      // border: solid pink;
+      font-family: variables.$informal-font;
+      > div {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        > div {
+          flex-basis: 50%;
+          > p {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 3px;
+          }
+          > input {
+            width: 100%;
+            height: 2.5rem;
+            border: solid rgb(161, 161, 161) 1px;
+            font-size: 1.1rem;
+            padding-left: 5px;
+          }
+        }
+      }
+
+      .size-field {
+        display: block;
+        font-family: variables.$informal-font;
+        > p {
+          font-size: 15px;
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
+        > input {
+          width: 100%;
+          height: 2.5rem;
+          border: solid rgb(161, 161, 161) 1px;
+          font-size: 1.1rem;
+          padding-left: 5px;
+        }
+      }
+
+      .details-field {
+        display: block;
+        margin-top: 4rem;
+        font-family: variables.$informal-font;
+        > p {
+          font-size: 15px;
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
+        > textarea {
+          width: 100%;
+          height: 8rem;
+          border: solid rgb(161, 161, 161) 1px;
+          font-size: 1.1rem;
+          padding: 5px;
+        }
+      }
+    }
+    .urgency-form-sect {
+      padding: 2rem 0rem;
+      > label {
+        font-size: 16px;
+        font-family: variables.$informal-font;
+        font-weight: 600;
+      }
+      > div {
+        margin: 10px 0 0 0;
+        margin-left: 2px;
+        > input {
+        }
+        > label {
+          margin-left: 8px;
+          font-size: 1rem;
+          font-family: variables.$informal-font;
+        }
+      }
+    }
+  }
+  button {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    background-color: variables.$primary-color;
+    color: white;
+    font-family: variables.$informal-font;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover {
+    background-color: variables.$secondary-color;
+    color: black;
+  }
+}
+
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+// ?SECTION TEN - CONTACT INFO........................................................................
+.contact-section-outer-container {
+  margin-bottom: -2.5rem;
+  z-index: 9999;
+  position: relative;
+  // border: solid red;
+  .contact-container {
+    // border: solid pink;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 1px 3px 11px 2px rgb(57, 57, 57);
+    border-radius: 20px;
+    font-family: variables.$informal-font;
+
+    > div {
+      padding: 1.5rem 0 1rem;
+      flex-basis: 33.3%;
+      :first-child {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        color: variables.$primary-color;
+      }
+      p {
+        text-align: center;
+        font-size: 1rem;
+        color: #000000;
+      }
+    }
+  }
+}
+
+// ?FOOTER SECTION......................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+// ?........................................................................
+footer {
+  display: block;
+  background-color: variables.$primary-color;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 6rem;
+  .socials-div {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    // border: solid red;
+    margin-bottom: 7rem;
+    .icons {
+      padding: 10px;
+      border-radius: 10px;
+      width: 45px;
+      height: 45px;
+      font-size: 2rem;
+      background-color: #7c7c7c;
+    }
+  }
+  // Content div.........................
+  .content-div {
+    max-width: 68%;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    // border: solid red;
+    > div:nth-child(1) {
+      flex-basis: 33%;
+      .label {
+        color: variables.$secondary-color;
+        font-size: 15px;
+        font-family: variables.$informal-font;
+        margin-bottom: 3px;
+      }
+      .info {
+        font-size: 1rem;
+        font-family: variables.$informal-font;
+      }
+      #number {
+        margin-bottom: 1.7rem;
+      }
+    }
+    > div:nth-child(2) {
+      flex-basis: 33%;
+      p {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2.4rem;
+        font-family: variables.$formal-font;
+      }
+      button {
+        display: block;
+        margin: auto;
+        font-size: 1.2rem;
+        padding: 18px 33px;
+        background-color: variables.$secondary-color;
+        border: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #f6cf8a;
+      }
+    }
+    > div:nth-child(3) {
+      flex-basis: 33%;
+      display: flex;
+      flex-direction: column;
+      font-family: variables.$informal-font;
+      img {
+        margin-top: -1.5rem;
+        width: 220px;
+        align-self: end;
+      }
+      p {
+        text-align: right;
+        width: 90%;
+        align-self: end;
+      }
+    }
+  }
+}
+
+// TODO 1614 MEDIA///////////////////////////////////////////////////////////////////////////////////
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+
+@media (max-width: 1614px) {
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .banner-image-container {
+    height: 97vh;
+  }
+  .banner-text-container {
+    h1 {
+      font-size: 3.3rem;
+      margin-bottom: 2.4rem;
+      max-width: 87%;
+    }
+
+    h2 {
+      font-size: 21px;
+      // width: 90%;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    > div {
+      max-width: 80%;
+      gap: 4rem;
+      // border: solid red 1px;
+      .left-images-container {
+        gap: 1.3rem;
+        %team-images-shared {
+          width: 225px;
+          height: 399px;
+        }
+
+        // .image-1 {
+        //   @extend %team-images-shared;
+
+        //   img {
+        //     object-fit: cover;
+        //     height: 100%;
+        //     width: 100%;
+        //   }
+        // }
+        .image-2 {
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .right-text-container {
+        // gap: 0.5rem;
+
+        .overheading {
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 17px;
+          margin-bottom: 1.6rem;
+        }
+
+        // Accordion
+        .accordion-container {
+          margin-bottom: 1rem;
+          min-height: 325px;
+          // border: solid red;
+        }
+      }
+    }
+
+    .vid {
+      top: 53%;
+      left: 3rem;
+      width: 500px;
+      height: 270px;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .services-section-outer-container {
+    > div {
+      > div {
+        max-width: 80%;
+        // margin-bottom: 2.2rem;
+        img {
+          padding: 15px 0 5px 0;
+        }
+      }
+    }
+  }
+
+  .service-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 2rem;
+  }
+
+  // Service card component styles.......................................//////////////
+  .service-card-container {
+    // border: solid red;
+    .card-image-container {
+      height: 230px;
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      // border: solid red;
+      width: 90%;
+      // margin: auto;
+      // display: flex;
+      gap: 2rem;
+      min-height: 580px;
+      padding-bottom: 5rem;
+      // background-color: #333;
+
+      .pic-div {
+        // position: relative;
+        flex-basis: 50%;
+        // display: flex;
+        // justify-content: end;
+        // align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          // position: relative;
+          // border: solid yellow;
+          width: 250px;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          .social-decor {
+            // position: absolute;
+            width: 300px;
+            height: 390px;
+            left: -215px;
+            z-index: 9999;
+          }
+          img {
+            // position: absolute;
+            width: 250px;
+            height: 100%;
+            z-index: 10;
+
+            // background-color: transparent;
+          }
+          .lazy {
+            // position: absolute;
+            // width: 290px;
+            // height: 100%;
+            // z-index: -1;
+          }
+          .vid {
+            // position: absolute;
+            // width: 290px;
+            // height: 100%;
+            // z-index: -1;
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        // border: solid red;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        // border: solid red;
+        > h3 {
+          font-size: 1.6rem;
+          padding: 0 0rem 0 3.5rem;
+          margin-bottom: 3rem;
+          width: 35ch;
+          font-family: variables.$formal-font;
+        }
+        .text {
+          display: flex;
+          gap: 1rem;
+          padding: 0 3.5rem 0 3.5rem;
+          .icon {
+            font-size: 2rem;
+            color: variables.$secondary-color;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 480px;
+            h4 {
+              font-size: 1.3rem;
+              font-family: variables.$formal-font;
+              font-weight: 400;
+              margin-bottom: 1rem;
+            }
+            p {
+              max-width: 90%;
+              font-size: 15px;
+              line-height: 1.5;
+              font-family: variables.$informal-font;
+            }
+          }
+        }
+
+        .text:first-child {
+          // margin-bottom: 50rem;
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      // border: solid red;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      gap: 4rem;
+      min-height: 580px;
+      padding-bottom: 5rem;
+      // background-color: #333;
+      // TODO Text side
+      .text-div {
+        // padding-left: 3rem;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        // border: solid pink;
+        // padding-left: 10rem;
+        > h3 {
+          font-family: variables.$formal-font;
+          font-size: 1.6rem;
+          padding: 0 3.5rem 0 0rem;
+          margin-bottom: 3rem;
+          width: 35ch;
+        }
+        .text {
+          display: flex;
+          gap: 1rem;
+          // padding: 0 3rem 0 3rem;
+          // border: solid red;
+          .icon {
+            font-size: 2rem;
+            color: variables.$secondary-color;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 470px;
+            h4 {
+              font-size: 1.3rem;
+              font-family: variables.$formal-font;
+              font-weight: 400;
+              margin-bottom: 1rem;
+            }
+            p {
+              max-width: 90%;
+              font-size: 15px;
+              line-height: 1.5;
+              font-family: variables.$informal-font;
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        position: relative;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          position: relative;
+          // border: solid yellow;
+          width: 430px;
+          height: 260px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            // position: absolute;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            height: 100%;
+            z-index: 9999;
+
+            // background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .first-para {
+    margin-bottom: 2rem;
+  }
+
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+}
+// TODO 1360 MEDIA///////////////////////////////////////////////////////////////////////////////////
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+
+@media (max-width: 1360px) {
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  header {
+    nav {
+      margin: 0.5rem 2rem 0 2rem;
+    }
+
+    .logo {
+      width: 320px;
+    }
+
+    ul {
+      gap: 4rem;
+    }
+  }
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .banner-image-container {
+    height: 92vh;
+  }
+  .banner-text-container {
+    margin-left: 7rem;
+    h1 {
+      font-size: 2.4rem;
+      max-width: 70%;
+      line-height: 1.3;
+    }
+    h2 {
+      max-width: 80%;
+    }
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    > div {
+      max-width: 70%;
+      display: block;
+      .left-images-container {
+        // border: solid red;
+        margin-bottom: 11rem;
+        justify-content: center;
+
+        // Styiling for images of this section.............................
+        %team-images-shared {
+          width: 200px;
+          height: 380px;
+        }
+      }
+
+      .right-text-container {
+        > h3 {
+        }
+
+        > p {
+          margin-bottom: 2.5rem;
+        }
+
+        // Accordion
+        .accordion-container {
+          margin-bottom: 2.3rem;
+          min-height: 350px;
+          // border: solid red;
+        }
+      }
+    }
+
+    .vid {
+      top: 24%;
+      left: 20%;
+      // width: 500px;
+      height: 290px;
+      // border: solid red;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .services-section-outer-container {
+    // background: linear-gradient(
+    //     to bottom,
+    //     rgb(26, 47, 71) 0%,
+    //     rgba(26, 47, 71, 0.95) 59%,
+    //     rgba(26, 47, 71, 0.9) 100%
+    //   ),
+    //   url("/services-background.jpg");
+    // background-position: center;
+    // background-size: cover;
+    > div {
+      > div {
+        max-width: 73%;
+      }
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // !EXPNADED GALLERY SLIDER......................................................................
+  // !........................................................................
+  // !........................................................................
+
+  .slider {
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100vh;
+    padding: 13rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: solid red;
+    // background-color: rgb(0, 0, 0, 0.9);
+    // z-index: 9999;
+
+    %arrows-shared-home-gallery {
+      // position: absolute;
+      // top: 50%;
+      font-size: 2.5rem;
+      // color: variables.$secondary-color;
+      // z-index: 10;
+      // cursor: pointer;
+      // user-select: none;
+    }
+    .right-arrow {
+      // @extend %arrows-shared-home-gallery;
+      right: 3rem;
+    }
+
+    .left-arrow {
+      // @extend %arrows-shared-home-gallery;
+      left: 3rem;
+    }
+
+    .slide {
+      // opacity: 0;
+      // transition-duration: 1.5s ease;
+    }
+
+    .slide.active {
+      // opacity: 1;
+      // transition-duration: 1.5s;
+      // transform: scale(1.08);
+    }
+
+    .close-btn {
+      // position: absolute;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      // bottom: 0;
+      // background-color: transparent;
+      // color: white;
+      // border: solid white 1px;
+      // padding: 10px 40px;
+      // cursor: pointer;
+      // font-size: large;
+      // font-family: variables.$informal-font;
+    }
+    .close-btn:hover {
+      // background-color: variables.$secondary-color;
+      // color: black;
+      // border: none;
+      // transition: all 0.5s ease;
+    }
+  }
+
+  .image {
+    // border: solid red;
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // border-radius: 10px;
+  }
+
+  // ?SECTION FOUR - WHO WE HELP.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION FIVE - PROCESS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .process-section-outer-container {
+    > h3 {
+      font-size: 2.5rem;
+    }
+    > p {
+      width: 65%;
+    }
+    .process-cards-container {
+      // border: solid pink;
+      max-width: 80%;
+      gap: 1.8rem;
+    }
+  }
+
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  .card {
+    min-width: 450px;
+    .image-container {
+    }
+    h4 {
+    }
+    p {
+      width: 92%;
+    }
+  }
+
+  // ?SECTION SIX - TESTIMONIALS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      // border: solid red;
+      width: 95%;
+      margin: auto;
+      display: flex;
+      gap: 2rem;
+      min-height: 580px;
+      padding-bottom: 5rem;
+      // background-color: #333;
+
+      .pic-div {
+        position: relative;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          position: relative;
+          // border: solid yellow;
+          width: 240px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .social-decor {
+            position: absolute;
+            width: 290px;
+            height: 370px;
+            left: -205px;
+            z-index: 9999;
+          }
+          img {
+            // position: absolute;
+            width: 230px;
+            height: 100%;
+            z-index: 10;
+
+            // background-color: transparent;
+          }
+          .lazy {
+            // border: solid red;
+            position: absolute;
+            width: 290px;
+            height: 100%;
+            z-index: -1;
+          }
+          .vid {
+            position: absolute;
+            width: 290px;
+            height: 100%;
+            z-index: -1;
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        // border: solid red;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        // border: solid red;
+        > h3 {
+          font-size: 1.4rem;
+          padding: 0 0rem 0 3.5rem;
+          margin-bottom: 3rem;
+          width: 35ch;
+          font-family: variables.$formal-font;
+        }
+        .text {
+          display: flex;
+          gap: 1rem;
+          padding: 0 3.5rem 0 3.5rem;
+          .icon {
+            font-size: 2rem;
+            color: variables.$secondary-color;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 480px;
+            h4 {
+              font-size: 1.3rem;
+              font-family: variables.$formal-font;
+              font-weight: 400;
+              margin-bottom: 1rem;
+            }
+            p {
+              max-width: 90%;
+              font-size: 15px;
+              line-height: 1.5;
+              font-family: variables.$informal-font;
+            }
+          }
+        }
+
+        .text:first-child {
+          // margin-bottom: 50rem;
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      // border: solid red;
+      width: 95%;
+      margin: auto;
+      display: flex;
+      gap: 2rem;
+      min-height: 580px;
+      padding-bottom: 5rem;
+      // background-color: #333;
+      // TODO Text side
+      .text-div {
+        // padding-left: 3rem;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        // border: solid pink;
+        // padding-left: 10rem;
+        > h3 {
+          font-family: variables.$formal-font;
+          font-size: 1.4rem;
+          padding: 0 3.5rem 0 0rem;
+          margin-bottom: 3rem;
+          width: 35ch;
+        }
+        .text {
+          display: flex;
+          gap: 1rem;
+          // padding: 0 3rem 0 3rem;
+          // border: solid red;
+          .icon {
+            font-size: 2rem;
+            color: variables.$secondary-color;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 470px;
+            h4 {
+              font-size: 1.3rem;
+              font-family: variables.$formal-font;
+              font-weight: 400;
+              margin-bottom: 1rem;
+            }
+            p {
+              max-width: 90%;
+              font-size: 15px;
+              line-height: 1.5;
+              font-family: variables.$informal-font;
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        position: relative;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          position: relative;
+          // border: solid yellow;
+          width: 430px;
+          height: 260px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            // position: absolute;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            height: 100%;
+            z-index: 9999;
+
+            // background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .first-para {
+    margin-bottom: 2rem;
+  }
+  // ?SECTION EIGHT - PACKAGES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .packages-section-outer-container {
+    padding: 4rem 0;
+
+    > h1 {
+      font-size: 5rem;
+    }
+
+    > .package-cards-container {
+      width: 79%;
+    }
+  }
+
+  // ?PACKAGE CARDS..........................
+  .package-card-shell {
+    width: 350px;
+    > h3 {
+      margin-bottom: 0.6rem;
+    }
+
+    > p {
+      margin-bottom: 1.1rem;
+    }
+
+    > .price {
+      font-size: 1.8rem;
+    }
+
+    > div {
+      height: 19rem;
+      > ul {
+        padding: 2rem 0.4rem;
+        > :last-child {
+          padding-bottom: 1.9rem;
+        }
+        > li {
+          margin-bottom: 0.9rem;
+        }
+      }
+    }
+
+    > a {
+      padding: 13px 27px;
+    }
+  }
+
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  .contact-section-outer-container {
+    // margin-bottom: -2.5rem;
+    // z-index: 9999;
+    // position: relative;
+    // border: solid red;
+    .contact-container {
+      // border: solid pink;
+      // background-color: white;
+      width: 80%;
+      // margin: auto;
+      // display: flex;
+      // gap: 1rem;
+      // box-shadow: 1px 3px 11px 2px rgb(57, 57, 57);
+      // border-radius: 20px;
+
+      > div {
+        // padding: 1.5rem 0 1rem;
+        // flex-basis: 33.3%;
+        :first-child {
+          // display: block;
+          // margin: auto;
+          // text-align: center;
+          // margin-bottom: 1.5rem;
+          // font-size: 1.6rem;
+          // color: variables.$primary-color;
+        }
+        p {
+          // text-align: center;
+          // font-size: 1.2rem;
+          // color: #000000;
+        }
+      }
+    }
+  }
+
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  footer {
+    .socials-div {
+      .icons {
+        font-size: 1.8rem;
+      }
+    }
+    // Content div.........................
+    .content-div {
+      max-width: 85%;
+      > div:nth-child(2) {
+        p {
+          font-size: 1.7rem;
+        }
+        button {
+          font-size: 1.1rem;
+          padding: 15px 28px;
+        }
+      }
+    }
+  }
+}
+
+// TODO 1064 MEDIA///////////////////////////////////////////////////////////////////////////////////
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+
+@media (max-width: 1064px) {
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  header {
+    nav {
+      margin: 1rem 3rem 0 1rem;
+    }
+
+    .logo {
+      // width: 320px;
+    }
+
+    ul {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+    }
+  }
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .banner-image-container {
+    height: 85vh;
+  }
+
+  .banner-text-container {
+    margin-left: 6rem;
+
+    h1 {
+      max-width: 90%;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      max-width: 79%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    position: relative;
+    > div {
+      max-width: 70%;
+    }
+
+    .vid {
+      top: 25%;
+      left: 12%;
+      width: 440px;
+      height: 285px;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .service-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  // Service card component styles
+  .service-card-container {
+    // border: solid red;
+    .card-image-container {
+      height: 200px;
+      // margin-bottom: 1rem;
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .gallery-section-outer-container {
+    > div {
+      > h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.7rem;
+      }
+      > p {
+        width: 75%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+
+  .images-container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)) !important;
+  }
+
+  // !EXPNADED GALLERY SLIDER......................................................................
+  // !........................................................................
+  // !........................................................................
+
+  .slider {
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100vh;
+    padding: 8rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: solid red;
+    // background-color: rgb(0, 0, 0, 0.9);
+    // z-index: 9999;
+
+    %arrows-shared-home-gallery {
+      // position: absolute;
+      // top: 50%;
+      font-size: 2rem;
+      // color: variables.$secondary-color;
+      // z-index: 10;
+      // cursor: pointer;
+      // user-select: none;
+    }
+    .right-arrow {
+      // @extend %arrows-shared-home-gallery;
+      right: 1.5rem;
+    }
+
+    .left-arrow {
+      // @extend %arrows-shared-home-gallery;
+      left: 1.5rem;
+    }
+
+    .slide {
+      // opacity: 0;
+      // transition-duration: 1.5s ease;
+    }
+
+    .slide.active {
+      // opacity: 1;
+      // transition-duration: 1.5s;
+      // transform: scale(1.08);
+    }
+
+    .close-btn {
+      // position: absolute;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      // bottom: 0;
+      // background-color: transparent;
+      // color: white;
+      // border: solid white 1px;
+      // padding: 10px 40px;
+      // cursor: pointer;
+      // font-size: large;
+      // font-family: variables.$informal-font;
+    }
+    .close-btn:hover {
+      // background-color: variables.$secondary-color;
+      // color: black;
+      // border: none;
+      // transition: all 0.5s ease;
+    }
+  }
+
+  .image {
+    // border: solid red;
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // border-radius: 10px;
+  }
+
+  // ?SECTION FOUR - WHO WE HELP.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION FIVE - PROCESS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .process-section-outer-container {
+    > h3 {
+      font-size: 2.3rem;
+      margin-bottom: 1.7rem;
+    }
+    > p {
+      width: 70%;
+      font-size: 1rem;
+      // margin-bottom: 3rem;
+    }
+    .process-cards-container {
+      // border: solid pink;
+      max-width: 85%;
+    }
+  }
+
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  .card {
+    // max-width: 33.3%;
+    // flex-basis: 30%;
+    min-width: 500px;
+    // min-height: 420px;
+    h4 {
+    }
+    p {
+      // font-size: 16px;
+      width: 95%;
+    }
+  }
+
+  // ?SECTION SIX - TESTIMONIALS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .testimonial-section-outer-container {
+    > div {
+      .text-container {
+        max-width: 79%;
+      }
+    }
+  }
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      display: block;
+      .pic-div {
+        justify-content: center;
+        // border: solid blue;
+        .pic-vic-div {
+          // width: 260px;
+          .social-decor {
+            // width: 340px;
+            // height: 400px;
+            // left: -230px;
+          }
+          > img {
+            // width: 230px;
+            // border: solid red;
+            // height: 100%;
+          }
+          .vid {
+            // width: 390px;
+            // border: solid red;
+            // height: 100%;
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        padding-top: 3rem;
+        // border: solid red;
+        max-width: 83%;
+        margin: auto;
+        > h3 {
+          // font-size: 1.8rem;
+          // padding: 0 0rem 0 3.5rem;
+          margin-bottom: 2.5rem;
+          width: 100%;
+        }
+        .text {
+          .icon {
+            font-size: 2rem;
+            width: none;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 550px;
+            h4 {
+            }
+            p {
+            }
+          }
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3.8rem;
+      // TODO Text side
+      .text-div {
+        order: 2;
+        margin: auto;
+        max-width: 80%;
+        // border: solid red;
+        > h3 {
+          padding: 0 4rem 0 3.5rem;
+          width: 100%;
+        }
+        .text {
+          // padding: 0 0rem 0 0rem;
+          // border: solid red;
+          .icon {
+            font-size: 2rem;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 550px;
+            h4 {
+            }
+            p {
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        padding-top: 0rem;
+        margin: auto;
+        .pic-vic-div {
+          // border: solid yellow;
+          width: 500px;
+          height: 325px;
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  // ?SECTION EIGHT - PACKAGES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .packages-section-outer-container {
+    // padding: 4rem 0;
+
+    > h1 {
+      // font-size: 5rem;
+    }
+
+    > .package-cards-container {
+      flex-direction: column;
+      // border: solid red;
+      // width: 79%;
+    }
+  }
+
+  // ?PACKAGE CARDS..........................
+  .package-card-shell {
+    width: 75%;
+    > h3 {
+      // margin-bottom: 0.6rem;
+    }
+
+    > p {
+      // margin-bottom: 1.1rem;
+    }
+
+    > .price {
+      font-size: 2rem;
+    }
+
+    > div {
+      height: 15rem;
+      > ul {
+        // padding: 2rem 0.4rem;
+        > :last-child {
+          // padding-bottom: 1.9rem;
+        }
+        > li {
+          // margin-bottom: 0.9rem;
+        }
+      }
+    }
+
+    > a {
+      // padding: 13px 27px;
+    }
+  }
+
+  // ?Disclaimer div
+  .disclaimer-div {
+    // background-color: white;
+    // padding: 1rem;
+    // border-radius: 20px;
+    // margin: auto;
+    // margin-top: 3rem;
+    font-size: 13px;
+    // font-family: variables.$informal-font;
+    line-height: 1.6;
+    // width: 80%;
+    // border: solid red;
+  }
+
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  .booking-section-outer-container {
+    > .booking-container {
+      max-width: 77%;
+      // margin: auto;
+      > p {
+        // font-size: 1rem;
+        // font-weight: 600;
+        // font-family: variables.$informal-font;
+        // color: variables.$primary-color;
+        // margin-bottom: 1.5rem;
+      }
+      > h1 {
+        // font-size: 2.5rem;
+        // margin-bottom: 1.8rem;
+      }
+    }
+  }
+
+  .booking-form-shell {
+    // border: solid pink;
+    .packages-form-sect {
+      // background-color: variables.$primary-color;
+      // padding: 2rem 1.5rem;
+      // color: white;
+      // border-radius: 10px;
+      // > label {
+      //   font-size: 1.1rem;
+      //   font-family: variables.$informal-font;
+      //   font-weight: 600;
+      // }
+      // > div {
+      //   margin: 10px 0 0 0;
+      //   margin-left: 1rem;
+      //   > input {
+      //   }
+      //   > label {
+      //     margin-left: 8px;
+      //     font-size: 1.2rem;
+      //   }
+      // }
+    }
+
+    .prospect-info-form-sect {
+      // margin-top: 3rem;
+      // border: solid variables.$primary-color;
+      // border-radius: 10px;
+      // padding: 3rem 1.5rem;
+      // position: relative;
+      > .title {
+        // padding: 1rem 2.5rem;
+        // position: absolute;
+        // top: -1.5rem;
+        // left: 5rem;
+        // max-width: 300px;
+        // border-radius: 30px;
+        // background-color: variables.$primary-color;
+        // color: white;
+        // font-family: variables.$informal-font;
+      }
+
+      > .user-info-container {
+        // border: solid pink;
+        > div {
+          display: flex;
+          gap: 1rem;
+          // margin-bottom: 1.5rem;
+          > div {
+            // flex-basis: 50%;
+            > p {
+              // font-size: 1.2rem;
+              // font-weight: 600;
+              // margin-bottom: 4px;
+            }
+            > input {
+              // width: 100%;
+              // height: 2.5rem;
+              // border: solid rgb(161, 161, 161) 1px;
+              // font-size: 1.1rem;
+              // padding-left: 5px;
+            }
+          }
+        }
+
+        .size-field {
+          // display: block;
+          // > p {
+          //   font-size: 1.2rem;
+          //   font-weight: 600;
+          //   margin-bottom: 4px;
+          // }
+          // > input {
+          //   width: 100%;
+          //   height: 2.5rem;
+          //   border: solid rgb(161, 161, 161) 1px;
+          //   font-size: 1.1rem;
+          //   padding-left: 5px;
+          // }
+        }
+
+        .details-field {
+          // display: block;
+          margin-top: 3.5rem;
+          > p {
+            // font-size: 1.2rem;
+            // font-weight: 600;
+            // margin-bottom: 4px;
+          }
+          > textarea {
+            // width: 100%;
+            height: 7rem;
+            // border: solid rgb(161, 161, 161) 1px;
+            // font-size: 1.1rem;
+            // padding: 5px;
+          }
+        }
+      }
+      .urgency-form-sect {
+        // padding: 2rem 0rem;
+        // > label {
+        //   font-size: 1.1rem;
+        //   font-family: variables.$informal-font;
+        //   font-weight: 600;
+        // }
+        // > div {
+        //   margin: 10px 0 0 0;
+        //   margin-left: 2px;
+        //   > input {
+        //   }
+        //   > label {
+        //     margin-left: 8px;
+        //     font-size: 1.2rem;
+        //   }
+        // }
+      }
+    }
+    button {
+      // width: 100%;
+      // height: 2.5rem;
+      // margin-top: 1rem;
+      // background-color: variables.$primary-color;
+      // color: white;
+      // border: none;
+      // cursor: pointer;
+      // font-size: 1rem;
+    }
+  }
+
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  .contact-section-outer-container {
+    // margin-bottom: -2.5rem;
+    // z-index: 9999;
+    // position: relative;
+    // border: solid red;
+    .contact-container {
+      // border: solid pink;
+      // background-color: white;
+      // width: 80%;
+      // margin: auto;
+      display: block;
+      // gap: 1rem;
+      // box-shadow: 1px 3px 11px 2px rgb(57, 57, 57);
+      // border-radius: 20px;
+
+      > div {
+        // padding: 1.5rem 0 1rem;
+        // flex-basis: 33.3%;
+        :first-child {
+          // display: block;
+          // margin: auto;
+          // text-align: center;
+          // margin-bottom: 1.5rem;
+          // font-size: 1.6rem;
+          // color: variables.$primary-color;
+        }
+        p {
+          // text-align: center;
+          // font-size: 1.2rem;
+          // color: #000000;
+        }
+      }
+    }
+  }
+
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  footer {
+    padding-top: 4rem;
+    .socials-div {
+      margin-bottom: 5rem;
+      .icons {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    // Content div.........................
+    .content-div {
+      display: block;
+      max-width: 85%;
+      > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 7rem;
+      }
+      > div:nth-child(2) {
+        margin-bottom: 4rem;
+        p {
+          font-size: 1.7rem;
+        }
+        button {
+          font-size: 1rem;
+          padding: 10px 22px;
+        }
+      }
+      > div:last-child {
+        // border: solid red;
+        display: block;
+        img {
+          margin: auto;
+          display: block;
+          width: 150px;
+        }
+        p {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// TODO 610 MEDIA///////////////////////////////////////////////////////////////////////////////////
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+// TODO.............................................................................................
+
+@media (max-width: 610px) {
+  // ?MOBILE MENU........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .mobile-menu {
+    // position: fixed;
+    // top: 0;
+    right: -100%;
+    width: 100%;
+    // height: 100vh;
+    // background-color: rgb(39, 39, 39);
+    // transition: right 0.5s ease;
+    // z-index: 9999;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
+
+  .logo-container {
+    margin-top: 3rem;
+    > img {
+      width: 320px;
+    }
+  }
+
+  /*Phone Number Button*/
+  .phone-container {
+    // width: 90%;
+    // padding: 1rem 0 1rem 0;
+    // background-color: #e6b35b;
+    // border: none;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
+    margin-top: -1rem;
+    // > .icon {
+    //   font-size: 20px;
+    // }
+  }
+
+  .mobile-menu.open {
+    // right: 0;
+  }
+  /*Close Button*/
+  .menu-toggle {
+    // position: absolute;
+    // top: 20px;
+    // right: 20px;
+    // border-radius: 10px;
+    // background-color: #e6b35b;
+    // border: none;
+    // padding: 0.5rem;
+    // > .icon {
+    //   font-size: 25px;
+    // }
+  }
+
+  /*NAV*/
+  .menu-items {
+    // padding: 20px 20px 20px 35px;
+    // margin-top: 2rem;
+    // width: 100%;
+    // color: white;
+  }
+
+  .menu-items ul {
+    // list-style: none;
+    // padding: 0;
+    // text-align: start;
+    // width: 100%;
+  }
+
+  .menu-items li {
+    // margin-bottom: 1.1rem;
+    // font-weight: 600;
+    // font-size: 1.2rem;
+  }
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  header {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // z-index: 9999;
+
+    nav {
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+      margin: 1rem 2.5rem 0 0.5rem;
+    }
+
+    .logo {
+      width: 200px;
+      margin: 0 0 0 0;
+    }
+
+    ul {
+      // display: flex;
+      // gap: 5rem;
+      // color: white;
+      // margin-right: 2.5rem;
+      // border: solid red;
+      // display: none;
+
+      // li {
+      //   font-size: 1.2rem;
+      // }
+    }
+    .menu-icon {
+      font-size: 1.5rem;
+      color: white;
+      display: block;
+    }
+  }
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .banner-image-container {
+    // border: solid red;
+    position: relative;
+    height: 90vh;
+    display: block;
+
+    > div {
+      // height: 100%;
+      // border: solid red;
+    }
+  }
+
+  .banner-text-container {
+    // width: 400px !important;
+    text-align: left;
+    // border: solid purple;
+    // align-self: center;
+    width: 92%;
+    margin: auto;
+    // margin-left: 0;
+
+    h1 {
+      font-size: 1.5rem;
+      // max-width: 100%;
+      margin-top: 6rem;
+      line-height: 1.4;
+      margin-bottom: 1.8rem;
+    }
+
+    h2 {
+      font-size: 17px;
+      max-width: 100%;
+      margin: 0;
+      margin-bottom: 3.5rem;
+    }
+
+    %button-shared {
+      // padding: 1rem 2rem 1rem 2rem;
+      width: 100%;
+      margin: auto;
+      display: block;
+      // border: none;
+      // font-size: 16px;
+    }
+
+    a:first-child {
+      // @extend %button-shared;
+      margin-bottom: 1rem;
+    }
+
+    // button:last-child {
+    //   @extend %button-shared;
+    //   background-color: transparent;
+    //   border: solid white 1px;
+    //   color: white;
+    // }
+  }
+
+  %arrows-shared {
+    display: none;
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    > div {
+      max-width: 93%;
+      // margin: auto;
+      // border: solid red 1px;
+      .left-images-container {
+        // border: solid red;
+        margin-bottom: 12rem;
+        gap: 0.5rem;
+
+        // Styiling for images of this section...............................
+        %team-images-shared {
+          // display: block;
+          width: 170px;
+          height: 220px;
+        }
+        .image-1 {
+        }
+        .image-2 {
+          margin-top: 2rem;
+        }
+      }
+
+      .right-text-container {
+        // border: solid red 2px;
+        .overheading {
+          font-size: 1rem;
+          margin-bottom: 0.2rem;
+          font-weight: 500;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+          line-height: 1.4;
+          // margin-bottom: 1.5rem;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.7;
+        }
+
+        // Accordion.....................
+        .accordion-container {
+          margin-bottom: 3.5rem;
+          min-height: 390px;
+          // border: solid red;
+
+          .indi-accordion {
+            p {
+              padding: 10px 0 10px 0;
+            }
+          }
+        }
+
+        %accordion-shared {
+          // padding: 15px 0 15px 0;
+          font-weight: 600;
+          font-size: 1rem;
+        }
+
+        .learn-more-button {
+          max-width: 160px;
+          padding: 1rem 0 1rem 0;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .vid {
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 350px;
+      height: 210px;
+      // border: solid red;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .services-section-outer-container {
+    > div {
+      > div {
+        max-width: 90%;
+        margin-bottom: 1.5rem;
+        h3 {
+          font-size: 2.5rem;
+          padding: 0 1rem 0 0rem;
+        }
+        img {
+          width: 90px;
+          padding: 16px 0 5px 0;
+        }
+      }
+    }
+  }
+
+  .service-cards-container {
+    // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    // gap: 2.5rem;
+  }
+
+  // Service card component styles.................
+  .service-card-container {
+    // border: solid red;
+    .card-image-container {
+      // width: 100%;
+      // height: 200px;
+      // margin-bottom: 1rem;
+    }
+
+    .card-text-container {
+      margin-bottom: 0rem;
+
+      h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 1.8rem;
+      }
+      a {
+        font-size: 15px;
+      }
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .gallery-section-outer-container {
+    // border: solid red;
+    > div:first-child {
+      // border: solid red;
+      width: 95%;
+      > h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      > p {
+        width: 100%;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+
+  .images-container {
+    grid-template-columns: repeat(1, minmax(300px, 1fr)) !important;
+  }
+
+  // !EXPNADED GALLERY SLIDER......................................................................
+  // !........................................................................
+  // !........................................................................
+
+  .slider {
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100vh;
+    padding: 3rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: solid red;
+    // background-color: rgb(0, 0, 0, 0.9);
+    // z-index: 9999;
+
+    %arrows-shared-home-gallery {
+      // position: absolute;
+      // top: 50%;
+      font-size: 1rem;
+      // color: variables.$secondary-color;
+      // z-index: 10;
+      // cursor: pointer;
+      // user-select: none;
+    }
+    .right-arrow {
+      // @extend %arrows-shared-home-gallery;
+      right: 10px;
+    }
+
+    .left-arrow {
+      // @extend %arrows-shared-home-gallery;
+      left: 10px;
+    }
+
+    .slide {
+      // opacity: 0;
+      // transition-duration: 1.5s ease;
+    }
+
+    .slide.active {
+      // opacity: 1;
+      // transition-duration: 1.5s;
+      // transform: scale(1.08);
+    }
+
+    .close-btn {
+      // position: absolute;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      // bottom: 0;
+      // background-color: transparent;
+      // color: white;
+      // border: solid white 1px;
+      // padding: 10px 40px;
+      // cursor: pointer;
+      // font-size: large;
+      // font-family: variables.$informal-font;
+    }
+    .close-btn:hover {
+      // background-color: variables.$secondary-color;
+      // color: black;
+      // border: none;
+      // transition: all 0.5s ease;
+    }
+  }
+
+  .image {
+    // border: solid red;
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // border-radius: 10px;
+  }
+
+  // ?SECTION FOUR - WHO WE HELP.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION FIVE - PROCESS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .process-section-outer-container {
+    > h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 0 1rem 0 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+    > p {
+      // border: solid red;
+      text-align: left;
+      width: 100%;
+      padding: 0 1rem 0 1rem;
+      line-height: 1.7;
+      font-size: 1rem;
+      // margin-bottom: 3rem;
+    }
+    .process-cards-container {
+      // border: solid pink;
+      max-width: 93%;
+      // min-height: 400px;
+    }
+  }
+
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  .card {
+    min-width: 100%;
+    // min-height: 420px;
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 1rem;
+      // line-height: 1.7;
+      width: 99%;
+    }
+  }
+
+  // ?SECTION SIX - TESTIMONIALS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .testimonial-section-outer-container {
+    > div {
+      .text-container {
+        max-width: 90%;
+        // margin-bottom: 2.5rem;
+        > h3 {
+          font-size: 3rem;
+          line-height: 1.2;
+          text-align: left;
+          margin-bottom: 1.2rem;
+        }
+        > p {
+          // margin-bottom: 0.5rem;
+          // line-height: 1.7;
+          text-align: left;
+          font-size: 1rem;
+        }
+        > img {
+          display: block;
+        }
+      }
+    }
+  }
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  .testi-card {
+  }
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      padding-bottom: 6rem;
+      .pic-div {
+        justify-content: end;
+        padding-right: 4.5rem;
+        // border: solid blue;
+        .pic-vic-div {
+          width: 180px;
+          .social-decor {
+            width: 220px;
+            height: 280px;
+            left: -146px;
+          }
+          img {
+            width: 165px;
+            // height: 100%;
+          }
+          .vid {
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        padding-top: 4rem;
+        // border: solid red;
+        max-width: 100%;
+        > h3 {
+          font-size: 1.3rem;
+          padding: 0 1rem 0 1rem;
+          margin-bottom: 2rem;
+          line-height: 1.4;
+        }
+        .text {
+          padding: 0 1rem 0 0.5rem;
+          .icon {
+            width: 80px;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 100%;
+            h4 {
+              font-size: 1.1rem;
+              margin-bottom: 0.6rem;
+            }
+            p {
+              // font-size: 15px;
+              // line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      // border: solid red;
+      // TODO Text side
+      .text-div {
+        max-width: 100%;
+        // border: solid red;
+        > h3 {
+          font-size: 1.3rem;
+          padding: 0 1rem 0 1rem;
+          margin-bottom: 2rem;
+          line-height: 1.4;
+        }
+        .text {
+          padding: 0 1rem 0 0.5rem;
+          // border: solid red;
+          .icon {
+            width: 80px;
+          }
+          > div {
+            // border: solid pink;
+            // max-width: 100%;
+            h4 {
+              font-size: 1.1rem;
+              margin-bottom: 0.6rem;
+            }
+            p {
+              // font-size: 15px;
+              // line-height: 1.5;
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        padding-top: 0rem;
+        // flex-basis: 50%;
+        display: block;
+        // justify-content: start;
+        // align-items: center;
+        // border: solid blue;
+        // margin: auto;
+        .pic-vic-div {
+          // border: solid yellow;
+          margin: auto;
+          width: 90%;
+          height: 225px;
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  // ?SECTION EIGHT - PACKAGES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .packages-section-outer-container {
+    // padding: 4rem 0;
+
+    > h1 {
+      font-size: 4rem;
+    }
+
+    > .package-cards-container {
+      // flex-direction: column;
+      // border: solid red;
+      width: 90%;
+    }
+  }
+
+  // ?PACKAGE CARDS..........................
+  .package-card-shell {
+    width: 96%;
+    > h3 {
+      // margin-bottom: 0.6rem;
+    }
+
+    > p {
+      // margin-bottom: 1.1rem;
+    }
+
+    > .price {
+      font-size: 1.5rem;
+    }
+
+    > div {
+      // height: 15rem;
+      > ul {
+        // padding: 2rem 0.4rem;
+        > :last-child {
+          // padding-bottom: 1.9rem;
+        }
+        > li {
+          // margin-bottom: 0.9rem;
+        }
+      }
+    }
+
+    > a {
+      // padding: 13px 27px;
+    }
+  }
+
+  // ?Disclaimer div
+  .disclaimer-div {
+    // background-color: white;
+    // padding: 1rem;
+    // border-radius: 20px;
+    // margin: auto;
+    // margin-top: 3rem;
+    // font-size: 13px;
+    // font-family: variables.$informal-font;
+    // line-height: 1.6;
+    width: 90%;
+    // border: solid red;
+  }
+
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  .booking-section-outer-container {
+    > .booking-container {
+      max-width: 92%;
+      // margin: auto;
+      > p {
+        // font-size: 1rem;
+        // font-weight: 600;
+        // font-family: variables.$informal-font;
+        // color: variables.$primary-color;
+        margin-bottom: 0.6rem;
+      }
+      > h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .booking-form-shell {
+    // border: solid pink;
+    .packages-form-sect {
+      // background-color: variables.$primary-color;
+      padding: 2rem 1rem;
+      // color: white;
+      // border-radius: 10px;
+      > label {
+        font-size: 1.2rem;
+        // font-family: variables.$informal-font;
+        // font-weight: 600;
+      }
+      > div {
+        margin: 1.2rem 0 0 0;
+        margin-left: 0;
+        > input {
+        }
+        > label {
+          // margin-left: 8px;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .prospect-info-form-sect {
+      // margin-top: 3rem;
+      // border: solid variables.$primary-color;
+      // border-radius: 10px;
+      padding: 3rem 1rem;
+      // position: relative;
+      > .title {
+        padding: 0.8rem 2.1rem;
+        // position: absolute;
+        // top: -1.5rem;
+        left: 1rem;
+        // max-width: 300px;
+        // border-radius: 30px;
+        // background-color: variables.$primary-color;
+        // color: white;
+        // font-family: variables.$informal-font;
+      }
+
+      > .user-info-container {
+        // border: solid pink;
+        > div {
+          // display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          margin-bottom: 1.7rem;
+          > div {
+            // flex-basis: 50%;
+            > p {
+              // font-weight: 600;
+              font-size: 15px;
+            }
+            > input {
+              // width: 100%;
+              // height: 2.5rem;
+              // border: solid rgb(161, 161, 161) 1px;
+              // font-size: 1.1rem;
+              // padding-left: 5px;
+            }
+          }
+        }
+
+        .size-field {
+          // display: block;
+          > p {
+            font-size: 15px;
+            // font-weight: 600;
+          }
+          > input {
+            // width: 100%;
+            // height: 2.5rem;
+            // border: solid rgb(161, 161, 161) 1px;
+            // font-size: 1.1rem;
+            // padding-left: 5px;
+          }
+        }
+
+        .details-field {
+          // display: block;
+          margin-top: 2.5rem;
+          > p {
+            // font-weight: 600;
+            font-size: 15px;
+          }
+          > textarea {
+            // width: 100%;
+            height: 6rem;
+            // border: solid rgb(161, 161, 161) 1px;
+            // font-size: 1.1rem;
+            // padding: 5px;
+          }
+        }
+      }
+      .urgency-form-sect {
+        // padding: 2rem 0rem;
+        > label {
+          font-size: 15px;
+          // font-family: variables.$informal-font;
+          // font-weight: 600;
+        }
+        > div {
+          margin: 1.2rem 0 0 0;
+          // margin-left: 2px;
+          > input {
+          }
+          > label {
+            // margin-left: 8px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    button {
+      // width: 100%;
+      height: 3rem;
+      // margin-top: 1rem;
+      // background-color: variables.$primary-color;
+      // color: white;
+      // border: none;
+      // cursor: pointer;
+      // font-size: 1rem;
+    }
+  }
+
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  .contact-section-outer-container {
+    // margin-bottom: -2.5rem;
+    // z-index: 9999;
+    // position: relative;
+    // border: solid red;
+    .contact-container {
+      // border: solid pink;
+      // background-color: white;
+      width: 92%;
+      // margin: auto;
+      display: block;
+      // gap: 1rem;
+      // box-shadow: 1px 3px 11px 2px rgb(57, 57, 57);
+      // border-radius: 20px;
+
+      > div {
+        padding: 1.5rem 0 1.5rem;
+        // flex-basis: 33.3%;
+        > :first-child {
+          // display: block;
+          // margin: auto;`
+          // text-align: center;
+          margin-bottom: 1.3rem;
+          // font-size: 1.6rem;
+          // color: variables.$primary-color;
+        }
+        > p {
+          // text-align: center;
+          font-size: 1rem;
+          // color: #000000;
+        }
+      }
+    }
+  }
+
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  footer {
+    padding-top: 6rem !important;
+
+    .socials-div {
+      // margin-bottom: 5rem;
+      gap: 8px;
+      .icons {
+        // font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    // Content div.........................
+    .content-div {
+      // display: block;
+      max-width: 90%;
+      > div:first-child {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // margin-bottom: 7rem;
+        .label {
+          margin-bottom: 0.8rem;
+        }
+        .info {
+          font-size: 1.1rem;
+        }
+      }
+      > div:nth-child(2) {
+        margin-bottom: 4.5rem;
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 1.6rem;
+        }
+        button {
+          // font-size: 1rem;
+          // padding: 10px 22px;
+        }
+      }
+      > div:last-child {
+        // border: solid red;
+        // display: block;
+        img {
+          // margin: auto;
+          // display: block;
+          // width: 150px;
+        }
+        p {
+          // text-align: center;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+// TODO 376 PIXELS PIXELS MEDIA QUERIES
+@media (max-width: 376px) and (max-height: 811px) {
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .banner-image-container {
+    // border: solid red;
+    // position: relative;
+    height: 100vh;
+    // display: block;
+
+    > div {
+      // height: 100%;
+      // border: solid red;
+    }
+  }
+
+  .banner-text-container {
+    // width: 400px !important;
+    // text-align: left;
+    // border: solid purple;
+    // align-self: center;
+    // width: 93%;
+    // margin: auto;
+    // margin-left: 0;
+
+    h1 {
+      // font-size: 1.3rem;
+      // max-width: 100%;
+      margin-top: 8rem;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+    }
+
+    h2 {
+      // font-size: 17px;
+      // max-width: 100%;
+      // margin: 0;
+      // margin-bottom: 3.5rem;
+    }
+
+    %button-shared {
+      // padding: 1rem 2rem 1rem 2rem;
+      // width: 100%;
+      // margin: auto;
+      // display: block;
+      // border: none;
+      // font-size: 16px;
+    }
+
+    a:first-child {
+      // @extend %button-shared;
+      // margin-bottom: 1rem;
+    }
+
+    // button:last-child {
+    //   @extend %button-shared;
+    //   background-color: transparent;
+    //   border: solid white 1px;
+    //   color: white;
+    // }
+  }
+}
+
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// ! ABOUT ABOUT ABOUT SECTION................................................
+// TODO ABOUT ABOUT ABOUT SECTION................................................
+
+// ?SECTION TWO - ABOUT INTRO.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.about-banner-section {
+  position: relative;
+}
+
+.about-intro-section {
+  > .container-div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 1300px;
+    min-width: 1160px;
+
+    > .intro-text-section {
+      flex-basis: 35%;
+      > .title-container {
+        margin-bottom: 2rem;
+        > h2 {
+          font-size: 2.1rem !important;
+          margin-bottom: 10px;
+          font-family: variables.$formal-font !important;
+        }
+        > img {
+          width: 100px;
+        }
+      }
+      > h4 {
+        font-size: 1.4rem;
+        width: 90%;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        font-family: variables.$informal-font;
+      }
+      > p {
+        font-family: variables.$informal-font;
+        width: 92%;
+        font-size: 15px;
+        line-height: 1.7;
+        color: rgb(117, 117, 117);
+        margin-bottom: 1rem;
+      }
+      > div {
+        > :first-child {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 5px;
+          font-family: variables.$informal-font;
+        }
+        > :last-child {
+          color: orange;
+          font-family: variables.$informal-font;
+        }
+      }
+    }
+
+    /*VISION-MISSION*/
+    .vision-mission-div {
+      flex-basis: 55%;
+      display: flex;
+      align-items: end;
+      gap: 2rem;
+
+      > .container {
+        > .image-div {
+          width: 100%;
+          height: 210px;
+          margin-bottom: 1.5rem;
+          > img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        > h4 {
+          font-size: 1.4rem;
+          font-family: variables.$informal-font;
+          margin-bottom: 1rem;
+        }
+        > p {
+          font-family: variables.$informal-font;
+          font-size: 15px;
+          line-height: 1.7;
+          width: 95%;
+        }
+      }
+    }
+  }
+}
+
+// ?SECTION THREE - WHY US.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+
+.why-us-section {
+  background: linear-gradient(
+      to bottom,
+      rgb(26, 47, 71) 0%,
+      rgba(26, 47, 71, 0.95) 59%,
+      rgba(26, 47, 71, 0.9) 100%
+    ),
+    url("/services-background.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  .width-container {
+    padding: 0 10px;
+    margin: auto;
+    width: 1200px;
+    // border: solid red;
+    > h3 {
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 3px;
+      font-family: variables.$formal-font;
+    }
+    > img {
+      display: block;
+      margin: auto;
+      width: 100px;
+      padding: 12px 0 5px 0;
+    }
+    .cards-div {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      // border: orange solid;
+    }
+  }
+}
+
+.card-div {
+  min-height: 140px;
+  display: flex;
+  // padding: 10px 0;
+  gap: 1.8rem;
+  // border: solid pink;
+
+  .icon-div {
+    height: 60px;
+    background-color: variables.$secondary-color;
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      font-size: 2.5rem;
+    }
+  }
+  > div {
+    flex-basis: 80%;
+    h4 {
+      font-size: 1.1rem;
+      font-family: variables.$formal-font;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-family: variables.$informal-font;
+      line-height: 1.6;
+      font-size: 15px;
+      color: #e9e9e9d3;
+    }
+  }
+}
+
+// ?SECTION THREE - MESSAGE FROM CEO.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.ceo-message-section {
+  > .width-container {
+    padding: 0 1rem;
+    margin: auto;
+    width: 1200px;
+    // border: solid pink;
+    > h3 {
+      font-size: 2.1rem;
+      font-family: variables.$formal-font;
+    }
+    > img {
+      width: 100px;
+      padding: 12px 0 5px 0;
+    }
+    .ceo-content-div {
+      margin-top: 2rem;
+      display: flex;
+      gap: 4rem;
+      // border: solid red;
+      .ceo-pic-div {
+        flex-basis: 30%;
+        height: 400px;
+        > img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .ceo-text-div {
+        flex-basis: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > h4 {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          font-family: variables.$informal-font;
+        }
+        > p {
+          font-family: variables.$informal-font;
+          line-height: 1.7;
+          font-size: 15px;
+          color: #7c7c7c;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  @include elevenSixty;
+}
+
+@media (max-width: 1012px) {
+  @include tentwelve;
+}
+
+@media (max-width: 830px) {
+  @include eightThirty;
+}
+
+@media (max-width: 699px) {
+  @include sixNineNine;
+}
+
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+// ! SERVICES SERVICES SERVICES SECTION................................................
+
+// ?SECTION TWO - OVERVIEW OF SERVICES.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.overview-services-section {
+  > .width-div {
+    width: 1300px;
+    margin: auto;
+    // border: solid pink;
+    > h3 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: variables.$formal-font;
+    }
+    > img {
+      width: 100px;
+      margin: auto;
+      display: block;
+      margin-bottom: 1.6rem;
+    }
+    > p {
+      width: 60%;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 3.5rem;
+      line-height: 1.7;
+      font-family: variables.$informal-font;
+      color: variables.$text-grey;
+    }
+
+    > .cards-div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+  }
+}
+
+.service-card {
+  // border: solid green;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  > .icon-div {
+    padding: 11px;
+    background-color: variables.$primary-color;
+    border-radius: 15px;
+    margin-bottom: 1.2rem;
+    > .icon {
+      font-size: 1.8rem;
+      color: white;
+    }
+  }
+  > h4 {
+    text-align: center;
+    font-size: 1rem;
+    font-family: variables.$formal-font;
+  }
+  > p {
+    text-align: center;
+    font-family: variables.$informal-font;
+    line-height: 1.7;
+    color: variables.$text-grey;
+  }
+}
+
+// ?SECTION THREE - PHOTOS SECTION.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.photos-section {
+  background-color: variables.$primary-color;
+  color: white;
+  > h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    font-family: variables.$formal-font;
+  }
+  > p {
+    text-align: center;
+    font-family: variables.$informal-font;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  > .width-div {
+    width: 1300px;
+    margin: auto;
+    margin-bottom: 4.5rem;
+  }
+
+  .slick-track {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .slider-image {
+    border-radius: 15px;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #ffffff;
+  }
+
+  > a {
+    display: block;
+    margin: auto;
+    background-color: variables.$secondary-color;
+    font-size: 1.1rem;
+    font-family: variables.$informal-font;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 5px;
+    width: 15rem;
+    text-align: center;
+    color: black;
+  }
+}
+
+// ?SECTION FOUR - VIDEOS SECTION.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+
+.video-section {
+  color: white;
+  > .width-div {
+    width: 1375px;
+    margin: auto;
+    background-color: variables.$primary-color;
+    padding: 6rem 4rem;
+    border-radius: 60px;
+    > h3 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.6rem;
+      font-family: variables.$formal-font;
+    }
+    > p {
+      text-align: center;
+      font-family: variables.$informal-font;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+
+    > .videos-div {
+      width: 100%;
+      // border: solid red;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      margin-bottom: 3rem !important;
+      .video-div {
+        width: 370px;
+        height: 230px;
+        background-color: red;
+      }
+    }
+
+    > a {
+      display: block;
+      margin: auto;
+      width: 15rem;
+      text-align: center;
+      color: black;
+      background-color: variables.$secondary-color;
+      font-size: 1.1rem;
+      font-family: variables.$informal-font;
+      border: none;
+      padding: 15px 28px;
+      border-radius: 5px;
+    }
+  }
+}
+
+// ?SECTION FIVE - VITUAL TOURS SECTION.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.virtual-tour-section {
+  > .width-div {
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 5rem;
+    // border: solid red;
+    > .image-div {
+      // border: solid green;
+      border-radius: 25px;
+      flex-basis: 55%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+        border-radius: 25px;
+      }
+    }
+
+    > .text-content-div {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > h3 {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+        font-family: variables.$formal-font;
+      }
+      > p {
+        font-family: variables.$informal-font;
+        width: 90%;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+      > ul {
+        margin-left: 2rem;
+        margin-bottom: 3rem;
+        // border: solid red;
+        li {
+          list-style: disc;
+          margin-bottom: 1rem;
+        }
+      }
+      > a {
+        background-color: variables.$secondary-color;
+        font-size: 1.1rem;
+        text-align: center;
+        font-family: variables.$informal-font;
+        border: none;
+        padding: 19px 0px;
+        width: 200px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// ?SECTION SIX - FLOOR PLANS.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.floor-plan-section {
+  padding: 12rem 0;
+  background-color: variables.$primary-color;
+  color: white;
+  > .width-div {
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 5rem;
+    > .text-content-div {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > h3 {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+        font-family: variables.$formal-font;
+      }
+      > img {
+        width: 100px;
+        margin-bottom: 3rem;
+      }
+      > p {
+        font-family: variables.$informal-font;
+        width: 99%;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+      }
+      > a {
+        background-color: variables.$secondary-color;
+        font-size: 1.1rem;
+        text-align: center;
+        color: black;
+        font-family: variables.$informal-font;
+        border: none;
+        padding: 19px 0px;
+        width: 200px;
+        border-radius: 5px;
+      }
+    }
+
+    > .image-div {
+      flex-basis: 60%;
+      height: 500px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 45px;
+      img {
+        object-fit: cover;
+        width: 80%;
+        height: 80%;
+        box-shadow: 3px 3px 5px 5px rgb(148, 148, 148);
+      }
+    }
+  }
+}
+
+// ?SECTION SEVEN - MORE SERVICES.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+
+.more-services-section {
+  padding: 4.5rem 0;
+  > .width-div {
+    width: 1300px;
+    margin: auto;
+    > h3 {
+      font-size: 2.3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      font-family: variables.$formal-font;
+    }
+  }
+}
+
+.tab-component-div {
+  height: 800px;
+  > .tabs-div {
+    padding: 0rem 1.5rem 2.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    border-bottom: solid black 1px;
+    margin-bottom: 4rem;
+    > .tab {
+      flex-basis: 25%;
+      font-size: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      padding: 19px 0;
+      background-color: variables.$primary-color;
+      color: white;
+    }
+
+    .active-tab {
+      background-color: variables.$secondary-color;
+      margin-top: 5px;
+    }
+  }
+}
+
+.sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > img {
+    width: 50%;
+    margin-bottom: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+  }
+  > h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+    text-align: center;
+  }
+  > p {
+    font-family: variables.$informal-font;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 1385px) {
+  @include thirteen85;
+}
+
+@media (max-width: 935px) {
+  @include nine35;
+}
+
+@media (max-width: 775px) {
+  @include seven75;
+}
+
+@media (max-width: 671px) {
+  @include six71;
+}
+
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+// ! PORTFOLIO PORTFOLIO PORTFOLIO SECTION................................................
+
+// ?SECTION TWO - GRID IMAGES ONE.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.portfolio-grid-section {
+  padding: 2.5rem 2rem;
+}
+
+.portfolio-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.3rem;
+  justify-content: center;
+  .portfolio-image-container {
+    height: 320px;
+    overflow: hidden;
+    // width: 400px;
+    > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+    }
+    > img:hover {
+      width: 103%;
+      height: 103%;
+    }
+  }
+}
+
+// ?SECTION THREE - TWO BIG IMAGES SECTION.....................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ?..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+// ..................................................................................
+.two-big-images-section {
+  padding: 2.5rem 2rem;
+  // border: solid red;
+  > .images-containerr {
+    // border: solid pink;
+    display: flex;
+    gap: 1.5rem;
+    // justify-content: space-between;
+
+    > .image1-containerr {
+      background-color: blue;
+      // border: solid green;
+      height: 500px;
+      flex-basis: 50%;
+      overflow: hidden;
+      > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+      }
+      > img:hover {
+        width: 103%;
+        height: 103%;
+      }
+    }
+    > .image2-containerr {
+      // border: solid blue;
+      background-color: blue;
+      height: 500px;
+      flex-basis: 50%;
+      overflow: hidden;
+      > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+      }
+      > img:hover {
+        width: 103%;
+        height: 103%;
+      }
+    }
+  }
+}
+
+// !EXPNADED GENERAL GALLERY SLIDER......................................................................
+// !........................................................................
+// !........................................................................
+// !........................................................................
+// !........................................................................
+// !........................................................................
+// !........................................................................
+// !........................................................................
+
+.slider-general {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: solid red;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 9999;
+
+  %arrows-shared-general {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: variables.$secondary-color;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .right-arrow-general {
+    @extend %arrows-shared-general;
+    right: 5rem;
+  }
+
+  .left-arrow-general {
+    @extend %arrows-shared-general;
+    left: 5rem;
+  }
+
+  .slide-general {
+    opacity: 0;
+    transition-duration: 1.5s ease;
+  }
+
+  .slide-active-general {
+    opacity: 1;
+    transition-duration: 1.5s;
+    transform: scale(1.08);
+  }
+
+  .close-btn-general {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    background-color: transparent;
+    color: white;
+    border: solid white 1px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: large;
+    font-family: variables.$informal-font;
+  }
+  .close-btn-general:hover {
+    background-color: variables.$secondary-color;
+    color: black;
+    border: none;
+    transition: all 0.5s ease;
+  }
+}
+
+.image-general {
+  // border: solid red;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+  @include thirteen00;
+}
+
+@media (max-width: 1000px) {
+  @include one00;
+}
+
+@media (max-width: 690px) {
+  @include six90;
+}
+
+@media (max-width: 490px) {
+  @include four90;
+}

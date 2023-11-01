@@ -1,0 +1,422 @@
+@mixin nine35 {
+  // ?SECTION TWO - OVERVIEW OF SERVICES.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .overview-services-section {
+    > .width-div {
+      //   width: 100%;
+      //   margin: auto;
+      //   border: solid pink;
+
+      > h3 {
+        // font-size: 2rem;
+        // text-align: center;
+        // margin-bottom: 1rem;
+      }
+      > img {
+        // width: 100px;
+        // margin: auto;
+        // display: block;
+        // margin-bottom: 1.6rem;
+      }
+      > p {
+        // width: 70%;
+        // text-align: center;
+        // margin: auto;
+        // margin-bottom: 3.5rem;
+        // line-height: 1.7;
+        // font-family: variables.$informal-font;
+        // color: variables.$text-grey;
+      }
+
+      > .cards-div {
+        // display: grid;
+        // grid-template-columns: repeat(2, minmax(100px, 1fr));
+        // border: solid red;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .service-card {
+    // border: solid green;
+    // padding: 0 1rem;
+    // height: 260px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
+    > .icon-div {
+      //   padding: 11px;
+      //   background-color: variables.$primary-color;
+      //   border-radius: 15px;
+      //   margin-bottom: 1.2rem;
+      > .icon {
+        // font-size: 1.8rem;
+        // color: white;
+      }
+    }
+    > h4 {
+      //   text-align: center;
+      //   font-size: 1.4rem;
+    }
+    > p {
+      //   text-align: center;
+      //   font-family: variables.$informal-font;
+      //   line-height: 1.7;
+      //   color: variables.$text-grey;
+      width: 80%;
+    }
+  }
+
+  // ?SECTION THREE - PHOTOS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .photos-section {
+    // background-color: variables.$primary-color;
+    // color: white;
+    > h3 {
+      //   font-size: 3rem;
+      //   text-align: center;
+      //   margin-bottom: 1.6rem;
+    }
+    > p {
+      //   text-align: center;
+      //   font-family: variables.$informal-font;
+      //   width: 60%;
+      //   margin: auto;
+      //   margin-bottom: 3rem;
+      //   line-height: 1.6;
+    }
+    > .width-div {
+      //   width: 100%;
+      //   margin: auto;
+      //   margin-bottom: 4.5rem;
+    }
+
+    .slick-track {
+      //   display: flex;
+      //   gap: 1.5rem;
+    }
+
+    .slider-image {
+      //   border-radius: 15px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      //   color: #ffffff;
+    }
+
+    > button {
+      //   display: block;
+      //   margin: auto;
+      //   background-color: variables.$secondary-color;
+      //   font-size: 1.1rem;
+      //   font-family: variables.$informal-font;
+      //   border: none;
+      //   padding: 15px 28px;
+      //   border-radius: 5px;
+    }
+  }
+
+  // ?SECTION FOUR - VIDEOS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+
+  .video-section {
+    // color: white;
+    > .width-div {
+      width: 90%;
+      //   margin: auto;
+      //   background-color: variables.$primary-color;
+      //   padding: 6rem 4rem;
+      //   border-radius: 20px;
+      > h3 {
+        // font-size: 2.5rem;
+        // text-align: center;
+        // margin-bottom: 1.6rem;
+      }
+      > p {
+        // text-align: center;
+        // font-family: variables.$informal-font;
+        width: 80%;
+        // margin: auto;
+        margin-bottom: 5rem;
+        // line-height: 1.6;
+      }
+
+      > .videos-div {
+        width: 95%;
+        // margin: auto;
+        // border: solid red;
+        // gap: 4rem;
+        // display: grid;
+        // grid-template-columns: repeat(1, 1fr);
+        // justify-items: center;
+        // margin-bottom: 3rem;
+        .video-div {
+          width: 540px;
+          height: 295px;
+          //   background-color: red;
+        }
+      }
+
+      > button {
+        // display: block;
+        // margin: auto;
+        margin-top: 4rem;
+        // background-color: variables.$secondary-color;
+        // font-size: 1.1rem;
+        // font-family: variables.$informal-font;
+        // border: none;
+        // padding: 15px 28px;
+        // border-radius: 5px;
+      }
+    }
+  }
+
+  // ?SECTION FIVE - VITUAL TOURS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .virtual-tour-section {
+    > .width-div {
+      //   width: 100%;
+      padding: 0 1.7rem;
+      //   margin: auto;
+      //   display: flex;
+      //   flex-direction: column;
+      //   gap: 5rem;
+      // border: solid red;
+      > .image-div {
+        // border: solid blue;
+        // margin: auto;
+        width: 89%;
+        // border-radius: 25px;
+        // flex-basis: 55%;
+        img {
+          //   object-fit: cover;
+          //   width: 100%;
+          //   height: 500px;
+          //   border-radius: 20px;
+        }
+      }
+
+      > .text-content-div {
+        // border: solid red;
+        // margin: auto;
+        // flex-basis: 45%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        padding: 0 7px 0 7px;
+        > h3 {
+          //   font-size: 2.5rem;
+          //   margin-bottom: 1.6rem;
+        }
+        > p {
+          //   font-family: variables.$informal-font;
+          //   width: 90%;
+          //   margin-bottom: 3rem;
+          //   line-height: 1.6;
+        }
+        > ul {
+          //   margin-left: 1rem;
+          //   margin-bottom: 3rem;
+          // border: solid red;
+          li {
+            // list-style: disc;
+            // margin-bottom: 1rem;
+          }
+        }
+        > button {
+          //   background-color: variables.$secondary-color;
+          //   font-size: 1.1rem;
+          //   font-family: variables.$informal-font;
+          //   border: none;
+          //   padding: 19px 0px;
+          //   width: 200px;
+          //   border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  // ?SECTION SIX - FLOOR PLANS.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .floor-plan-section {
+    // padding: 9rem 20px;
+    // background-color: variables.$primary-color;
+    // color: white;
+    > .width-div {
+      //   padding: 0rem 20px;
+      max-width: 745px;
+      //   min-width: 500px;
+      height: 900px;
+      //   margin: auto;
+      //   display: flex;
+      //   flex-direction: column;
+      gap: 7rem;
+      > .text-content-div {
+        // border: solid red;
+        // order: 2;
+        // flex-basis: 30%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        > h3 {
+          //   font-size: 2.5rem;
+          //   margin-bottom: 1.6rem;
+        }
+        > img {
+          //   width: 100px;
+          //   margin-bottom: 3rem;
+        }
+        > p {
+          //   font-family: variables.$informal-font;
+          width: 90%;
+          //   margin-bottom: 3.5rem;
+          //   line-height: 1.7;
+        }
+        > button {
+          //   background-color: variables.$secondary-color;
+          //   font-size: 1.1rem;
+          //   font-family: variables.$informal-font;
+          //   border: none;
+          //   padding: 19px 0px;
+          //   width: 200px;
+          //   border-radius: 5px;
+        }
+      }
+
+      > .image-div {
+        // margin: auto;
+        // flex-basis: 70%;
+        width: 95%;
+        // background-color: #ffffff;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // border-radius: 45px;
+        img {
+          //   object-fit: cover;
+          //   width: 80%;
+          //   height: 80%;
+          //   box-shadow: 3px 3px 5px 5px rgb(148, 148, 148);
+        }
+      }
+    }
+  }
+
+  // ?SECTION SEVEN - MORE SERVICES.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+
+  .more-services-section {
+    // padding: 5rem 2rem;
+    > .width-div {
+      //   width: 100%;
+      //   margin: auto;
+      > h3 {
+        // font-size: 2.3rem;
+        // margin-bottom: 3rem;
+        // text-align: center;
+      }
+    }
+  }
+
+  .tab-component-div {
+    height: 790px;
+    // border: solid blue;
+    > .tabs-div {
+      //   padding: 0rem 1.5rem 2.3rem;
+      //   display: flex;
+      //   justify-content: center;
+      gap: 1rem;
+      //   border-bottom: solid black 1px;
+      //   margin-bottom: 4rem;
+      > .tab {
+        // flex-basis: 25%;
+        // font-size: 1rem;
+        // text-align: center;
+        // cursor: pointer;
+        // padding: 19px 0;
+        // background-color: variables.$primary-color;
+        // color: white;
+      }
+
+      .active-tab {
+        // background-color: variables.$secondary-color;
+        // margin-top: 5px;
+      }
+    }
+  }
+
+  .sect {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    > img {
+      width: 60%;
+      //   margin-bottom: 1.8rem;
+      //   border-radius: 15px;
+      //   box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+    }
+    // > h4 {
+    //   font-size: 1.5rem;
+    //   margin-bottom: 1.3rem;
+    //   text-align: center;
+    // }
+    > p {
+      //   font-family: variables.$informal-font;
+      width: 90%;
+      //   text-align: center;
+      //   margin-bottom: 1rem;
+      //   line-height: 1.7;
+    }
+  }
+}
