@@ -47,7 +47,7 @@ function About() {
           <div className="vision-mission-div">
             <div className="container">
               <div className="image-div">
-                <img src="/10.jpg" alt="" />
+                <img src="/poggi-3.jpg" alt="" />
               </div>
               <h4>Our Mission</h4>
               <p>
@@ -59,14 +59,13 @@ function About() {
 
             <div className="container">
               <div className="image-div">
-                <img src="/11.jpg" alt="" />
+                <img src="/poggi-7.jpg" alt="" />
               </div>
               <h4>Our Vision</h4>
               <p>
                 We will continue to create a brand recognized for outstanding
                 creative and quality work while pushing the boundaries of what's
-                been done. Pushing further into the luxury market, both locally
-                and abroad.
+                been done. Pushing further into the luxury market.
               </p>
             </div>
           </div>
@@ -167,7 +166,7 @@ function About() {
           <img src="/decoration-line.png" alt="" />
           <div className="ceo-content-div">
             <div className="ceo-pic-div">
-              <img src="/ceo-pic.jpg" alt="" />
+              <img src="/me.jpg" alt="" />
             </div>
             <div className="ceo-text-div">
               <h4>We Serve With Joy</h4>

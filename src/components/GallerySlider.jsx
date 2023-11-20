@@ -31,9 +31,9 @@ function GallerySlider() {
     // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 7000,
+    // autoplay: true,
+    // speed: 1000,
+    // autoplaySpeed: 7000,
     pauseOnHover: false,
     // cssEase: "linear",
   };
@@ -43,7 +43,7 @@ function GallerySlider() {
       <Slider {...settings}>
         <div className="images-container">
           {imagesData.slice(0, 9).map((imagesData, index) => (
-            <LazyLoad offset={100} once>
+            <LazyLoad offset={200} once>
               <img
                 alt="Homes"
                 style={{
@@ -62,7 +62,7 @@ function GallerySlider() {
             </LazyLoad>
           ))}
         </div>
-        <LazyLoad offset={100} once>
+        <LazyLoad offset={200} once>
           <div className="images-container">
             {imagesData.slice(9, 18).map((imagesData, index) => (
               <img
@@ -83,7 +83,7 @@ function GallerySlider() {
             ))}
           </div>
         </LazyLoad>
-        <LazyLoad offset={100} once>
+        <LazyLoad offset={200} once>
           <div className="images-container">
             {imagesData.slice(18, 27).map((imagesData, index) => (
               <img

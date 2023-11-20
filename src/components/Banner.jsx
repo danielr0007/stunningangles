@@ -12,16 +12,16 @@ const Banner = () => {
       subheadline:
         "Make a lasting impression and establish your reputation as a top-tier realtor with stunning visuals.",
       buttonText: "Button 1",
-      imageUrl: "/banner1.jpg", // Replace with the URL of your first image
+      imageUrl: "/poggi-12.jpg", // Replace with the URL of your first image
     },
-    {
-      headline:
-        "Unlock the Full Potential of Your Listings: Professional Real Estate Photography",
-      subheadline:
-        "Discover the power of compelling visuals that attract more buyers and help you sell properties faster.",
-      buttonText: "Button 2",
-      imageUrl: "/banner2.jpg", // Replace with the URL of your second image
-    },
+    // {
+    //   headline:
+    //     "Unlock the Full Potential of Your Listings: Professional Real Estate Photography",
+    //   subheadline:
+    //     "Discover the power of compelling visuals that attract more buyers and help you sell properties faster.",
+    //   buttonText: "Button 2",
+    //   imageUrl: "/banner2.jpg", // Replace with the URL of your second image
+    // },
     // Add more slides as needed
   ];
 
@@ -72,12 +72,12 @@ const Banner = () => {
             </div>
           </div>
 
-          <button className="banner-next" onClick={nextSlide}>
+          {/* <button className="banner-next" onClick={nextSlide}>
             <FaArrowAltCircleRight />
-          </button>
-          <button className="banner-previous" onClick={prevSlide}>
+          </button> */}
+          {/* <button className="banner-previous" onClick={prevSlide}>
             <FaArrowAltCircleLeft />
-          </button>
+          </button> */}
         </div>
       ))}
     </div>

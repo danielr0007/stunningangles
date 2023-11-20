@@ -12,7 +12,7 @@ const Video = () => {
           muted
           loop
           style={{ width: "100%", height: "100%" }}
-          src="/customer-service.mp4"
+          src="/stunning team video.mov"
         ></video>
       </LazyLoad>
     </div>

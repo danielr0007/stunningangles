@@ -61,10 +61,18 @@ function Portfolio() {
       <section className="two-big-images-section">
         <div className="images-containerr">
           <div className="image1-containerr">
-            <img src={imagesData[7].image} alt="" />
+            <img
+              src={imagesData[7].image}
+              alt=""
+              onClick={() => expandImage(imagesData[7].id)}
+            />
           </div>
           <div className="image2-containerr">
-            <img src={imagesData[8].image} alt="" />
+            <img
+              src={imagesData[8].image}
+              alt=""
+              onClick={() => expandImage(imagesData[8].id)}
+            />
           </div>
         </div>
       </section>
@@ -96,10 +104,18 @@ function Portfolio() {
       <section className="two-big-images-section">
         <div className="images-containerr">
           <div className="image1-containerr">
-            <img src={imagesData[19].image} alt="" />
+            <img
+              src={imagesData[19].image}
+              alt=""
+              onClick={() => expandImage(imagesData[19].id)}
+            />
           </div>
           <div className="image2-containerr">
-            <img src={imagesData[18].image} alt="" />
+            <img
+              src={imagesData[18].image}
+              alt=""
+              onClick={() => expandImage(imagesData[18].id)}
+            />
           </div>
         </div>
       </section>
@@ -110,7 +126,7 @@ function Portfolio() {
       {/* ........................................................................................ */}
       <section className="portfolio-grid-section">
         <PortfolioGallery>
-          {imagesData.slice(20, 37).map((unit, index) => {
+          {imagesData.slice(20, 35).map((unit, index) => {
             return (
               <div key={unit.id} className="portfolio-image-container">
                 <img

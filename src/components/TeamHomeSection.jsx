@@ -10,7 +10,7 @@ function TeamHomeSection() {
       {/* Left side */}
       <div className="left-images-container">
         <div className="image-1">
-          <img src="/team-1.jpg" alt="" />
+          <img src="/me.jpg" alt="" />
         </div>
         <div className="image-2">
           <img src="/team-2.jpg" alt="" />

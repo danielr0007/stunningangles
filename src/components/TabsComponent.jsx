@@ -71,7 +71,7 @@ function TabsComponent() {
 
       {showSection.drone && (
         <div className="sect">
-          <img src="/10.jpg" alt="" />
+          <img src="/mhdrone-2.jpg" alt="" />
           <h4>Drone Shots</h4>
           <p>
             We charge just $95 for our 6 drone photo package. Our photographers

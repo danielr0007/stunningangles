@@ -10,7 +10,7 @@ function GenericBanner(props) {
       className="gen-banner-container"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgb(26, 47, 71, 1) 10%, rgba(0, 0, 0, .7) 59%, rgba(0, 0, 0, .7) 100%),
-        url("/services-background.jpg")`,
+        url("/poggi-2.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
