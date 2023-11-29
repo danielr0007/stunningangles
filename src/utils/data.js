@@ -2,36 +2,40 @@ export const services = [
   {
     firstName: "HDR",
     lastName: "Photos",
-    description: "Beautifully hand-blended images",
+    description: `Our photos employ the 'High Dynamic Range' technique, ensuring an ideal harmony between brightness and colors, resulting in strikingly vivid images brimming with incredible detail.`,
     image: "/poggi-11.jpg",
     id: 0,
   },
   {
     firstName: "Drone",
     lastName: "Photos",
-    description: "Part 107 certified drone pilots",
+    description:
+      "Nothing showcases the fullness of a home quite like aerial photos. They allow potential buyers to fall in love with the landscapes, architectural features, and the surrounding neighborhood.",
     image: "/mhdrone-2.jpg",
     id: 1,
   },
   {
     firstName: "Cinematic",
     lastName: "Video Tours",
-    description: "Show-stopping 4K videos",
+    description:
+      "Capturing the essence and charm of each room, every unique angle, and the overall flow of the space, the stunning cinematic 4K video serves as a great pre-qualifier, ensuring that only serious buyers respond.",
     image: "/4k-video-shot.jpg",
     id: 2,
   },
   {
     firstName: "Virtual",
     lastName: "Tours",
-    description: "Matterport or Zillow 3D Tours",
+    description:
+      "A dynamic, lifelike walkthrough of your listings, allowing potential buyers to virtually navigate every room, peek around corners, and truly envision themselves in the space",
     image: "/virtual-tour-shot.jpg",
     id: 3,
   },
   {
     firstName: "Floor",
     lastName: "Plans",
-    description: "What every buyer wants",
-    image: "/floorplan-shot.jpg",
+    description:
+      "From room space to the arrangement of each area, our precise floorplans bring clarity and structure to your listings, helping buyers imagine furnishing their future home.",
+    image: "/floorplan-shot.webp",
     id: 4,
   },
 ];
@@ -238,21 +242,21 @@ export const process = [
     id: 1,
     name: "Book a Shoot",
     description:
-      "Schedule your photoshoot online or by calling our office at 407-377-7766. Our booking system is designed to set appointments for your earliest possible convenience!",
+      "Book your photoshoot online (fill out the brief form the bottom of this page) or call 954-415-8906. Our user-friendly booking system offers various options, allowing you to select the one that perfectly fits your needs. It takes approximately 3 minutes to complete.",
     image: "/process-calendar.png",
   },
   {
     id: 2,
     name: "Photoshoot",
     description:
-      "One of our professional photographers will arrive to the property at the scheduled time. Photoshoot durations range from 1 hour to 3 hours depending on square footage",
+      "A professional photographer will arrive at the property at the designated time. You can choose to either meet them in person or provide the access code, whichever suits you best. Photoshoot durations vary between 1 to 3 hours, depending on the square footage.",
     image: "/process-camera.png",
   },
   {
     id: 3,
     name: "Delivery",
     description:
-      "The completed photoshoot is sent to you via email address. Photoshoots done on weekdays are delivered next-day by 5pm. Weekend photoshoots are delivered Monday by 5pm.",
+      "Once completed, the photoshoot is sent to your email address. Weekday photoshoots are delivered the next day by 8 PM, while weekend sessions are delivered by Monday at 5 PM. Regarding videoshoots, allow us up to 48 hours to craft a Hollywood-like masterpiece.",
     image: "/process-mail.png",
   },
 ];
@@ -262,46 +266,185 @@ export const process = [
 // ?PRICE PACKAGES...........................................................................
 // ?PRICE PACKAGES...........................................................................
 // ?PRICE PACKAGES...........................................................................
-export const packages = [
+export const defaultPackage = [
   {
-    name: "Get It Sold Package",
-    subHeadline: "25 Professionally Edited Photos",
-    price: "$235 plus tax",
+    name: "Modern Listing Photo Package",
+    subHeadline: "Complete photos only package",
+    price: "$ enter sqft",
     features: [
-      "Exterior",
-      "Interior",
+      "Exterior Photos",
+      "Interior Photos",
+      "6 Aerial/Drone Photos (Home & Neighborhood & Community Amenities)",
       "Professional Editing",
-      "Standard Floor-Plan",
-      "Marketing Kit (Website, Premade Flyers, Social Media Posts, Social Media Videos)",
-    ],
-  },
-  {
-    name: "Blow Them Away Package",
-    subHeadline: "40 Professionally Edited Photos",
-    price: "$365 plus tax",
-    features: [
-      "Exterior",
-      "Interior",
-      "6 Aerial/Drone",
-      "Professional Editing",
-      "Standard Floor-Plan",
-      "Marketing Kit (Website, Premade Flyers, Social Media Posts, Social Media Videos)",
-    ],
-  },
-  {
-    name: "Become Unforgettable Package",
-    subHeadline: "40 Professionally Edited Photos",
-    price: "$825 plus tax",
-    features: [
-      "Exterior",
-      "Interior",
-      "12 Aerial/Drone (Home & Neighborhood & Community Amenities)",
-      "Professional Editing",
-      "60 Second Cinematic Video",
-      "Matterport 3D Tour",
-      "Standard Floor-Plan",
-      "Marketing Kit (Website, Premade Flyers, Social Media Posts, Social Media Videos)",
+      "Image SlideShow Video",
+      "Hand-coded Listing Website",
+      "Premade Flyers",
+      "Premade Social Media Posts",
       "Delivered in both High Resolution and MLS or AirBnB format",
     ],
+  },
+  {
+    name: "Modern Listing Video Package",
+    subHeadline: "Complete video only package",
+    price: "$ enter sqft",
+    features: [
+      "3-4 minute 4k Cinematic Video",
+      "Includes Drone video footage",
+      "Professional editing w/ music",
+      "30-45 Second Social Media Video Reel (vertical for tiktok & instagram)",
+      "Hand-coded Listing Website",
+    ],
+  },
+  {
+    name: "Full Photo/Video Package",
+    subHeadline: "Complete photos and video package",
+    price: "$ enter sqft",
+    features: [
+      "Exterior Photos",
+      "Interior Photos",
+      "12 Aerial/Drone photos (Home & Neighborhood & Community Amenities)",
+      "Professional Editing",
+      "3-4 minute 4k Cinematic Video w/ drone footage",
+      "45 Second Social Media Video Reel (vertical for tiktok & instagram)",
+      "Hand-coded Listing Website",
+      "Premade Flyers",
+      "Premade Social Media Posts",
+      "Delivered in both High Resolution and MLS or AirBnB format",
+    ],
+  },
+  {
+    name: "Social Media Package",
+    subHeadline: "Complete photos and video package",
+    price: "$ enter sqft",
+    features: [
+      "Exterior Photos",
+      "Interior Photos",
+      "6 Aerial/Drone photos (Home & Neighborhood & Community Amenities)",
+      "Professional Editing",
+      "45 Second Social Media Video Reel (vertical for tiktok & instagram)",
+      "Image SlideShow Video",
+      "Hand-coded Listing Website",
+      "Premade Flyers",
+      "Premade Social Media Posts",
+      "Delivered in both High Resolution and MLS or AirBnB format",
+    ],
+  },
+];
+
+const tier1 = [
+  {
+    ...defaultPackage[0],
+    price: "$210 plus tax",
+  },
+  {
+    ...defaultPackage[1],
+    price: "$365 plus tax",
+  },
+  {
+    ...defaultPackage[2],
+    price: "$525 plus tax",
+  },
+  {
+    ...defaultPackage[3],
+    price: "$335 plus tax",
+  },
+];
+
+const tier2 = [
+  {
+    ...defaultPackage[0],
+    price: "$285 plus tax",
+  },
+  {
+    ...defaultPackage[1],
+    price: "$470 plus tax",
+  },
+  {
+    ...defaultPackage[2],
+    price: "$650 plus tax",
+  },
+  {
+    ...defaultPackage[3],
+    price: "$410 plus tax",
+  },
+];
+
+const tier3 = [
+  {
+    ...defaultPackage[0],
+    price: "$365 plus tax",
+  },
+  {
+    ...defaultPackage[1],
+    price: "$575 plus tax",
+  },
+  {
+    ...defaultPackage[2],
+    price: "$780 plus tax",
+  },
+  {
+    ...defaultPackage[3],
+    price: "$495 plus tax",
+  },
+];
+
+const tier4 = [
+  {
+    ...defaultPackage[0],
+    price: "$445 plus tax",
+  },
+  {
+    ...defaultPackage[1],
+    price: "$675 plus tax",
+  },
+  {
+    ...defaultPackage[2],
+    price: "$910 plus tax",
+  },
+  {
+    ...defaultPackage[3],
+    price: "$580 plus tax",
+  },
+];
+
+const tier5 = [
+  {
+    ...defaultPackage[0],
+    price: "$520 plus tax",
+  },
+  {
+    ...defaultPackage[1],
+    price: "$780 plus tax",
+  },
+  {
+    ...defaultPackage[2],
+    price: "$1040 plus tax",
+  },
+  {
+    ...defaultPackage[3],
+    price: "$655 plus tax",
+  },
+];
+
+export const packages = [
+  {
+    name: "tier 1",
+    packages: tier1,
+  },
+  {
+    name: "tier 2",
+    packages: tier2,
+  },
+  {
+    name: "tier 3",
+    packages: tier3,
+  },
+  {
+    name: "tier 4",
+    packages: tier4,
+  },
+  {
+    name: "tier 5",
+    packages: tier5,
   },
 ];

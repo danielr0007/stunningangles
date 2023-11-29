@@ -8,9 +8,10 @@ const Banner = () => {
   // Define your slides with headline, subheadline, button text, and image URL
   const slides = [
     {
-      headline: "Elevate Your Brand with High-Quality Real Estate Photography",
+      headline:
+        "Rise Above with Memorable, Eye-Grabbing Real Estate Photography",
       subheadline:
-        "Make a lasting impression and establish your reputation as a top-tier realtor with stunning visuals.",
+        "Make your presence known and establish your reputation as a top-tier realtor with stunning visuals.",
       buttonText: "Button 1",
       imageUrl: "/poggi-12.jpg", // Replace with the URL of your first image
     },

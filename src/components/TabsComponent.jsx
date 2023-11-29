@@ -72,54 +72,64 @@ function TabsComponent() {
       {showSection.drone && (
         <div className="sect">
           <img src="/mhdrone-2.jpg" alt="" />
-          <h4>Drone Shots</h4>
+          <h4>Drone/Aerial Shots</h4>
           <p>
-            We charge just $95 for our 6 drone photo package. Our photographers
-            are FAA Part 107 Certified so you can rest easily knowing you will
-            not only get high quality drone photos, but also legal drone photos
+            Allow potential buyers to experience the listing from a whole new
+            angle with our aerial photography. Our high-altitude images offer a
+            sweeping panorama that showcases your home's architectural beauty,
+            picturesque landscapes, and unique neighborhood entertainment and
+            features. These bird's-eye views provide a captivating spectacle,
+            allowing potential buyers to admire the sprawling landscapes,
+            architectural details, and neighborhood charm in exquisite detail.
           </p>
         </div>
       )}
       {showSection.reels && (
         <div className="sect">
-          <img src="/11.jpg" alt="" />
-          <h4>Instagram & Tiktok Video</h4>
+          <video src="/iphone-video.mp4"></video>
+          <h4>Instagram & Tiktok Reels</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            laborum sint delectus deserunt molestias voluptatibus ipsam cumque
-            in? Quisquam repellendus numquam dolorum a quis ipsa tempore
-            possimus ratione vel impedit.
+            Our 30-45 second vertical videos for property listings combine the
+            appeal of TikTok and Instagram Reels. These captivating videos
+            showcase your property's best features with music, grabbing
+            attention and keeping viewers engaged. They're designed to stand out
+            in a crowded market, attracting serious buyers and selling your
+            property at top value. Plus, their small file size makes them easy
+            to share across messaging platforms, ensuring swift exposure to a
+            wide audience.
           </p>
         </div>
       )}
       {showSection.twilight && (
         <div className="sect">
-          <img src="/12.jpg" alt="" />
+          <img src="/twilight.jpeg" alt="" />
           <h4>Twilight Photos</h4>
           <p>
-            We offer both standard twilight photos (taken at dusk) and virtual
-            twilight photos (daylight photos edited to resemble dusk photos).
-            Our virtual twilight photo package is $95 for 4 photos, and our
-            standard twilight photos are $195 for 4 photos.
+            By capturing homes in the soft, ambient light of twilight, this
+            technique infuses warmth, charm, and sophistication, presenting
+            property features in a captivating manner. Through digital editing,
+            daytime photos are enhanced to emulate the magical twilight
+            ambiance, highlighting the property's exterior and landscape with
+            rich colors, vibrant skies, and subtle lighting adjustments. This
+            transformation not only accentuates the property's beauty but also
+            sparks an emotional connection, inviting potential buyers to
+            envision a cozy, inviting lifestyle within the home.
           </p>
         </div>
       )}
       {showSection.staging && (
         <div className="sect">
-          <img src="/13.jpg" alt="" />
+          <img src="/virtual-staging.jpeg" alt="" />
           <h4>Virtual Staging</h4>
           <p>
-            Virtual staging is a real estate photography service that digitally
-            enhances and furnishes empty or minimally furnished properties to
-            make them more appealing to potential buyers or renters. It involves
-            using computer-generated imagery (CGI) to insert virtual furniture,
-            decor, and other elements into photographs of vacant rooms. This
-            technique helps prospective buyers visualize the full potential and
-            functionality of a space, making it easier for them to imagine
-            themselves living in the property. Virtual staging can significantly
-            enhance property listings and attract more interest, ultimately
-            leading to quicker sales or rentals in the competitive real estate
-            market.
+            Virtual staging digitally enhances empty or minimally furnished
+            properties by inserting virtual furniture and decor using
+            computer-generated imagery (CGI). This technique helps buyers or
+            renters envision the space's potential, making it easier for them to
+            imagine living there. By showcasing a fully furnished look, virtual
+            staging significantly enhances property listings, attracting more
+            interest and expediting sales or rentals in a competitive real
+            estate market.
           </p>
         </div>
       )}

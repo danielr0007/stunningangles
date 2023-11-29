@@ -41,9 +41,9 @@ function GallerySlider() {
   return (
     <div className="container">
       <Slider {...settings}>
-        <div className="images-container">
-          {imagesData.slice(0, 9).map((imagesData, index) => (
-            <LazyLoad offset={200} once>
+        <LazyLoad offset={200} once>
+          <div className="images-container">
+            {imagesData.slice(0, 9).map((imagesData, index) => (
               <img
                 alt="Homes"
                 style={{
@@ -59,9 +59,9 @@ function GallerySlider() {
                 key={imagesData.id}
                 src={imagesData.image}
               />
-            </LazyLoad>
-          ))}
-        </div>
+            ))}
+          </div>
+        </LazyLoad>
         <LazyLoad offset={200} once>
           <div className="images-container">
             {imagesData.slice(9, 18).map((imagesData, index) => (

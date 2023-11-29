@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 function TestimonialCard() {
   return (
     <div className="testi-card">
-      <img src="/realtor-1.jpg" alt="" />
+      <img src="/realtor-1.webp" alt="" />
       <h4>Daniel Rasch</h4>
       <div>
         <FaStar />

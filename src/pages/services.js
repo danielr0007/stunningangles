@@ -29,10 +29,15 @@ function Services() {
           <h3>LISTING MEDIA</h3>
           <img src="/decoration-line-2.png" alt="" />
           <p>
-            We have gone to great lengths to make sure your media is perfect
-            every single time. From our in-house editors, to a quality control
-            team, to our highly trained photographers… we think you will be
-            impressed.
+            In every piece of media we craft, expect two key elements: 1.
+            Exceptional, awe-inspiring quality. 2. Precision in conveying the
+            perfect message to sell your property at top price in record time.
+            Our success stems from this deliberate, laser-focused approach
+            coupled with an unwavering attention to detail. We leverage
+            top-notch equipment, seasoned photographers, meticulous editors, and
+            storytellers informed by market insights. Dive deeper into all our
+            home selling media services below to discover how we can elevate
+            your property's presentation.
           </p>
           <div className="cards-div">
             <div className="service-card">
@@ -40,28 +45,40 @@ function Services() {
                 <FaCamera className="icon" />
               </div>
               <h4>PHOTOS</h4>
-              <p>More than important than ever. Professionals you can trust.</p>
+              <p>
+                Detailed, punchy images that capture the eyes and hearts of
+                potential buyers
+              </p>
             </div>
             <div className="service-card">
               <div className="icon-div">
                 <BsCameraReelsFill className="icon" />
               </div>
               <h4>VIDEOS</h4>
-              <p>Sell the house and your personal brand. Video is a must!</p>
+              <p>
+                Creates the immersive illusion of touring the home through
+                breathtaking 4K film.
+              </p>
             </div>
             <div className="service-card">
               <div className="icon-div">
                 <RiComputerFill className="icon" />
               </div>
               <h4>VIRTUAL TOURS</h4>
-              <p>Out of town buyers or for a second look at midnight.</p>
+              <p>
+                For the detail oriented folks who need a complete feel of the
+                property before reaching out
+              </p>
             </div>
             <div className="service-card">
               <div className="icon-div">
                 <FaRulerCombined className="icon" />
               </div>
               <h4>FLOORPLANS</h4>
-              <p>Does the furniture fit? What if we moved that wall...</p>
+              <p>
+                Will this room be big enough for... Let the listing floorplan
+                give action taking confidence to your prospects
+              </p>
             </div>
           </div>
         </div>
@@ -73,7 +90,20 @@ function Services() {
       {/* ........................................................................................ */}
       <section className="photos-section section-spacing">
         <h3>LISTING PHOTOS</h3>
-        <p>The quality your listing deserves.</p>
+        <p>
+          Our techniques leverage the power of 'High Dynamic Range' (HDR). This
+          approach guarantees that every image showcases a harmonious blend of
+          vibrant hues and nuanced shades. By employing HDR, we preserve every
+          detail, infusing our photographs with a mesmerizing lifelike quality
+          that captivates potential buyers. <br />
+          <br />
+          Beyond just image quality, identifying those specific angles and
+          standout features that deeply engage potential buyers is paramount.
+          Through our expertise and planning, we have a knack for intuitively
+          discovering these selling points. It's about going beyond the visuals
+          to pinpoint those aspects that transform prospects into invested
+          leads, rendering your property irresistible.
+        </p>
         <div className="width-div">
           <ServicesPhotoGallery />
         </div>
@@ -89,9 +119,14 @@ function Services() {
         <div className="width-div">
           <h3>CINEMATIC VIDEO TOUR</h3>
           <p>
-            We’ve set a new standard across the board. Our Cinematic Tours bring
-            a whole new level of quality while still being delivered the next
-            business day.
+            Immersing viewers in the essence and allure of every room, our
+            cinematic 4K videos masterfully encapsulate the charm of each space,
+            showcasing its unique angles, textures, and the seamless flow of the
+            entire property. Beyond mere visuals, these videos serve as a
+            powerful pre-qualifier, engaging potential buyers at a deeper level.
+            By offering an unparalleled virtual walkthrough, we ensure that only
+            the most serious and genuinely interested buyers respond, having
+            already experienced the property's ambiance and flow.
           </p>
 
           <div className="videos-div">
@@ -111,14 +146,21 @@ function Services() {
       <section className="virtual-tour-section section-spacing">
         <div className="width-div">
           <div className="image-div">
-            <img src="/20.jpg" alt="" />
+            <img src="/poggi-10.jpg" alt="" />
           </div>
 
           <div className="text-content-div">
             <h3>VIRTUAL TOURS</h3>
             <p>
-              An immersive experience for buyers and more online exposure for
-              sellers. We offer 2 different kinds of virtual tours:
+              This isn't just a static presentation; it's an interactive journey
+              that invites exploration, allowing individuals to absorb the
+              ambiance, texture, and layout from the comfort of their own
+              screens. This technology bridges the gap between imagination and
+              reality, fostering a deeper connection between the property and
+              the prospective buyer. It's more than a walkthrough—it's an
+              opportunity for them to mentally move in, picturing their
+              lifestyle and making an emotional connection with what could be
+              their future home.
             </p>
             <ul>
               <li>3D Matterport Tour</li>
@@ -136,7 +178,7 @@ function Services() {
       <section className="floor-plan-section">
         <div className="width-div">
           <div className="text-content-div">
-            <h3>SCHEMATIC FLOOR PLANS</h3>
+            <h3>FLOOR PLANS</h3>
             <img src="/decoration-line.png" alt="" />
             <p>
               You know what Zillow said is the most important piece of media
@@ -148,7 +190,7 @@ function Services() {
           </div>
 
           <div className="image-div">
-            <img src="/23.jpg" alt="" />
+            <img src="/floorplan-shot.webp" alt="" />
           </div>
         </div>
       </section>
@@ -159,7 +201,7 @@ function Services() {
       {/* ........................................................................................ */}
       <section className="more-services-section">
         <div className="width-div">
-          <h3>PLUS SO MUCH MORE</h3>
+          <h3>PLUS MUCH MORE SELLING POWER</h3>
 
           <TabsComponent />
         </div>

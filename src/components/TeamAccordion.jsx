@@ -15,7 +15,7 @@ const TeamAccordion = () => {
           className={`acc-1 ${expandedIndex === 0 ? "active" : ""}`}
           onClick={() => handleAccordionClick(0)}
         >
-          15 minutes early is our standard
+          Punctuality and reliability define our service
         </button>
         <div
           style={{
@@ -26,11 +26,12 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 0 && (
             <p>
-              At our company, we uphold professionalism and reliability as core
-              values. We prioritize punctuality, effective communication, and
-              respectful conduct. You can trust us to deliver our services with
-              utmost professionalism, ensuring a smooth and dependable
-              experience from start to finish.
+              We recognize how crucial timing is in real estate transactions.
+              That's why we've optimized our workflow to meet deadlines
+              consistently. From being punctual for every photoshoot appointment
+              to delivering the final photos (they are beautiful btw) at the
+              promised time, we've refined our process to not just meet but
+              exceed your expectations.
             </p>
           )}
         </div>
@@ -41,7 +42,7 @@ const TeamAccordion = () => {
           className={`acc-2 ${expandedIndex === 1 ? "active" : ""}`}
           onClick={() => handleAccordionClick(1)}
         >
-          Positive attitude and collaboration
+          Our DNA: Positive attitude and collaboration
         </button>
         <div
           style={{
@@ -52,11 +53,12 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 1 && (
             <p>
-              Like a Chick-fil-A drive-through employee, we are eager to help,
-              and do so with a big smile. At our company, we foster a positive
-              and collaborative atmosphere. We value your ideas and actively
-              work together to achieve your vision. We ensure a rewarding and
-              enjoyable experience throughout the process.
+              Embracing a positive attitude is a non-negotiable when it comes to
+              rocking the Stunning Angles uniform. The truth is that we love
+              what we do. Many of us began with a camera as a mere hobby, which
+              has now blossomed into our fervent profession. Each photographer
+              within our team is carefully selected for their distinct talent
+              and innate ability to serve with attentiveness and boundless joy.
             </p>
           )}
         </div>
@@ -67,7 +69,7 @@ const TeamAccordion = () => {
           className={`acc-3 ${expandedIndex === 2 ? "active" : ""}`}
           onClick={() => handleAccordionClick(2)}
         >
-          We practice clear and timely communication
+          Communication is the heartbeat of our partnership.
         </button>
         <div
           style={{
@@ -78,10 +80,11 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 2 && (
             <p>
-              At our company, we prioritize strong communication. We listen to
-              your needs, provide updates, and ensure your satisfaction every
-              step of the way. Your project is important to us, and we value
-              clear and timely communication to exceed your expectations.
+              We take pride in our team's prompt responses, active listening,
+              and dedication to comprehending your requirements. Your feedback
+              is invaluable to us at every stage, ensuring our work seamlessly
+              aligns with your vision. Choose your preferred communication
+              method; we're ready to address your every need.
             </p>
           )}
         </div>

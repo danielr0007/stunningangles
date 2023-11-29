@@ -27,7 +27,7 @@ function Footer() {
           <img src="/logo.png" alt="" />
           <p>
             An architecture and real estate visuals company based out of
-            Melbourne, FL
+            Orlando, FL
           </p>
         </div>
       </div>
