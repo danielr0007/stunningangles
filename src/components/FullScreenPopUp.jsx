@@ -16,7 +16,7 @@ function FullScreenPopUp(props) {
             <TfiClose className="icon" />
           </div>
           {/* TITLE....................................... */}
-          <h1 style={{ fontFamily: "Josefin Sans" }}>Service Area Map</h1>
+          <h1>Service Area Map</h1>
           {/* Map................................... */}
           <div className="map-div">
             <img src="/service-area-map.png" alt="" srcset="" />

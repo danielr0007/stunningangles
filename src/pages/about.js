@@ -52,7 +52,7 @@ function About() {
           <div className="vision-mission-div">
             <div className="container">
               <div className="image-div">
-                <img src="/poggi-3.jpg" alt="" />
+                <img src="/fancy1.jpg" alt="" />
               </div>
               <h4>Our Mission</h4>
               <p>
@@ -134,7 +134,7 @@ function About() {
               </div>
 
               <div>
-                <h4>Call Us Flash</h4>
+                <h4>Work Flow as Fast as a Flash Shot</h4>
                 <p>
                   The instant the shoot is wrapped up, we get to editing,
                   delegating tasks to deliver the final product FAST!
@@ -147,7 +147,7 @@ function About() {
               </div>
 
               <div>
-                <h4>Customized Packages</h4>
+                <h4>We Offer Exactly What You Need</h4>
                 <p>
                   We offer flexible packages tailored to your specific needs and
                   budget. Pick the one that matches your goals best.
@@ -160,7 +160,7 @@ function About() {
               </div>
 
               <div>
-                <h4>We're there for you, CONSITENTLY</h4>
+                <h4>We're There For You, CONSITENTLY</h4>
                 <p>
                   Customer service so good you tell your friends, nothing less.
                 </p>
@@ -182,7 +182,7 @@ function About() {
               <img src="/me.webp" alt="" />
             </div>
             <div className="ceo-text-div">
-              <h4>We Serve With Joy</h4>
+              <h4>We Serve With Joy & Gratitude</h4>
               <p>
                 I want to express my heartfelt gratitude for your trust and
                 partnership. Your support is the driving force behind our

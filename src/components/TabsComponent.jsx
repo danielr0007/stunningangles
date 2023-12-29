@@ -86,7 +86,7 @@ function TabsComponent() {
       )}
       {showSection.reels && (
         <div className="sect">
-          <video src="/iphone-video.mp4"></video>
+          <video src="/reel.mp4" autoPlay muted playsInline loop></video>
           <h4>Instagram & Tiktok Reels</h4>
           <p>
             Our 30-45 second vertical videos for property listings combine the

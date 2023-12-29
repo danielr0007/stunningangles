@@ -25,18 +25,17 @@ function TeamHomeSection() {
         <p className="overheading">
           In the world of real estate, reputation is KING.
         </p>
-        <h3>
-          Our mission? Serving and representing you in the best possible light.
-        </h3>
+        <h3>Elevating Your Brand Through Professionalism & Genuine Care</h3>
         <p>
-          As real estate photographers, we are a reflection of the agents that
-          we shoot for, and here at Stunning Angles, we don't take that
-          responsibility lightly. For that reason, if we photograph an occupied
-          home, you better believe that we make it our top priority that your
-          seller feels completely comfortable; served with the utmost
-          professionalism and care. Our aim is to make you look like the top
-          professional that you are while providing you with unrivaled customer
-          service CONSISTENTLY.
+          Cool fact... Reputable brands invest massive effort in selecting
+          partners that enhance or, at the very least, do not harm their brand
+          image. These major players recognize the difficulty of building a
+          positive reputation and the ease with which it can be tarnished. As a
+          brand yourself, why do any different? At Stunning Angles we take
+          measures to not only protect your reputation, but to make it referral
+          worthy. Every home we shoot and every homeowner we engage with
+          receives exceptional professionalism and care. The same superb
+          customer care you will experience on a consitent basis.
         </p>
         <TeamAccordion />
 

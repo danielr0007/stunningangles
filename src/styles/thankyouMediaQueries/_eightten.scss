@@ -1,0 +1,68 @@
+@mixin eightten {
+  .thankyou-body {
+    // height: 100vh;
+    // background-color: #ffffff;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // position: relative;
+    // overflow: hidden;
+    .message {
+      //   text-align: center;
+      > div {
+        // margin-bottom: 2.5rem;
+        .icon {
+          font-size: 2.5rem;
+          //   color: #e6b35b;
+        }
+      }
+
+      > h1 {
+        font-size: 2.5rem;
+        // margin-bottom: 1rem;
+      }
+
+      > p {
+        width: 90%;
+        // margin: auto;
+        // line-height: 1.5;
+        // margin-bottom: 2rem;
+      }
+    }
+
+    > a {
+      //   text-decoration: underline;
+    }
+  }
+
+  .thankyou-body::before {
+    // content: "";
+    // width: 0px;
+    // height: 0px;
+    // border-style: solid;
+    // border-width: 0px 280px 400px 250px;
+    // border-color: transparent transparent #314061 transparent;
+    // display: inline-block;
+    // vertical-align: middle;
+    // margin-right: 5px;
+    // position: absolute;
+    top: -200px;
+    left: -390px;
+  }
+
+  .thankyou-body::after {
+    // content: "";
+    // width: 0px;
+    // height: 0px;
+    // border-style: solid;
+    // border-width: 0px 280px 400px 250px;
+    // border-color: transparent transparent #314061 transparent;
+    // display: inline-block;
+    // vertical-align: middle;
+    // margin-right: 5px;
+    // position: absolute;
+    // bottom: 0;
+    right: -430px;
+  }
+}

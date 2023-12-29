@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { Link } from "gatsby";
 
 const Banner = () => {
@@ -9,11 +9,11 @@ const Banner = () => {
   const slides = [
     {
       headline:
-        "Rise Above with Memorable, Eye-Grabbing Real Estate Photography",
+        "Make your Presence Known with Memorable, Eye-Grabbing Real Estate Media",
       subheadline:
-        "Make your presence known and establish your reputation as a top-tier realtor with stunning visuals.",
+        "We partner with top-tier Orlando realtors helping them establish their reputation with stunning visual media marketing",
       buttonText: "Button 1",
-      imageUrl: "/poggi-12.jpg", // Replace with the URL of your first image
+      imageUrl: "/fancy4.jpg", // Replace with the URL of your first image
     },
     // {
     //   headline:
@@ -34,15 +34,15 @@ const Banner = () => {
     return () => clearTimeout(timer);
   }, [currentSlide, slides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  // };
 
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(
+  //     (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
+  //   );
+  // };
 
   return (
     <div className="banner-image-container">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 function ServiceCardComponent(props) {
   return (
@@ -11,7 +12,7 @@ function ServiceCardComponent(props) {
           <span>{props.cardData.firstName}</span> {props.cardData.lastName}
         </h4>
         <p>{props.cardData.description}</p>
-        <a href="">Read More...</a>
+        <Link to={props.cardData.link}>Read More...</Link>
       </div>
     </div>
   );

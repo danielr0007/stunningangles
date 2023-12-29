@@ -24,6 +24,9 @@ function Header() {
           <li>
             <Link to="/portfolio">Portfolio</Link>
           </li>
+          <li>
+            <Link to="/#contact">Contact</Link>
+          </li>
         </ul>
         <GiHamburgerMenu
           onClick={() => dispatch(toggleMobileMenu())}

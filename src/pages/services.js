@@ -88,7 +88,7 @@ function Services() {
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
-      <section className="photos-section section-spacing">
+      <section id="services-photos" className="photos-section section-spacing">
         <h3>LISTING PHOTOS</h3>
         <p>
           Our techniques leverage the power of 'High Dynamic Range' (HDR). This
@@ -115,7 +115,7 @@ function Services() {
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
-      <section className="video-section section-spacing">
+      <section id="services-video" className="video-section section-spacing">
         <div className="width-div">
           <h3>CINEMATIC VIDEO TOUR</h3>
           <p>
@@ -143,10 +143,13 @@ function Services() {
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
-      <section className="virtual-tour-section section-spacing">
+      <section
+        id="services-virtual-tour"
+        className="virtual-tour-section section-spacing"
+      >
         <div className="width-div">
           <div className="image-div">
-            <img src="/poggi-10.jpg" alt="" />
+            <img src="/virtual-tour-shot.jpg" alt="" />
           </div>
 
           <div className="text-content-div">
@@ -163,7 +166,7 @@ function Services() {
               their future home.
             </p>
             <ul>
-              <li>3D Matterport Tour</li>
+              {/* <li>3D Matterport Tour</li> */}
               <li>Zillow 3D Home Tour</li>
             </ul>
             <Link to="/#booking">Book A Shoot</Link>
@@ -175,7 +178,7 @@ function Services() {
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
-      <section className="floor-plan-section">
+      <section id="services-floorplan" className="floor-plan-section">
         <div className="width-div">
           <div className="text-content-div">
             <h3>FLOOR PLANS</h3>
@@ -199,7 +202,7 @@ function Services() {
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
       {/* ........................................................................................ */}
-      <section className="more-services-section">
+      <section id="services-drone" className="more-services-section">
         <div className="width-div">
           <h3>PLUS MUCH MORE SELLING POWER</h3>
 

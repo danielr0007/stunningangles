@@ -1,0 +1,426 @@
+@mixin servicesfull {
+  // ?SECTION TWO - OVERVIEW OF SERVICES.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .overview-services-section {
+    > .width-div {
+      width: 1300px;
+      margin: auto;
+      // border: solid pink;
+      > h3 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: variables.$formal-font;
+      }
+      > img {
+        width: 100px;
+        margin: auto;
+        display: block;
+        margin-bottom: 1.6rem;
+      }
+      > p {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 3.5rem;
+        line-height: 1.7;
+        font-family: variables.$informal-font;
+        color: variables.$text-grey;
+      }
+
+      > .cards-div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+    }
+  }
+
+  .service-card {
+    // border: solid green;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    > .icon-div {
+      padding: 11px;
+      background-color: variables.$primary-color;
+      border-radius: 15px;
+      margin-bottom: 1.2rem;
+      > .icon {
+        font-size: 1.8rem;
+        color: white;
+      }
+    }
+    > h4 {
+      text-align: center;
+      font-size: 1rem;
+      font-family: variables.$formal-font;
+    }
+    > p {
+      text-align: center;
+      font-family: variables.$informal-font;
+      line-height: 1.7;
+      color: variables.$text-grey;
+    }
+  }
+
+  // ?SECTION THREE - PHOTOS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .photos-section {
+    background-color: variables.$primary-color;
+    color: white;
+    > h3 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.6rem;
+      font-family: variables.$formal-font;
+    }
+    > p {
+      text-align: center;
+      font-family: variables.$informal-font;
+      width: 70%;
+      margin: auto;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+    > .width-div {
+      width: 1300px;
+      margin: auto;
+      margin-bottom: 4.5rem;
+      // border: solid red;
+    }
+
+    .slick-track {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .slider-image {
+      border-radius: 15px;
+      // border: solid red;
+      min-height: 280px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: #ffffff;
+    }
+
+    > a {
+      display: block;
+      margin: auto;
+      background-color: variables.$secondary-color;
+      font-size: 1.1rem;
+      font-family: variables.$informal-font;
+      border: none;
+      padding: 15px 28px;
+      border-radius: 5px;
+      width: 15rem;
+      text-align: center;
+      color: black;
+    }
+  }
+
+  // ?SECTION FOUR - VIDEOS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+
+  .video-section {
+    color: white;
+    > .width-div {
+      width: 1375px;
+      margin: auto;
+      background-color: variables.$primary-color;
+      padding: 6rem 4rem;
+      border-radius: 60px;
+      > h3 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        font-family: variables.$formal-font;
+      }
+      > p {
+        text-align: center;
+        font-family: variables.$informal-font;
+        width: 83%;
+        margin: auto;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+      }
+
+      > .videos-div {
+        width: 100%;
+        // border: solid red;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        margin-bottom: 3rem !important;
+        .video-div {
+          width: 370px;
+          height: 230px;
+          background-color: black;
+        }
+      }
+
+      > a {
+        display: block;
+        margin: auto;
+        width: 15rem;
+        text-align: center;
+        color: black;
+        background-color: variables.$secondary-color;
+        font-size: 1.1rem;
+        font-family: variables.$informal-font;
+        border: none;
+        padding: 15px 28px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  // ?SECTION FIVE - VITUAL TOURS SECTION.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .virtual-tour-section {
+    > .width-div {
+      width: 1300px;
+      margin: auto;
+      display: flex;
+      gap: 5rem;
+      // border: solid red;
+      > .image-div {
+        // border: solid green;
+        border-radius: 25px;
+        flex-basis: 55%;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 500px;
+          border-radius: 25px;
+        }
+      }
+
+      > .text-content-div {
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > h3 {
+          font-size: 3rem;
+          margin-bottom: 1.6rem;
+          font-family: variables.$formal-font;
+        }
+        > p {
+          font-family: variables.$informal-font;
+          width: 90%;
+          margin-bottom: 3rem;
+          line-height: 1.6;
+        }
+        > ul {
+          margin-left: 2rem;
+          margin-bottom: 3rem;
+          // border: solid red;
+          li {
+            list-style: disc;
+            margin-bottom: 1rem;
+          }
+        }
+        > a {
+          background-color: variables.$secondary-color;
+          font-size: 1.1rem;
+          text-align: center;
+          font-family: variables.$informal-font;
+          border: none;
+          padding: 19px 0px;
+          width: 200px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  // ?SECTION SIX - FLOOR PLANS.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .floor-plan-section {
+    padding: 12rem 0;
+    background-color: variables.$primary-color;
+    color: white;
+    > .width-div {
+      width: 1300px;
+      margin: auto;
+      display: flex;
+      gap: 5rem;
+      > .text-content-div {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > h3 {
+          font-size: 3rem;
+          margin-bottom: 1.6rem;
+          font-family: variables.$formal-font;
+        }
+        > img {
+          width: 100px;
+          margin-bottom: 3rem;
+        }
+        > p {
+          font-family: variables.$informal-font;
+          width: 99%;
+          margin-bottom: 3rem;
+          line-height: 1.7;
+        }
+        > a {
+          background-color: variables.$secondary-color;
+          font-size: 1.1rem;
+          text-align: center;
+          color: black;
+          font-family: variables.$informal-font;
+          border: none;
+          padding: 19px 0px;
+          width: 200px;
+          border-radius: 5px;
+        }
+      }
+
+      > .image-div {
+        flex-basis: 60%;
+        height: 500px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45px;
+        img {
+          object-fit: cover;
+          width: 80%;
+          height: 80%;
+          box-shadow: 3px 3px 5px 5px rgb(148, 148, 148);
+        }
+      }
+    }
+  }
+
+  // ?SECTION SEVEN - MORE SERVICES.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+
+  .more-services-section {
+    padding: 4.5rem 0;
+    > .width-div {
+      width: 1300px;
+      margin: auto;
+      > h3 {
+        font-size: 2.3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-family: variables.$formal-font;
+      }
+    }
+  }
+
+  .tab-component-div {
+    height: 800px;
+    > .tabs-div {
+      padding: 0rem 1.5rem 2.3rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      border-bottom: solid black 1px;
+      margin-bottom: 4rem;
+      > .tab {
+        flex-basis: 25%;
+        font-size: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        padding: 19px 0;
+        background-color: variables.$primary-color;
+        color: white;
+      }
+
+      .active-tab {
+        background-color: variables.$secondary-color;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 50%;
+      margin-bottom: 1.8rem;
+      border-radius: 15px;
+      box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+    }
+    > video {
+      width: 15%;
+      margin-bottom: 1.8rem;
+      border-radius: 15px;
+      box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+    }
+
+    > h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1.3rem;
+      text-align: center;
+    }
+    > p {
+      font-family: variables.$informal-font;
+      width: 80%;
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+  }
+}

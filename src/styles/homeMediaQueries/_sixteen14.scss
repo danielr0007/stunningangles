@@ -1,0 +1,427 @@
+@mixin sixteen14 {
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .banner-image-container {
+    height: 97vh;
+  }
+  .banner-text-container {
+    h1 {
+      font-size: 3.3rem;
+      margin-bottom: 2.4rem;
+      max-width: 87%;
+    }
+
+    h2 {
+      font-size: 21px;
+      // width: 90%;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    > div {
+      max-width: 80%;
+      gap: 4rem;
+      // border: solid red 1px;
+      .left-images-container {
+        gap: 1.3rem;
+        %team-images-shared {
+          width: 225px;
+          height: 399px;
+        }
+
+        // .image-1 {
+        //   @extend %team-images-shared;
+
+        //   img {
+        //     object-fit: cover;
+        //     height: 100%;
+        //     width: 100%;
+        //   }
+        // }
+        .image-2 {
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .right-text-container {
+        // gap: 0.5rem;
+
+        .overheading {
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 17px;
+          margin-bottom: 1.6rem;
+        }
+
+        // Accordion
+        .accordion-container {
+          margin-bottom: 1rem;
+          min-height: 325px;
+          // border: solid red;
+        }
+      }
+    }
+
+    .vid {
+      top: 53%;
+      left: 3rem;
+      width: 500px;
+      height: 270px;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .services-section-outer-container {
+    > div {
+      > div {
+        max-width: 80%;
+        // margin-bottom: 2.2rem;
+        img {
+          padding: 15px 0 5px 0;
+        }
+      }
+    }
+  }
+
+  .service-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 2rem;
+  }
+
+  // Service card component styles.......................................//////////////
+  .service-card-container {
+    // border: solid red;
+    .card-image-container {
+      height: 230px;
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      // border: solid red;
+      // width: 80%;
+      // margin: auto;
+      // display: flex;
+      // gap: 2.3rem;
+      // min-height: 580px;
+      // padding-bottom: 5rem;
+      // background-color: #333;
+
+      .pic-div {
+        // position: relative;
+        // flex-basis: 50%;
+        // display: flex;
+        // justify-content: end;
+        // align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          // position: relative;
+          // border: solid yellow;
+          // width: 330px;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          .social-decor {
+            // position: absolute;
+            // width: 370px;
+            // height: 450px;
+            // left: -245px;
+            // z-index: 9999;
+          }
+          img {
+            // position: absolute;
+            // width: 275px;
+            // height: 100%;
+            // z-index: 10;
+          }
+
+          .lazy {
+            // border: solid red;
+            // position: absolute;
+            // width: 290px;
+            // height: 100%;
+            // z-index: -1;
+          }
+          .vid {
+            // position: absolute;
+            // width: 290px;
+            // height: 100%;
+            // z-index: -1;
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        // border: solid red;
+        // padding-right: 3rem;
+        // flex-basis: 50%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: start;
+
+        // border: solid red;
+        > h3 {
+          // font-size: 1.3rem;
+          // line-height: 1.5;
+          // padding: 0 0rem 0 3.5rem;
+          // margin-bottom: 2rem;
+          // width: 35ch;
+          // font-family: variables.$formal-font;
+        }
+        .text {
+          // display: flex;
+          gap: 0.5rem;
+          // padding: 0 3.5rem 0 3.5rem;
+          .icon {
+            // font-size: 2rem;
+            // color: variables.$secondary-color;
+            flex-basis: 10%;
+          }
+          > div {
+            // border: solid pink;
+            flex-basis: 90%;
+            // max-width: 570px;
+            h4 {
+              font-size: 1rem;
+              // font-family: variables.$formal-font;
+              // font-weight: 400;
+              // margin-bottom: 1rem;
+            }
+            p {
+              // max-width: 90%;
+              // font-size: 15px;
+              // line-height: 1.5;
+              // font-family: variables.$informal-font;
+            }
+          }
+        }
+
+        .text:first-child {
+          // margin-bottom: 50rem;
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      // border: solid red;
+      // width: 80%;
+      // margin: auto;
+      // display: flex;
+      // gap: 4rem;
+      // min-height: 580px;
+      // padding-bottom: 5rem;
+      // background-color: #333;
+      // TODO Text side
+      .text-div {
+        // padding-left: 3rem;
+        // flex-basis: 50%;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        // border: solid pink;
+        // padding-left: 10rem;
+        > h3 {
+          // font-family: variables.$formal-font;
+          // font-size: 1.3rem;
+          // line-height: 1.5;
+          // padding: 0 3.5rem 0 0rem;
+          // margin-bottom: 2rem;
+          // width: 35ch;
+        }
+        .text {
+          // display: flex;
+          gap: 0.5rem;
+          // padding: 0 3rem 0 3rem;
+          // border: solid red;
+          .icon {
+            // font-size: 2rem;
+            // color: variables.$secondary-color;
+            flex-basis: 10%;
+          }
+          > div {
+            // border: solid pink;
+            flex-basis: 90%;
+            max-width: 570px;
+            h4 {
+              font-size: 1rem;
+              // font-family: variables.$formal-font;
+              // font-weight: 400;
+              // margin-bottom: 1rem;
+            }
+            p {
+              // max-width: 90%;
+              // font-size: 15px;
+              // line-height: 1.5;
+              // font-family: variables.$informal-font;
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        position: relative;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        // background-color: transparent;
+        // border: solid blue;
+        .pic-vic-div {
+          position: relative;
+          // border: solid yellow;
+          width: 530px;
+          height: 390px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            // position: absolute;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            height: 100%;
+            z-index: 9999;
+
+            // background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .first-para {
+    margin-bottom: 2rem;
+  }
+
+  // ?SECTION EIGHT - PACKAGES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .packages-section-outer-container {
+    // background-color: #ececec;
+    // padding: 4rem 0;
+
+    // > h1 {
+    //   color: rgba(255, 255, 255, 0.889);
+    //   text-align: center;
+    //   font-size: 5.5rem;
+    //   text-shadow: 1px 4px 5px rgb(210, 210, 210);
+    //   margin-top: -3rem;
+    //   font-family: variables.$formal-font;
+    // }
+
+    // > .sqft-input-div {
+    // max-width: 50%;
+    // margin: auto;
+    // // border: solid red;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // margin-bottom: 1.5rem;
+    // margin-top: 1.5rem;
+    // > p {
+    //   text-align: center;
+    //   margin-bottom: 1rem;
+    //   font-family: variables.$informal-font;
+    // }
+
+    // > div {
+    //   > label {
+    //     margin-right: 1rem;
+    //   }
+    //   > input {
+    //     padding: 5px 30px 5px 5px;
+    //   }
+    // }
+    // }
+
+    > .package-cards-container {
+      // margin: auto;
+      // margin-top: -2px;
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: center;
+      // gap: 1rem;
+      // align-items: center;
+      // border: solid red;
+      width: 90%;
+    }
+  }
+
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+}

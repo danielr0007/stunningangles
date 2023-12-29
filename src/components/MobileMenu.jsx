@@ -46,6 +46,11 @@ const MobileMenu = () => {
               Portfolio
             </Link>
           </li>
+          <li>
+            <Link to="/#contact" onClick={toggleMenu}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

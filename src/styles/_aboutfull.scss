@@ -1,0 +1,241 @@
+@mixin aboutfull {
+  // ?SECTION TWO - ABOUT INTRO.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .about-banner-section {
+    position: relative;
+  }
+
+  .about-intro-section {
+    > .container-div {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      max-width: 1300px;
+      min-width: 1160px;
+
+      > .intro-text-section {
+        flex-basis: 35%;
+        > .title-container {
+          margin-bottom: 2rem;
+          > h2 {
+            font-size: 2.1rem !important;
+            margin-bottom: 10px;
+            font-family: variables.$formal-font !important;
+          }
+          > img {
+            width: 100px;
+          }
+        }
+        > h4 {
+          font-size: 1.4rem;
+          width: 90%;
+          margin-bottom: 1.5rem;
+          line-height: 1.5;
+          font-family: variables.$informal-font;
+        }
+        > p {
+          font-family: variables.$informal-font;
+          width: 92%;
+          font-size: 15px;
+          line-height: 1.7;
+          color: rgb(117, 117, 117);
+          margin-bottom: 1rem;
+        }
+        > div {
+          > :first-child {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-family: variables.$informal-font;
+          }
+          > :last-child {
+            color: orange;
+            font-family: variables.$informal-font;
+          }
+        }
+      }
+
+      /*VISION-MISSION*/
+      .vision-mission-div {
+        flex-basis: 55%;
+        display: flex;
+        align-items: end;
+        gap: 2rem;
+
+        > .container {
+          > .image-div {
+            width: 100%;
+            height: 210px;
+            margin-bottom: 1.5rem;
+            > img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+          > h4 {
+            font-size: 1.4rem;
+            font-family: variables.$informal-font;
+            margin-bottom: 1rem;
+          }
+          > p {
+            font-family: variables.$informal-font;
+            font-size: 15px;
+            line-height: 1.7;
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+
+  // ?SECTION THREE - WHY US.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+
+  .why-us-section {
+    background: linear-gradient(
+        to bottom,
+        rgb(26, 47, 71) 0%,
+        rgba(26, 47, 71, 0.95) 59%,
+        rgba(26, 47, 71, 0.9) 100%
+      ),
+      url("/services-background.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .width-container {
+      padding: 0 10px;
+      margin: auto;
+      width: 1200px;
+      // border: solid red;
+      > h3 {
+        text-align: center;
+        font-size: 2.1rem;
+        margin-bottom: 3px;
+        font-family: variables.$formal-font;
+      }
+      > img {
+        display: block;
+        margin: auto;
+        width: 100px;
+        padding: 12px 0 5px 0;
+      }
+      .cards-div {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        // border: orange solid;
+      }
+    }
+  }
+
+  .card-div {
+    min-height: 140px;
+    display: flex;
+    // padding: 10px 0;
+    gap: 1.8rem;
+    // border: solid pink;
+
+    .icon-div {
+      height: 60px;
+      background-color: variables.$secondary-color;
+      flex-basis: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        font-size: 2.5rem;
+      }
+    }
+    > div {
+      flex-basis: 80%;
+      h4 {
+        font-size: 1.1rem;
+        font-family: variables.$formal-font;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-family: variables.$informal-font;
+        line-height: 1.6;
+        font-size: 15px;
+        color: #e9e9e9d3;
+      }
+    }
+  }
+
+  // ?SECTION THREE - MESSAGE FROM CEO.....................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ?..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  // ..................................................................................
+  .ceo-message-section {
+    > .width-container {
+      padding: 0 1rem;
+      margin: auto;
+      width: 1200px;
+      // border: solid pink;
+      > h3 {
+        font-size: 2.1rem;
+        font-family: variables.$formal-font;
+      }
+      > img {
+        width: 100px;
+        padding: 12px 0 5px 0;
+      }
+      .ceo-content-div {
+        margin-top: 2rem;
+        display: flex;
+        gap: 4rem;
+        // border: solid red;
+        .ceo-pic-div {
+          flex-basis: 30%;
+          height: 400px;
+          > img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .ceo-text-div {
+          flex-basis: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          > h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-family: variables.$informal-font;
+          }
+          > p {
+            font-family: variables.$informal-font;
+            line-height: 1.7;
+            font-size: 15px;
+            color: #7c7c7c;
+          }
+        }
+      }
+    }
+  }
+}

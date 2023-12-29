@@ -369,7 +369,7 @@
   }
 
   .tab-component-div {
-    height: 790px;
+    height: 850px;
     // border: solid blue;
     > .tabs-div {
       //   padding: 0rem 1.5rem 2.3rem;
@@ -411,6 +411,12 @@
     //   margin-bottom: 1.3rem;
     //   text-align: center;
     // }
+    > video {
+      width: 30%;
+      // margin-bottom: 1.8rem;
+      // border-radius: 15px;
+      // box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+    }
     > p {
       //   font-family: variables.$informal-font;
       width: 90%;

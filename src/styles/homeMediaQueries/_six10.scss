@@ -1,0 +1,1175 @@
+@mixin six10 {
+  // ?MOBILE MENU........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .mobile-menu {
+    // position: fixed;
+    // top: 0;
+    right: -100%;
+    width: 100%;
+    // height: 100vh;
+    // background-color: rgb(39, 39, 39);
+    // transition: right 0.5s ease;
+    // z-index: 9999;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
+
+  .logo-container {
+    margin-top: 3rem;
+    > img {
+      width: 320px;
+    }
+  }
+
+  /*Phone Number Button*/
+  .phone-container {
+    // width: 90%;
+    // padding: 1rem 0 1rem 0;
+    // background-color: #e6b35b;
+    // border: none;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
+    margin-top: -1rem;
+    // > .icon {
+    //   font-size: 20px;
+    // }
+  }
+
+  .mobile-menu.open {
+    // right: 0;
+  }
+  /*Close Button*/
+  .menu-toggle {
+    // position: absolute;
+    // top: 20px;
+    // right: 20px;
+    // border-radius: 10px;
+    // background-color: #e6b35b;
+    // border: none;
+    // padding: 0.5rem;
+    // > .icon {
+    //   font-size: 25px;
+    // }
+  }
+
+  /*NAV*/
+  .menu-items {
+    // padding: 20px 20px 20px 35px;
+    // margin-top: 2rem;
+    // width: 100%;
+    // color: white;
+  }
+
+  .menu-items ul {
+    // list-style: none;
+    // padding: 0;
+    // text-align: start;
+    // width: 100%;
+  }
+
+  .menu-items li {
+    // margin-bottom: 1.1rem;
+    // font-weight: 600;
+    // font-size: 1.2rem;
+  }
+  // ?TOP NAVIGATION BAR........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  header {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // z-index: 9999;
+
+    nav {
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+      margin: 1rem 2.5rem 0 0.5rem;
+    }
+
+    .logo {
+      width: 200px;
+      margin: 0 0 0 0;
+    }
+
+    ul {
+      // display: flex;
+      // gap: 5rem;
+      // color: white;
+      // margin-right: 2.5rem;
+      // border: solid red;
+      // display: none;
+
+      // li {
+      //   font-size: 1.2rem;
+      // }
+    }
+    .menu-icon {
+      font-size: 1.5rem;
+      color: white;
+      display: block;
+    }
+  }
+
+  // ?BANNER SECTION.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .banner-image-container {
+    // border: solid red;
+    position: relative;
+    height: 93vh;
+    display: block;
+
+    > div {
+      // height: 100%;
+      // border: solid red;
+    }
+  }
+
+  .banner-text-container {
+    // width: 400px !important;
+    text-align: left;
+    // border: solid purple;
+    // align-self: center;
+    width: 92%;
+    margin: auto;
+    // margin-left: 0;
+
+    h1 {
+      font-size: 1.5rem;
+      // max-width: 100%;
+      margin-top: 6rem;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 16px;
+      max-width: 100%;
+      margin: 0;
+      margin-bottom: 3.5rem;
+    }
+
+    %button-shared {
+      // padding: 1rem 2rem 1rem 2rem;
+      width: 100%;
+      margin: auto;
+      display: block;
+      // border: none;
+      // font-size: 16px;
+    }
+
+    a:first-child {
+      // @extend %button-shared;
+      margin-bottom: 1rem;
+    }
+
+    // button:last-child {
+    //   @extend %button-shared;
+    //   background-color: transparent;
+    //   border: solid white 1px;
+    //   color: white;
+    // }
+  }
+
+  %arrows-shared {
+    display: none;
+  }
+
+  // ?SECTION ONE - TEAM.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .team-section-outer-container {
+    > div {
+      max-width: 92%;
+      // margin: auto;
+      // border: solid red 1px;
+      .left-images-container {
+        // border: solid red;
+        margin-bottom: 12rem;
+        gap: 0.5rem;
+
+        // Styiling for images of this section...............................
+        %team-images-shared {
+          // display: block;
+          width: 170px;
+          height: 220px;
+        }
+        .image-1 {
+        }
+        .image-2 {
+          margin-top: 2rem;
+        }
+      }
+
+      .right-text-container {
+        // border: solid red 2px;
+        .overheading {
+          font-size: 15px;
+          margin-bottom: 0.2rem;
+          font-weight: 500;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+          line-height: 1.4;
+          margin-bottom: 1.3rem;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        // Accordion.....................
+        .accordion-container {
+          margin-bottom: 3.5rem;
+          min-height: 400px;
+          // border: solid red;
+
+          .indi-accordion {
+            p {
+              padding: 10px 0 10px 0;
+            }
+          }
+        }
+
+        %accordion-shared {
+          // padding: 15px 0 15px 0;
+          font-weight: 600;
+          font-size: 15px;
+        }
+
+        .learn-more-button {
+          max-width: 160px;
+          padding: 1rem 0 1rem 0;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .vid {
+      top: 16%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 300px;
+      height: 210px;
+      // border: solid red;
+    }
+  }
+
+  // ?SECTION TWO - SERVICES.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .services-section-outer-container {
+    > div {
+      > div {
+        max-width: 90%;
+        margin-bottom: 1.5rem;
+        h3 {
+          font-size: 2rem;
+          padding: 0 1rem 0 0rem;
+          line-height: 1.5;
+        }
+        img {
+          width: 90px;
+          padding: 16px 0 5px 0;
+        }
+      }
+    }
+  }
+
+  .service-cards-container {
+    // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    // gap: 2.5rem;
+  }
+
+  // Service card component styles.................
+  .service-card-container {
+    // border: solid red;
+    .card-image-container {
+      // width: 100%;
+      // height: 200px;
+      // margin-bottom: 1rem;
+    }
+
+    .card-text-container {
+      margin-bottom: 0rem;
+
+      h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 15px;
+        margin-bottom: 1.8rem;
+      }
+      a {
+        font-size: 15px;
+      }
+    }
+  }
+
+  // ?SECTION THREE - HOMEPAGE-GALLERY.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .gallery-section-outer-container {
+    // border: solid red;
+    > div:first-child {
+      // border: solid red;
+      width: 95%;
+      > h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      > p {
+        width: 100%;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        font-size: 15px;
+      }
+    }
+  }
+
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+  // ?Slider Component Styling...............
+
+  .images-container {
+    grid-template-columns: repeat(1, minmax(300px, 1fr)) !important;
+  }
+
+  // !EXPNADED GALLERY SLIDER......................................................................
+  // !........................................................................
+  // !........................................................................
+
+  .slider {
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100vh;
+    padding: 2.8rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: solid red;
+    // background-color: rgb(0, 0, 0, 0.9);
+    // z-index: 9999;
+
+    %arrows-shared-home-gallery {
+      // position: absolute;
+      // top: 50%;
+      font-size: 1rem;
+      // color: variables.$secondary-color;
+      // z-index: 10;
+      // cursor: pointer;
+      // user-select: none;
+    }
+    .right-arrow {
+      // @extend %arrows-shared-home-gallery;
+      right: 10px;
+    }
+
+    .left-arrow {
+      // @extend %arrows-shared-home-gallery;
+      left: 10px;
+    }
+
+    .slide {
+      // opacity: 0;
+      // transition-duration: 1.5s ease;
+    }
+
+    .slide.active {
+      // opacity: 1;
+      // transition-duration: 1.5s;
+      // transform: scale(1.08);
+    }
+
+    .close-btn {
+      // position: absolute;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      // bottom: 0;
+      // background-color: transparent;
+      // color: white;
+      // border: solid white 1px;
+      // padding: 10px 40px;
+      // cursor: pointer;
+      // font-size: large;
+      // font-family: variables.$informal-font;
+    }
+    .close-btn:hover {
+      // background-color: variables.$secondary-color;
+      // color: black;
+      // border: none;
+      // transition: all 0.5s ease;
+    }
+  }
+
+  .image {
+    // border: solid red;
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // border-radius: 10px;
+  }
+
+  // ?IMAGE REVEALER SLIDER...........................................
+  // !IMAGE REVEALER SLIDER...........................................
+  // ?IMAGE REVEALER SLIDER...........................................
+  // !IMAGE REVEALER SLIDER...........................................
+  // ?IMAGE REVEALER SLIDER...........................................
+  // !IMAGE REVEALER SLIDER...........................................
+  .revealer-section {
+    // background-color: #ececec;
+    // padding: 4rem 0 4rem 0;
+    .revealer-section-container {
+      // display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 90%;
+      // border: solid red;
+      // margin: auto;
+      .revealer-text-div {
+        order: 2;
+        // flex-basis: 50%;
+        // padding-top: 1.5rem;
+        > h2 {
+          // font-family: variables.$formal-font;
+          padding: 0 0 1rem 0;
+          // font-size: 1.3rem;
+          // text-transform: capitalize;
+          // line-height: 1.5;
+        }
+        > p {
+          // font-family: variables.$informal-font;
+          // font-size: 15px;
+        }
+      }
+      .revealer-component-div {
+        // flex-basis: 50%;
+        order: 1;
+      }
+    }
+  }
+
+  // ?SECTION FOUR - WHO WE HELP.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .whowehelp-section-outer-container {
+    padding: 2rem 0 3rem 0;
+    // background: linear-gradient(
+    //     to bottom,
+    //     rgb(26, 47, 71, 0.95) 0%,
+    //     rgba(26, 47, 71, 0.95) 59%,
+    //     rgba(26, 47, 71, 0.95) 100%
+    //   ),
+    //   url("/poggi-11.jpg");
+    // background-position: center;
+    // background-size: cover;
+    h3 {
+      font-size: 1rem;
+      line-height: 1.5;
+      // font-weight: 400;
+      // text-transform: uppercase;
+      // font-family: variables.$formal-font;
+      // text-align: center;
+      // color: white;
+      // margin-bottom: 2.5rem;
+    }
+    h4 {
+      // text-align: center;
+      // color: variables.$secondary-color;
+      // font-family: variables.$informal-font;
+      font-size: 1.1rem;
+      // line-height: 1.6;
+      // margin: auto;
+      // font-weight: 300;
+      // padding: 0 4.5rem 0 4.5rem;
+      // transition: 0.4s ease-out;
+    }
+    h4:hover {
+      // font-size: 1.6rem;
+      // color: white;
+      // transition: all 0.3s ease-in-out;
+    }
+  }
+
+  // ?SECTION FIVE - PROCESS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .process-section-outer-container {
+    > h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 0 1rem 0 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+    > p {
+      // border: solid red;
+      text-align: left;
+      width: 100%;
+      padding: 0 1rem 0 1rem;
+      line-height: 1.7;
+      font-size: 15px;
+      // margin-bottom: 3rem;
+    }
+    .process-cards-container {
+      // border: solid pink;
+      max-width: 93%;
+      // min-height: 400px;
+    }
+  }
+
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  .card {
+    min-width: 100%;
+    // min-height: 420px;
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 15px;
+      // line-height: 1.7;
+      width: 99%;
+    }
+  }
+
+  // ?SECTION SIX - TESTIMONIALS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+
+  .testimonial-section-outer-container {
+    > div {
+      .text-container {
+        max-width: 90%;
+        // margin-bottom: 2.5rem;
+        > h3 {
+          font-size: 1.8rem;
+          line-height: 1.5;
+          text-align: left;
+          margin-bottom: 1.2rem;
+        }
+        > p {
+          // margin-bottom: 0.5rem;
+          // line-height: 1.7;
+          text-align: left;
+          font-size: 15px;
+        }
+        > img {
+          display: block;
+        }
+      }
+    }
+  }
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  // !Testimonial card component.......................
+  .testi-card {
+  }
+
+  // ?SECTION SEVEN - EXTRA SERVICES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .extraservices-section-outer-container {
+    .reels-section {
+      padding-bottom: 6rem;
+      .pic-div {
+        justify-content: end;
+        padding-right: 4.5rem;
+        // border: solid blue;
+        .pic-vic-div {
+          width: 180px;
+          .social-decor {
+            width: 220px;
+            height: 280px;
+            left: -146px;
+          }
+          img {
+            width: 165px;
+            // height: 100%;
+          }
+          .vid {
+          }
+        }
+      }
+      // TODO Text side
+      .text-div {
+        padding-top: 4rem;
+        // border: solid red;
+        max-width: 100%;
+        > h3 {
+          // font-size: 1.3rem;
+          padding: 0 1rem 0 1rem;
+          margin-bottom: 2rem;
+          line-height: 1.4;
+        }
+        .text {
+          padding: 0 1rem 0 0.5rem;
+          .icon {
+            width: 70px;
+            flex-basis: 10%;
+          }
+          > div {
+            // border: solid pink;
+            max-width: 100%;
+            flex-basis: 90%;
+            h4 {
+              font-size: 1rem;
+              margin-bottom: 0.6rem;
+            }
+            p {
+              // font-size: 15px;
+              // line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+
+    // WEBSITE SECTION.................................................
+    .website-section {
+      // border: solid red;
+
+      gap: 1.2rem;
+      // TODO Text side
+      .text-div {
+        max-width: 100%;
+        // border: solid red;
+        > h3 {
+          // font-size: 1.3rem;
+          padding: 0 1rem 0 1rem;
+          margin-bottom: 2rem;
+          line-height: 1.4;
+        }
+        .text {
+          padding: 0 1rem 0 0.5rem;
+          // border: solid red;
+
+          .icon {
+            width: 70px;
+            flex-basis: 10%;
+          }
+          > div {
+            // border: solid pink;
+            // max-width: 100%;
+            flex-basis: 90%;
+            h4 {
+              font-size: 1rem;
+              margin-bottom: 0.6rem;
+            }
+            p {
+              // font-size: 15px;
+              // line-height: 1.5;
+            }
+          }
+        }
+      }
+
+      // TODO Image side
+      .pic-div {
+        padding-top: 0rem;
+        // flex-basis: 50%;
+        display: block;
+        // justify-content: start;
+        // align-items: center;
+        // border: solid blue;
+        // margin: auto;
+        .pic-vic-div {
+          // border: solid yellow;
+          margin: auto;
+          width: 100%;
+          height: 330px;
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  // ?SECTION EIGHT - PACKAGES........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .packages-section-outer-container {
+    // padding: 4rem 0;
+
+    > h1 {
+      font-size: 4rem;
+    }
+
+    > .sqft-input-div {
+      // max-width: 100%;
+      // margin: auto;
+      // border: solid red;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // margin-bottom: 1.5rem;
+      // margin-top: 1.5rem;
+      > p {
+        font-size: 14px;
+        // text-align: center;
+        // margin-bottom: 1rem;
+        // font-family: variables.$informal-font;
+      }
+
+      > div {
+        > label {
+          margin-right: 0.7rem;
+        }
+        > input {
+          // padding: 5px 30px 5px 5px;
+        }
+      }
+    }
+
+    > .package-cards-container {
+      // flex-direction: column;
+      // border: solid red;
+      width: 90%;
+    }
+  }
+
+  // ?PACKAGE CARDS..........................
+  .package-card-shell {
+    width: 96%;
+    > h3 {
+      // margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    > p {
+      // margin-bottom: 1.1rem;
+    }
+
+    > .price {
+      font-size: 1.5rem;
+    }
+
+    > div {
+      // height: 15rem;
+      > ul {
+        // padding: 2rem 0.4rem;
+        > :last-child {
+          // padding-bottom: 1.9rem;
+        }
+        > li {
+          // margin-bottom: 0.9rem;
+        }
+      }
+    }
+
+    > a {
+      // padding: 13px 27px;
+    }
+  }
+
+  // ?Disclaimer div
+  .disclaimer-div {
+    // background-color: white;
+    // padding: 1rem;
+    // border-radius: 20px;
+    // margin: auto;
+    // margin-top: 3rem;
+    // font-size: 13px;
+    // font-family: variables.$informal-font;
+    // line-height: 1.6;
+    width: 90%;
+    // border: solid red;
+  }
+
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  // ?SECTION NINE - BOOKING FORM........................................................................
+  .booking-section-outer-container {
+    > .booking-container {
+      max-width: 92%;
+      // margin: auto;
+      > p {
+        font-size: 15px;
+        // font-weight: 600;
+        // font-family: variables.$informal-font;
+        // color: variables.$primary-color;
+        margin-bottom: 0.6rem;
+      }
+      > h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .booking-form-shell {
+    // border: solid pink;
+    .packages-form-sect {
+      // background-color: variables.$primary-color;
+      padding: 2rem 1rem;
+      // color: white;
+      // border-radius: 10px;
+      > label {
+        font-size: 1.2rem;
+        // font-family: variables.$informal-font;
+        // font-weight: 600;
+      }
+      > div {
+        margin: 1.2rem 0 0 0;
+        margin-left: 0;
+        > input {
+        }
+        > label {
+          // margin-left: 8px;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .prospect-info-form-sect {
+      // margin-top: 3rem;
+      // border: solid variables.$primary-color;
+      // border-radius: 10px;
+      padding: 3rem 1rem;
+      // position: relative;
+      > .title {
+        padding: 0.8rem 2.1rem;
+        // position: absolute;
+        // top: -1.5rem;
+        left: 1rem;
+        // max-width: 300px;
+        // border-radius: 30px;
+        // background-color: variables.$primary-color;
+        // color: white;
+        // font-family: variables.$informal-font;
+      }
+
+      > .user-info-container {
+        // border: solid pink;
+        > div {
+          // display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          margin-bottom: 1.7rem;
+          > div {
+            // flex-basis: 50%;
+            > p {
+              // font-weight: 600;
+              font-size: 15px;
+            }
+            > input {
+              // width: 100%;
+              // height: 2.5rem;
+              // border: solid rgb(161, 161, 161) 1px;
+              // font-size: 1.1rem;
+              // padding-left: 5px;
+            }
+          }
+        }
+
+        .size-field {
+          // display: block;
+          > p {
+            font-size: 15px;
+            // font-weight: 600;
+          }
+          > input {
+            // width: 100%;
+            // height: 2.5rem;
+            // border: solid rgb(161, 161, 161) 1px;
+            // font-size: 1.1rem;
+            // padding-left: 5px;
+          }
+        }
+
+        .details-field {
+          // display: block;
+          margin-top: 2.5rem;
+          > p {
+            // font-weight: 600;
+            font-size: 15px;
+          }
+          > textarea {
+            // width: 100%;
+            height: 6rem;
+            // border: solid rgb(161, 161, 161) 1px;
+            // font-size: 1.1rem;
+            // padding: 5px;
+          }
+        }
+      }
+      .urgency-form-sect {
+        // padding: 2rem 0rem;
+        > label {
+          font-size: 15px;
+          // font-family: variables.$informal-font;
+          // font-weight: 600;
+        }
+        > div {
+          margin: 1.2rem 0 0 0;
+          // margin-left: 2px;
+          > input {
+          }
+          > label {
+            // margin-left: 8px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    button {
+      // width: 100%;
+      height: 3rem;
+      // margin-top: 1rem;
+      // background-color: variables.$primary-color;
+      // color: white;
+      // border: none;
+      // cursor: pointer;
+      // font-size: 1rem;
+    }
+  }
+
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  // ?SECTION TEN - CONTACT INFO........................................................................
+  .contact-section-outer-container {
+    // margin-bottom: -2.5rem;
+    // z-index: 9999;
+    // position: relative;
+    // border: solid red;
+    .contact-container {
+      // border: solid pink;
+      // background-color: white;
+      width: 92%;
+      // margin: auto;
+      display: block;
+      // gap: 1rem;
+      // box-shadow: 1px 3px 11px 2px rgb(57, 57, 57);
+      // border-radius: 20px;
+
+      > div {
+        padding: 1.5rem 0 1.5rem;
+        // flex-basis: 33.3%;
+        > :first-child {
+          // display: block;
+          // margin: auto;`
+          // text-align: center;
+          margin-bottom: 1.3rem;
+          // font-size: 1.6rem;
+          // color: variables.$primary-color;
+        }
+        > p {
+          // text-align: center;
+          font-size: 1rem;
+          // color: #000000;
+        }
+      }
+    }
+  }
+
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  // ?SERVICE MAP POP UP................................................................................
+  .overlay-div {
+    // position: fixed;
+    // overflow: scroll;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: rgba(0, 0, 0, 0.901);
+    // z-index: 9999;
+    .outer-div {
+      // padding-top: 1rem;
+      // margin-bottom: 0.8rem;
+      // height: 100%;
+      // width: 100%;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      .background-div {
+        // background-color: white;
+        // overflow: auto;
+        // margin: auto;
+        padding: 0 0.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        height: 50%;
+        width: 98%;
+
+        > .close-button {
+          // margin-bottom: 1rem;
+          // display: flex;
+          // justify-content: end;
+          > .icon {
+            font-size: 1rem;
+            // cursor: pointer;
+            // color: black;
+          }
+        }
+        h1 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+          // text-align: center;
+        }
+        > .map-div {
+          height: 80%;
+          // width: 100%;
+          // border: solid green;
+          // display: flex;
+          // justify-content: center;
+          img {
+            // max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  // ?FOOTER SECTION......................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  footer {
+    padding-top: 6rem !important;
+
+    .socials-div {
+      // margin-bottom: 5rem;
+      gap: 8px;
+      .icons {
+        // font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    // Content div.........................
+    .content-div {
+      // display: block;
+      max-width: 90%;
+      > div:first-child {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // margin-bottom: 7rem;
+        .label {
+          margin-bottom: 0.8rem;
+        }
+        .info {
+          font-size: 1.1rem;
+        }
+      }
+      > div:nth-child(2) {
+        margin-bottom: 4.5rem;
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 1.6rem;
+        }
+        button {
+          // font-size: 1rem;
+          // padding: 10px 22px;
+        }
+      }
+      > div:last-child {
+        // border: solid red;
+        // display: block;
+        img {
+          // margin: auto;
+          // display: block;
+          // width: 150px;
+        }
+        p {
+          // text-align: center;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}

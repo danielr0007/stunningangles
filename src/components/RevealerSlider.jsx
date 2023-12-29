@@ -4,10 +4,10 @@ import "react-before-after-slider-component/dist/build.css";
 
 const RevealerSlider = () => {
   const FIRST_IMAGE = {
-    imageUrl: "/poggi-12.jpg",
+    imageUrl: "/fancy2.jpg",
   };
   const SECOND_IMAGE = {
-    imageUrl: "/unedited-livingroom.jpg",
+    imageUrl: "/fancy2-noedit.jpg",
   };
 
   return (

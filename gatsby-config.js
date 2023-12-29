@@ -9,6 +9,13 @@
  */
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "239895025788871",
+      },
+    },
+
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

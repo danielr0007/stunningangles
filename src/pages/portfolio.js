@@ -45,7 +45,7 @@ function Portfolio() {
               <div key={unit.id} className="portfolio-image-container">
                 <img
                   src={unit.image}
-                  alt="real estate photo"
+                  alt="real estate"
                   onClick={() => expandImage(unit.id)}
                 />
               </div>
@@ -70,7 +70,7 @@ function Portfolio() {
           <div className="image2-containerr">
             <img
               src={imagesData[8].image}
-              alt=""
+              alt="real estate"
               onClick={() => expandImage(imagesData[8].id)}
             />
           </div>

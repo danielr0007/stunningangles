@@ -27,7 +27,7 @@
         // margin-bottom: 1.6rem;
       }
       > p {
-        // width: 70%;
+        width: 75%;
         // text-align: center;
         // margin: auto;
         // margin-bottom: 3.5rem;
@@ -38,7 +38,7 @@
 
       > .cards-div {
         // display: grid;
-        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        // grid-template-columns: repeat(1, minmax(100px, 1fr));
         // border: solid red;
         gap: 0rem;
       }
@@ -372,7 +372,7 @@
   }
 
   .tab-component-div {
-    height: 1110px;
+    height: 1100px;
     // border: solid blue;
     > .tabs-div {
       //   padding: 0rem 1.5rem 2.3rem;
@@ -415,6 +415,12 @@
     //   margin-bottom: 1.3rem;
     //   text-align: center;
     // }
+    > video {
+      width: 35%;
+      // margin-bottom: 1.8rem;
+      // border-radius: 15px;
+      // box-shadow: 2px 2px 5px 2px rgb(104, 104, 104);
+    }
     > p {
       //   font-family: variables.$informal-font;
       width: 95%;

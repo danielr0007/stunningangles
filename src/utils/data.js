@@ -3,7 +3,8 @@ export const services = [
     firstName: "HDR",
     lastName: "Photos",
     description: `Our photos employ the 'High Dynamic Range' technique, ensuring an ideal harmony between brightness and colors, resulting in strikingly vivid images brimming with incredible detail.`,
-    image: "/poggi-11.jpg",
+    image: "/poggi-11-small.jpg",
+    link: "/services#services-photos",
     id: 0,
   },
   {
@@ -11,7 +12,8 @@ export const services = [
     lastName: "Photos",
     description:
       "Nothing showcases the fullness of a home quite like aerial photos. They allow potential buyers to fall in love with the landscapes, architectural features, and the surrounding neighborhood.",
-    image: "/mhdrone-2.jpg",
+    image: "/mhdrone-2-small.jpg",
+    link: "/services#services-drone",
     id: 1,
   },
   {
@@ -20,6 +22,7 @@ export const services = [
     description:
       "Capturing the essence and charm of each room, every unique angle, and the overall flow of the space, the stunning cinematic 4K video serves as a great pre-qualifier, ensuring that only serious buyers respond.",
     image: "/4k-video-shot.jpg",
+    link: "/services#services-video",
     id: 2,
   },
   {
@@ -28,6 +31,7 @@ export const services = [
     description:
       "A dynamic, lifelike walkthrough of your listings, allowing potential buyers to virtually navigate every room, peek around corners, and truly envision themselves in the space",
     image: "/virtual-tour-shot.jpg",
+    link: "/services#services-virtual-tour",
     id: 3,
   },
   {
@@ -36,6 +40,7 @@ export const services = [
     description:
       "From room space to the arrangement of each area, our precise floorplans bring clarity and structure to your listings, helping buyers imagine furnishing their future home.",
     image: "/floorplan-shot.webp",
+    link: "/services#services-floorplan",
     id: 4,
   },
 ];
@@ -64,7 +69,7 @@ export const imagesData = [
   },
   {
     id: "4",
-    image: "/kp-4.jpg",
+    image: "/fancy3.jpg",
   },
   {
     id: "5",
@@ -80,7 +85,7 @@ export const imagesData = [
   },
   {
     id: "8",
-    image: "/mhomeliving2.jpg",
+    image: "/fancy4.jpg",
   },
   {
     id: "9",
@@ -88,7 +93,7 @@ export const imagesData = [
   },
   {
     id: "10",
-    image: "/poggidrone-1.jpg",
+    image: "/mhomeliving2.jpg",
   },
   {
     id: "11",
@@ -116,11 +121,11 @@ export const imagesData = [
   },
   {
     id: "17",
-    image: "/japt3.jpg",
+    image: "/fancy1.jpg",
   },
   {
     id: "18",
-    image: "/poggi-1.jpg",
+    image: "/fancy2.jpg",
   },
   {
     id: "19",
@@ -144,11 +149,11 @@ export const imagesData = [
   },
   {
     id: "24",
-    image: "/mhome7.jpg",
+    image: "/mhomebed.jpg",
   },
   {
     id: "25",
-    image: "/poggidrone-4.jpg",
+    image: "/fancy5.jpg",
   },
   {
     id: "26",
@@ -168,7 +173,7 @@ export const imagesData = [
   },
   {
     id: "31",
-    image: "/kp-1.jpg",
+    image: "/poggi-1.jpg",
   },
   {
     id: "30",
@@ -180,20 +185,16 @@ export const imagesData = [
   },
   {
     id: "33",
-    image: "/kp-3.jpg",
+    image: "/my-house-3.jpg",
   },
   {
     id: "34",
-    image: "/mhomebed.jpg",
+    image: "/japt3.jpg",
   },
-  // {
-  //   id: "35",
-  //   image: "/1.jpg",
-  // },
-  // {
-  //   id: "36",
-  //   image: "/1.jpg",
-  // },
+  {
+    id: "36",
+    image: "kp-4.jpg",
+  },
   // {
   //   id: "37",
   //   image: "/1.jpg",
@@ -256,7 +257,7 @@ export const process = [
     id: 3,
     name: "Delivery",
     description:
-      "Once completed, the photoshoot is sent to your email address. Weekday photoshoots are delivered the next day by 8 PM, while weekend sessions are delivered by Monday at 5 PM. Regarding videoshoots, allow us up to 48 hours to craft a Hollywood-like masterpiece.",
+      "Once completed, the photoshoot is sent to your email. Weekday shoots are delivered the next day by 8 PM, while weekend sessions are delivered by Monday at 5 PM. Regarding videoshoots, allow us up to 48 hours to craft a Hollywood-like masterpiece.",
     image: "/process-mail.png",
   },
 ];
@@ -446,5 +447,50 @@ export const packages = [
   {
     name: "tier 5",
     packages: tier5,
+  },
+];
+
+// ? TESTIMONIALS..........................................................................
+// ? TESTIMONIALS..........................................................................
+// ? TESTIMONIALS..........................................................................
+// ? TESTIMONIALS..........................................................................
+// ? TESTIMONIALS..........................................................................
+// ? TESTIMONIALS..........................................................................
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Jorge",
+    message:
+      "I used their great service recently for one of my condos that l was going to put on the market. Pictures came out fantastic, I couldn’t be more happier with the results. Very professional and awesome delivery, I highly recommend their service for any real estate photos. Thanks again!",
+    image: "jorge.jpg",
+  },
+  {
+    id: 2,
+    name: "Omar",
+    message:
+      "I’ve been a realtor for 20 years. This company knows what they are doing. The photographer analyzed every room before capturing the best angles, he even moves things around when necessary to make sure the photo is perfect. Pictures were ready by the next day. Booking a session is super easy, I did mine online and they followed up with me to confirm. They even reached out the day before to confirm the appointment. Using them all the time from now on.",
+    image: "omar.jpg",
+  },
+  {
+    id: 3,
+    name: "Dar",
+    message:
+      "Stunning Angles truly sets the standard for professionalism and quality. Daniel goes above and beyond to capture the most appealing parts of my listings. He is always on time and shows up with a positive friendly attitude. The images themselves are stunning and are delivered super quick, allowing for eyes balls on my listings ASAP. Highly recommend!",
+    image: "dar.jpg",
+  },
+  {
+    id: 4,
+    name: "Nichole",
+    message:
+      "I wish I could give more than 5 stars because of how good my pictures came out! My listing truly stands out with the stunning images this company delivered. Communication was very consistent. I recommend to any realtor trying to stand out in this competitive market.",
+    image: "nichole.jpg",
+  },
+  {
+    id: 5,
+    name: "Chris",
+    message:
+      "Terrific photos and video tour; better than I expected. To top it off the booking fast and easy, and so was the delivery. I love how accommodating they were, the day of the shoot it rained and Daniel rescheduled my shoot with 0 issue. I recommend them, super professional and talented. ",
+    image: "chris.jpg",
   },
 ];

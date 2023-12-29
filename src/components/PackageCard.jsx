@@ -28,7 +28,7 @@ function PackageCard(props) {
       </div>
 
       <Link
-        to="/#booking"
+        to="/#form"
         onClick={() => {
           dispatch(selectOption(name));
         }}

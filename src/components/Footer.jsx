@@ -5,7 +5,14 @@ function Footer() {
   return (
     <footer className="section-spacing">
       <div className="socials-div">
-        <FaInstagram className="icons" />
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/stunninganglesfl/"
+        >
+          <FaInstagram className="icons" />
+        </a>
+
         <FaTiktok className="icons" />
         <FaYoutube className="icons" />
       </div>
@@ -14,10 +21,10 @@ function Footer() {
         <div>
           <p className="label">Phone</p>
           <p className="info" id="number">
-            954-415-8906
+            ‪(407) 815-4882‬
           </p>
           <p className="label">Email</p>
-          <p className="info">Danielr00077@yahoo.com</p>
+          <p className="info">Danielr0007@yahoo.com</p>
         </div>
         <div>
           <p>Interested In Our Services?</p>

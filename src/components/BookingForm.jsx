@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { navigate } from "gatsby";
 
-function BookingForm() {
+const api = "https://stunning-backend.onrender.com/v1/new-user";
+
+function BookingForm(props) {
+  // Redux Packages
   const packageChosen = useSelector(
     (state) => state.packageOptions.selectedOption
   );
@@ -26,24 +30,24 @@ function BookingForm() {
     urgency: "",
   });
 
-  // handles logic to match clicked UI package to radio option available...........................
+  // !handles logic to match clicked UI package to radio option available...........................
   useEffect(() => {
     if (packageChosen !== null) {
       setSelectedPackage(packageChosen);
     }
   }, [packageChosen]);
 
-  // handles the photography package that the user selected.......................................
+  // !handles the photography package that the user selected.......................................
   const handlePackageChange = (event) => {
     setSelectedPackage(event.target.value);
   };
 
-  // handles the urgency  that the user selected...................................................
+  // !handles the urgency  that the user selected...................................................
   const handleUrgencyChange = (event) => {
     setSelectedUrgency(event.target.value);
   };
 
-  // handles option for twilight photo addon.........................................................
+  // !handles option for twilight photo addon.........................................................
   const handleTwilightPhoto = () => {
     if (!selectedTwilightPhotos) {
       setSelectedTwilightPhotos(true);
@@ -52,7 +56,7 @@ function BookingForm() {
     }
   };
 
-  // handles option for twilight photo addon........................................................
+  // !handles option for twilight photo addon........................................................
   const handleFloorplan = () => {
     if (!selectedFloorplan) {
       setSelectedFloorplan(true);
@@ -61,17 +65,18 @@ function BookingForm() {
     }
   };
 
-  // handles option for twilight photo addon.........................................................
+  // !handles option for twilight photo addon.........................................................
   const handleStaging = (e) => {
     setSelectedStaging(e.target.value);
   };
 
-  // handles option for twilight photo addon.........................................................
+  // !handles option for twilight photo addon.........................................................
   const handleVirtualTour = (e) => {
     setSelectedVirtualTour(e.target.value);
   };
 
-  // handles the fetch in order to send the user form to the database................................
+  // !handles the fetch in order to send the user form to the database................................
+  // !handles the fetch in order to send the user form to the database................................
   function handleSubmit() {
     // e.preventDefault();
 
@@ -87,73 +92,99 @@ function BookingForm() {
     };
     console.log(clientInfo);
 
-    // Fetch request
-    // fetch("http://localhost:3000/v1/new-user", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(clientInfo),
-    // })
-    //   .then((res) => {
-    //     if (res.status === 201) {
-    //       console.log("Submission successful");
+    // !Fetch request.....................................................................
+    // !Fetch request.....................................................................
+    fetch(api, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(clientInfo),
+    })
+      .then((res) => {
+        if (res.status === 201) {
+          console.log("Submission successful");
 
-    //       // Clear input fields.............
-    setProspectInfo({
-      name: "",
-      phone: "",
-      email: "",
-      address: "",
-      city: "",
-      zip: "",
-      propertySize: "",
-      details: "",
-      package: "",
-      urgency: "",
-    });
-    setSelectedPackage("");
-    setSelectedUrgency("");
-    setSelectedTwilightPhotos(false);
-    setSelectedFloorplan(false);
-    setSelectedStaging("none");
-    setSelectedVirtualTour("none");
-    //       // setSelectedStaging("none");
-    //     } else {
-    //       // Handle other response statuses as errors
-    //       console.log("Submission failed with status: " + res.status);
+          // Redirect to the thank you page after a short delay (example: 2 seconds)
+          setTimeout(() => {
+            navigate("/thankyoupageone/");
+          }, 2000);
 
-    //       // ?Checks what error status was returned
-    //       switch (res.status) {
-    //         case 409:
-    //           return res.json().then((data) => {
-    //             console.log("Response Data:", data);
-    //           });
-    //           break;
-    //         case 400:
-    //           return res.json().then((data) => {
-    //             console.log("Response Data:", data.errors[0].msg);
-    //           });
-    //           break;
-    //         case 500:
-    //           console.log("database issue");
-    //           return res.json().then((data) => {
-    //             console.log("Response Data:", data.status);
-    //           });
-    //           break;
-    //         default:
-    //           console.log("some error");
-    //       }
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error("Failed to connect to the server:", error);
-    //   });
+          // Clear input fields.............
+          setProspectInfo({
+            name: "",
+            phone: "",
+            email: "",
+            address: "",
+            city: "",
+            zip: "",
+            propertySize: "",
+            details: "",
+            package: "",
+            urgency: "",
+          });
+          setSelectedPackage("");
+          setSelectedUrgency("");
+          setSelectedTwilightPhotos(false);
+          setSelectedFloorplan(false);
+          setSelectedStaging("none");
+          setSelectedVirtualTour("none");
+          // setSelectedStaging("none");
+        } else {
+          // Handle other response statuses as errors
+          console.log("Submission failed with status: " + res.status);
+
+          // ?Checks what error status was returned
+          switch (res.status) {
+            case 409:
+              res.json().then((data) => {
+                console.log("Response Data:", data);
+                props.setServerFormAnswer(
+                  "Server error. Please contact us 954-415-8906"
+                );
+                props.setShowFormFeedback(true);
+              });
+              break;
+            case 400:
+              res.json().then((data) => {
+                console.log("Response Data:", data.errors[0].msg);
+                props.setServerFormAnswer(
+                  data.errors[0].msg + ". Please try again"
+                );
+                props.setShowFormFeedback(true);
+              });
+              break;
+            case 500:
+              // console.log("database issue");
+              res.json().then((data) => {
+                console.log("Response Data:", data.status);
+                props.setServerFormAnswer(
+                  "Server error. Please contact us 954-415-8906"
+                );
+                props.setShowFormFeedback(true);
+              });
+              break;
+            default:
+              // console.log("some error");
+              props.setServerFormAnswer(
+                "Server error. Please contact us 954-415-8906"
+              );
+              props.setShowFormFeedback(true);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to connect to the server:", error);
+        props.setServerFormAnswer(
+          "Could not connect. Please contact us 954-415-8906"
+        );
+        props.setShowFormFeedback(true);
+      });
   }
 
   return (
     <div className="booking-form-shell">
       {/* PACKAGES SECT............................................................ */}
       <div className="packages-form-sect">
-        <label htmlFor="packages">Packages:</label>
+        <label htmlFor="packages">Choose a Package:</label>
         <div>
           <input
             type="radio"
@@ -206,8 +237,15 @@ function BookingForm() {
       </div>
 
       {/* ADDONS SECT............................................................ */}
+      {/* ADDONS SECT............................................................ */}
+      {/* ADDONS SECT............................................................ */}
+      {/* ADDONS SECT............................................................ */}
+      {/* ADDONS SECT............................................................ */}
+      {/* ADDONS SECT............................................................ */}
       <div className="addons-sect">
         <label htmlFor="addons">ADD ONS:</label>
+        {/* Twilight Photos Select........................... */}
+        {/* Twilight Photos Select........................... */}
         {/* Twilight Photos Select........................... */}
         <div>
           <input
@@ -225,6 +263,8 @@ function BookingForm() {
             </span>
           </label>
         </div>
+        {/* 2D Floor Plan Select...................................... */}
+        {/* 2D Floor Plan Select...................................... */}
         {/* 2D Floor Plan Select...................................... */}
         <div>
           <input
@@ -247,7 +287,10 @@ function BookingForm() {
         {/* Virtual Staging Select...................................... */}
         <div>
           <label id="staging-label" htmlFor="virtual-staging">
-            Virtual Staging
+            Virtual Staging{" "}
+            <span className="text-gold">
+              (Bring life and joy to an empty space with realistic staging)
+            </span>
           </label>
           <select
             className="selector"
@@ -267,7 +310,11 @@ function BookingForm() {
         {/* Virtual Tour Select...................................... */}
         <div>
           <label id="tour-label" htmlFor="virtual-tour">
-            Virtual Tour
+            Virtual Tour{" "}
+            <span className="text-gold">
+              (Listings on Zillow with an Interactive Floor Plan received, on
+              average, 72% more shares)
+            </span>
           </label>
 
           <select

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TabArrow from "./TabArrow";
 
 const TeamAccordion = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -15,7 +16,10 @@ const TeamAccordion = () => {
           className={`acc-1 ${expandedIndex === 0 ? "active" : ""}`}
           onClick={() => handleAccordionClick(0)}
         >
-          Punctuality and reliability define our service
+          Punctuality and reliability define our service{" "}
+          <span>
+            <TabArrow selected={expandedIndex === 0} />
+          </span>
         </button>
         <div
           style={{
@@ -42,11 +46,14 @@ const TeamAccordion = () => {
           className={`acc-2 ${expandedIndex === 1 ? "active" : ""}`}
           onClick={() => handleAccordionClick(1)}
         >
-          Our DNA: Positive attitude and collaboration
+          Our DNA: Positive attitude and collaboration{" "}
+          <span>
+            <TabArrow selected={expandedIndex === 1} />
+          </span>
         </button>
         <div
           style={{
-            maxHeight: expandedIndex === 1 ? "200px" : "0",
+            maxHeight: expandedIndex === 1 ? "250px" : "0",
             overflow: "hidden",
             transition: "max-height 0.6s ease-in-out",
           }}
@@ -70,6 +77,9 @@ const TeamAccordion = () => {
           onClick={() => handleAccordionClick(2)}
         >
           Communication is the heartbeat of our partnership.
+          <span>
+            <TabArrow selected={expandedIndex === 2} />
+          </span>
         </button>
         <div
           style={{

@@ -15,13 +15,15 @@ const useFadeInOnScrollHook = () => {
       { threshold: 0.1 } // Adjust the threshold as needed
     );
 
-    if (componentRef.current) {
-      observer.observe(componentRef.current);
+    const currentRef = componentRef.current; // Capture current value
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (componentRef.current) {
-        observer.unobserve(componentRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
