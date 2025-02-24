@@ -22,20 +22,17 @@ function TeamHomeSection() {
 
       {/* Right side */}
       <div className="right-text-container">
-        <p className="overheading">
-          In the world of real estate, reputation is KING.
+        <p className="overheading capitalize">
+          Committed to professionalism & excellence
         </p>
-        <h3>Elevating Your Brand Through Professionalism & Genuine Care</h3>
+        <h3>Real Estate Photographers In Orlando, FL That You Can Depend On</h3>
         <p>
-          Cool fact... Reputable brands invest massive effort in selecting
-          partners that enhance or, at the very least, do not harm their brand
-          image. These major players recognize the difficulty of building a
-          positive reputation and the ease with which it can be tarnished. As a
-          brand yourself, why do any different? At Stunning Angles we take
-          measures to not only protect your reputation, but to make it referral
-          worthy. Every home we shoot and every homeowner we engage with
-          receives exceptional professionalism and care. The same superb
-          customer care you will experience on a consitent basis.
+          You’ve got a lot on your plate, from juggling multiple roles to
+          handling unexpected challenges and demanding clients. We understand.
+          That’s why our mission is to provide you with stunning real estate
+          photos quickly, consistently, and professionally. Count on us to be
+          the reliable real estate photographer you can trust for all your media
+          needs.
         </p>
         <TeamAccordion />
 

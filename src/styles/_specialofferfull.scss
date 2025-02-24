@@ -1,61 +1,52 @@
 @mixin specialofferfull {
-  // !HEADER............................................
-  // !HEADER............................................
-  // !HEADER............................................
-  // !HEADER............................................
-  // !HEADER............................................
-  .special-offer-header {
-    background-color: #1a2f47;
-    height: 300px;
-    // border: solid blue;
-    > div {
-      //   width: 100%;
-      > img {
-        padding: 1rem 0;
-        width: 300px;
-        margin: auto;
-        display: block;
-      }
-    }
+  .sect-title {
+    font-family: variables.$formal-font;
   }
+  .sect-ititle {
+    font-family: variables.$informal-font;
+  }
+  // !HEADER............................................
+  // !HEADER............................................
+  // !HEADER............................................
+  // !HEADER............................................
+  // !HEADER............................................
+
   //   !HERO SECTION.......................................
   //   !HERO SECTION.......................................
   //   !HERO SECTION.......................................
   //   !HERO SECTION.......................................
   //   !HERO SECTION.......................................
   .hero-section {
-    background-color: #1a2f47;
+    background-color: #60203a;
     // height: 90vh;
-    padding: 2rem 0;
+    padding: 1rem 0;
     > .width-container {
       height: 100%;
-      width: 80%;
-      //   border: solid red;
+      width: 70%;
+      // border: solid red;
       margin: auto;
-      display: flex;
-      gap: 6rem;
 
       > .message-div {
-        width: 55%;
         color: white;
         height: 100%;
-        padding: 6rem 0 1rem 0;
+        text-align: center;
         // border: solid red;
         > h1 {
-          font-size: 3rem;
-          font-family: Arial, Helvetica, sans-serif;
-          margin-bottom: 1.5rem;
+          // font-size: 3rem;
+          // font-family: Arial, Helvetica, sans-serif;
+          // margin-bottom: 1.5rem;
         }
         > h2 {
-          font-size: 2rem;
-          font-family: Arial, Helvetica, sans-serif;
-          margin-bottom: 2.5rem;
-          color: #e6b35b;
+          // font-size: 2rem;
+          // font-family: Arial, Helvetica, sans-serif;
+          // margin-bottom: 2.5rem;
+          // color: #e6b35b;
         }
 
         > p {
           margin-bottom: 4rem;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          line-height: 1.5;
           font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -69,67 +60,6 @@
           font-family: Arial, Helvetica, sans-serif;
         }
       }
-      // !FORM DIV..........................................
-      // !FORM DIV..........................................
-
-      > .form-div {
-        width: 45%;
-        // White form container
-        .lead-form-container {
-          width: 100%;
-          background-color: white;
-          padding: 3rem 4rem 3rem 4rem;
-          border-radius: 20px;
-          //   Form title
-          h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.6rem;
-            font-family: Arial, Helvetica, sans-serif;
-          }
-          //   Where the actual fields are
-          .lead-form-div {
-            width: 100%;
-            // border: solid red;
-            label {
-              color: rgb(80, 80, 80);
-              display: block;
-              margin-bottom: 0.5rem;
-              font-size: 1.2rem;
-              font-family: Arial, Helvetica, sans-serif;
-            }
-            input {
-              width: 100%;
-              height: 40px;
-              margin-bottom: 1rem;
-              padding-left: 5px;
-              font-size: 18px;
-            }
-            .agree-div {
-              margin-top: 1rem;
-              margin-bottom: 2rem;
-              .checkbox {
-                height: 20px;
-                width: 20px;
-                margin-right: 10px;
-              }
-            }
-            button {
-              background-color: variables.$secondary-color;
-              width: 100%;
-              padding: 1rem 0;
-              border: none;
-              border-radius: 30px;
-              font-size: 16px;
-              font-family: Helvetica, sans-serif;
-              color: black;
-              font-weight: 900;
-              text-align: center;
-              cursor: pointer;
-              transition: all 0.3s ease-in-out;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -138,7 +68,7 @@
     display: grid !important;
     // border: solid green;
     cursor: pointer;
-    grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+    grid-template-columns: repeat(4, minmax(300px, 1fr)) !important;
     .images-special {
       width: 100%;
       height: 100%;
@@ -152,121 +82,115 @@
   //   !HOW IT WORKS SECTION.................................................
   //   !HOW IT WORKS SECTION.................................................
 
+  // ! 3 F's SECTION........................................................
+  // ! 3 F's SECTION........................................................
+  // ! 3 F's SECTION........................................................
+  // ! 3 F's SECTION........................................................
+  // ! 3 F's SECTION........................................................
+  .three-f-section {
+    background: #60203a;
+  }
+
+  // !SHAPE DIVIDER...........................
+  // !SHAPE DIVIDER...........................
+  // !SHAPE DIVIDER...........................
+  // !SHAPE DIVIDER...........................
+  .custom-shape-divider-top-1707163441 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1707163441 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+  }
+
+  .custom-shape-divider-top-1707163441 .shape-fill {
+    fill: #60203a;
+  }
   // !WHAT THE PACKAGE INCLUDES SECTION.....................................
   // !WHAT THE PACKAGE INCLUDES SECTION.....................................
   // !WHAT THE PACKAGE INCLUDES SECTION.....................................
   // !WHAT THE PACKAGE INCLUDES SECTION.....................................
   // !WHAT THE PACKAGE INCLUDES SECTION.....................................
-  .package-includes-section {
-    background-color: rgb(239, 239, 239);
-    .width-container {
-      height: 100%;
-      width: 80%;
-      // border: solid red;
-      margin: auto;
+
+  .special-offer-package-card-shell {
+    background-color: #60203a;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid #e6b35b 1px;
+    padding: 25px 10px 25px 10px;
+    color: white;
+    > h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-family: variables.$formal-font;
+    }
+
+    > p {
+      margin-bottom: 1rem;
+      font-size: 12px;
+      font-family: variables.$informal-font;
+    }
+
+    > .price {
+      font-size: 1.5rem;
+      text-decoration: line-through;
+      color: red;
+      margin-bottom: 5px;
+      // font-family: variables.$informal-font;
+    }
+
+    > .new-price {
+      font-size: 2.5rem;
+      color: #f6cf8a;
+      // font-family: variables.$informal-font;
+    }
+
+    > div {
+      border: solid #e6b35b 1px;
+      background-color: white;
+      width: 100%;
+      height: 10rem;
       display: flex;
-      gap: 6rem;
-      padding: 4rem 0 3.5rem 0;
-      .text-div {
-        width: 55%;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      overflow: scroll;
+      > ul {
+        padding: 2rem 0.5rem;
         height: 100%;
-        padding: 7rem 0 1rem 0;
-
-        .above-title-text {
-          margin-bottom: 1.2rem;
-          font-size: 1.7rem;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #e6b35b;
+        > :last-child {
+          padding-bottom: 2rem;
         }
-        > h2 {
-          font-size: 2.7rem;
-          font-family: Arial, Helvetica, sans-serif;
-          margin-bottom: 2.5rem;
-        }
-        > p {
-          margin-bottom: 4rem;
-          font-size: 1.2rem;
+        > li {
+          margin-bottom: 0.8rem;
+          font-size: 15px;
+          font-family: variables.$informal-font;
         }
       }
-      //  !VISUAL ELEMENT AKA IMAGE OF PACKAGE......
-      //  !VISUAL ELEMENT AKA IMAGE OF PACKAGE......
-      .visual-element-div {
-        // ?PACKAGE CARDS..........................
-        > .package-card-shell {
-          width: 550px;
-          background-color: rgb(26, 47, 71);
-          border-radius: 10px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          border: solid #e6b35b 1px;
-          padding: 25px 10px 25px 10px;
-          color: white;
-          > h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            font-family: variables.$formal-font;
-          }
+    }
 
-          > p {
-            margin-bottom: 1rem;
-            font-size: 12px;
-            font-family: variables.$informal-font;
-          }
-
-          > .price {
-            font-size: 2rem;
-            text-decoration: line-through;
-            color: red;
-            margin-bottom: 5px;
-            // font-family: variables.$informal-font;
-          }
-
-          > .new-price {
-            font-size: 3rem;
-            color: rgb(0, 255, 0);
-            // font-family: variables.$informal-font;
-          }
-
-          > div {
-            border: solid #e6b35b 1px;
-            background-color: white;
-            width: 100%;
-            height: 20rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            overflow: scroll;
-            > ul {
-              padding: 2rem 0.5rem;
-              height: 100%;
-              > :last-child {
-                padding-bottom: 2rem;
-              }
-              > li {
-                margin-bottom: 0.8rem;
-                font-size: 15px;
-                font-family: variables.$informal-font;
-              }
-            }
-          }
-
-          > a {
-            margin-top: 1rem;
-            background-color: #e6b35b;
-            padding: 13px 28px;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-            font-family: variables.$informal-font;
-          }
-          > a:hover {
-            background-color: #f6cf8a;
-          }
-        }
-      }
+    > a {
+      margin-top: 1rem;
+      background-color: #f64a64;
+      padding: 13px 28px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      font-family: variables.$informal-font;
+    }
+    > a:hover {
+      background-color: #f6cf8a;
     }
   }
 
@@ -278,6 +202,13 @@
   .footer {
     width: 100%;
     height: 200px;
-    background-color: #1a2f47;
+    background-color: #60203a;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 13px;
+    color: rgb(211, 211, 211);
+    padding: 0 0 5px 0;
   }
 }

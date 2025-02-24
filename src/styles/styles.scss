@@ -1,4 +1,8 @@
 @use "variables";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @import "./commonuse";
 @import "./genericbanner";
 @import "./aboutfull";
@@ -6,22 +10,6 @@
 @import "./portfoliofull";
 @import "./thankyoupageonefull";
 @import "./specialofferfull";
-// @import "homeMediaQueries/_sixteen14.scss";
-// @import "homeMediaQueries/_thirteen60.scss";
-// @import "homeMediaQueries/_ten64.scss";
-// @import "homeMediaQueries/_six10.scss";
-// @import "aboutMediaQueries/_elevenSixty.scss";
-// @import "aboutMediaQueries/_tentwelve.scss";
-// @import "aboutMediaQueries/_eightThirty.scss";
-// @import "aboutMediaQueries/_sixNineNine.scss";
-// @import "servicesMediaQueries/_thirteen85.scss";
-// @import "servicesMediaQueries/_nine35.scss";
-// @import "servicesMediaQueries/_seven75.scss";
-// @import "servicesMediaQueries/_six71.scss";
-// @import "portfolioMediaQueries/_thirteen00.scss";
-// @import "portfolioMediaQueries/_one00.scss";
-// @import "portfolioMediaQueries/_six90.scss";
-// @import "portfolioMediaQueries/_four90.scss";
 @import "thankyouMediaQueries/_eightten.scss";
 
 * {
@@ -56,6 +44,14 @@ a {
 button:focus,
 a:focus {
   outline: none;
+}
+
+.formal-font {
+  font-family: variables.$formal-font;
+}
+
+.informal-font {
+  font-family: variables.$informal-font;
 }
 
 // ?MOBILE MENU........................................................................
@@ -158,45 +154,47 @@ a:focus {
 // ?........................................................................
 // ?........................................................................
 header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // z-index: 10;
+  // width: 80%;
+  // margin: auto;
 
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 3rem 0 3rem;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin: 0 3rem 0 3rem;
   }
 
   .logo {
-    width: 380px;
-    margin: -20px 0 -20px 0;
+    // width: 380px;
+    // margin: -20px 0 -20px 0;
   }
 
   ul {
-    display: flex;
-    gap: 5rem;
-    color: white;
-    margin-right: 2.5rem;
+    // display: flex;
+    // gap: 5rem;
+    // color: white;
+    // margin-right: 2.5rem;
     // border: solid red;
 
     li {
-      font-size: 1.2rem;
-      transition: all 0.3s ease-in-out;
+      // font-size: 1.2rem;
+      // transition: all 0.3s ease-in-out;
       // transition-delay: 0.3s;
     }
     li:hover {
-      color: rgb(221, 221, 221);
+      // color: rgb(221, 221, 221);
     }
   }
   .menu-icon {
-    font-size: 2rem;
-    color: white;
-    display: none;
-    cursor: pointer;
+    // font-size: 2rem;
+    // color: white;
+    // display: none;
+    // cursor: pointer;
   }
 }
 
@@ -208,92 +206,92 @@ header {
 // ?........................................................................
 // ?........................................................................
 // ?........................................................................
-.banner-image-container {
-  height: 100vh;
-  position: relative;
-  > div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+// .banner-image-container {
+//   height: 100vh;
+//   position: relative;
+//   > div {
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
 
-.banner-text-container {
-  margin-left: 8rem;
-  color: white;
+// .banner-text-container {
+//   margin-left: 8rem;
+//   color: white;
 
-  h1 {
-    font-size: 3rem;
-    max-width: 70%;
-    line-height: 1.3;
-    margin-bottom: 2.5rem;
-    font-family: variables.$formal-font;
-  }
+//   h1 {
+//     font-size: 3rem;
+//     max-width: 70%;
+//     line-height: 1.3;
+//     margin-bottom: 2.5rem;
+//     font-family: variables.$formal-font;
+//   }
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 3rem;
-    max-width: 80%;
-    font-family: variables.$informal-font;
-  }
+//   h2 {
+//     font-size: 1.5rem;
+//     font-weight: 300;
+//     margin-bottom: 3rem;
+//     max-width: 80%;
+//     font-family: variables.$informal-font;
+//   }
 
-  %button-shared {
-    background-color: variables.$secondary-color;
-    padding: 1rem 3rem 1rem 3rem;
-    border: none;
-    font-size: 15px;
-    font-family: variables.$informal-font;
-    color: black;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
+//   %button-shared {
+//     background-color: variables.$secondary-color;
+//     padding: 1rem 3rem 1rem 3rem;
+//     border: none;
+//     font-size: 15px;
+//     font-family: variables.$informal-font;
+//     color: black;
+//     text-align: center;
+//     cursor: pointer;
+//     transition: all 0.3s ease-in-out;
+//   }
 
-  a:first-child {
-    @extend %button-shared;
-    margin-right: 1rem;
-  }
+//   a:first-child {
+//     @extend %button-shared;
+//     margin-right: 1rem;
+//   }
 
-  a:first-child:hover {
-    background-color: #f6cf8a;
-  }
+//   a:first-child:hover {
+//     background-color: #f6cf8a;
+//   }
 
-  a:last-child {
-    @extend %button-shared;
-    background-color: transparent;
-    border: solid white 1px;
-    color: white;
-  }
+//   a:last-child {
+//     @extend %button-shared;
+//     background-color: transparent;
+//     border: solid white 1px;
+//     color: white;
+//   }
 
-  a:last-child:hover {
-    background-color: white;
-    color: black;
-  }
-}
+//   a:last-child:hover {
+//     background-color: white;
+//     color: black;
+//   }
+// }
 
-%arrows-shared {
-  background-color: transparent;
-  color: variables.$secondary-color;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+// %arrows-shared {
+//   background-color: transparent;
+//   color: variables.$secondary-color;
+//   border: none;
+//   font-size: 1.5rem;
+//   cursor: pointer;
+// }
 
-.banner-previous {
-  @extend %arrows-shared;
-  position: absolute;
-  top: 50%;
-  left: 1.5rem;
-}
+// .banner-previous {
+//   @extend %arrows-shared;
+//   position: absolute;
+//   top: 50%;
+//   left: 1.5rem;
+// }
 
-.banner-next {
-  @extend %arrows-shared;
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-}
+// .banner-next {
+//   @extend %arrows-shared;
+//   position: absolute;
+//   top: 50%;
+//   right: 1.5rem;
+// }
 
 // ?SECTION ONE - TEAM.....................................................
 // ?........................................................................
@@ -464,7 +462,7 @@ header {
       rgba(26, 47, 71, 0.95) 59%,
       rgba(26, 47, 71, 0.9) 100%
     ),
-    url("/poggi-10.jpg");
+    url("/services-banner.jpg");
   background-position: center;
   background-size: cover;
   > div {
@@ -542,7 +540,9 @@ header {
 // ?........................................................................
 // ?........................................................................
 .gallery-section-outer-container {
+  // border: solid red;
   > div {
+    // width: 100%;
     margin: auto;
     color: black;
     // border: solid red;
@@ -575,14 +575,15 @@ header {
 // ?Slider Component Styling...............
 // ?Slider Component Styling...............
 .container {
-  // border: solid red;
-  position: relative;
+  // width: 100% !important;
+  // border: solid blue !important;
+  // position: relative;
 }
 .images-container {
-  display: grid !important;
+  display: grid;
   // border: solid green;
   cursor: pointer;
-  grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   .imagess {
     width: 100%;
     height: 100%;
@@ -750,7 +751,7 @@ header {
       rgba(26, 47, 71, 0.95) 59%,
       rgba(26, 47, 71, 0.95) 100%
     ),
-    url("/poggi-11.jpg");
+    url("/who-for-banner.jpg");
   background-position: center;
   background-size: cover;
   h3 {
@@ -813,7 +814,7 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 }
@@ -902,7 +903,7 @@ header {
     font-size: 16px;
     color: #7c7c7c;
     line-height: 1.7;
-    width: 90%;
+    width: 87%;
     margin: auto;
     font-family: variables.$informal-font;
   }
@@ -918,15 +919,16 @@ header {
 // ?........................................................................
 
 .testimonial-section-outer-container {
-  background: linear-gradient(
-      to bottom,
-      rgb(26, 47, 71) 0%,
-      rgba(26, 47, 71, 0.95) 59%,
-      rgba(26, 47, 71, 0.9) 100%
-    ),
-    url("/poggi-4.jpg");
-  background-position: center;
-  background-size: cover;
+  // background: linear-gradient(
+  //     to bottom,
+  //     rgb(26, 47, 71) 0%,
+  //     rgba(26, 47, 71, 0.95) 59%,
+  //     rgba(26, 47, 71, 0.9) 100%
+  //   ),
+  //   url("/poggi-4.jpg");
+  // background-position: center;
+  // background-size: cover;
+  background-color: rgb(26, 47, 71);
   > div {
     // border: solid green;
     .text-container {
@@ -947,6 +949,7 @@ header {
         line-height: 1.7;
       }
       > img {
+        margin: auto;
         width: 100px;
         padding: 12px 0 5px 0;
       }
@@ -986,6 +989,7 @@ header {
   > div {
     color: variables.$secondary-color;
     margin-bottom: 1rem;
+    display: flex;
   }
   > p {
     color: rgb(37, 37, 79);
@@ -1017,7 +1021,7 @@ header {
       position: relative;
       flex-basis: 50%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
       // background-color: transparent;
       // border: solid blue;
@@ -1032,7 +1036,7 @@ header {
           position: absolute;
           width: 370px;
           height: 450px;
-          left: -245px;
+          left: -205px;
           z-index: 9999;
         }
         img {
@@ -1065,7 +1069,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
+      align-items: flex-start;
 
       // border: solid red;
       > h3 {
@@ -1171,7 +1175,7 @@ header {
       position: relative;
       flex-basis: 50%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
       // background-color: transparent;
       // border: solid blue;
@@ -1189,7 +1193,7 @@ header {
           object-fit: cover;
           border-radius: 20px;
           height: 100%;
-          z-index: 9999;
+          z-index: 50;
 
           // background-color: transparent;
         }
@@ -1213,7 +1217,7 @@ header {
   background-color: #ececec;
   padding: 4rem 0;
 
-  > h1 {
+  > h3 {
     color: rgba(255, 255, 255, 0.889);
     text-align: center;
     font-size: 5.5rem;
@@ -1222,34 +1226,37 @@ header {
     font-family: variables.$formal-font;
   }
 
-  > .sqft-input-div {
-    max-width: 50%;
-    margin: auto;
-    // border: solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    > p {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-family: variables.$informal-font;
-    }
+  // > .sqft-input-div {
+  //   max-width: 50%;
+  //   margin: auto;
+  //   // border: solid red;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   margin-bottom: 1.5rem;
+  //   margin-top: 1.5rem;
+  //   > p {
+  //     text-align: center;
+  //     margin-bottom: 1rem;
+  //     font-family: variables.$informal-font;
+  //   }
 
-    > div {
-      > label {
-        margin-right: 1rem;
-      }
-      > input {
-        padding: 5px 30px 5px 5px;
-      }
-    }
-  }
+  //   > div {
+  //     display: flex;
+  //     gap: 1rem;
+  //     // border: solid red;
+  //     > label {
+  //       // margin-right: 1rem;
+  //     }
+  //     > input {
+  //       padding: 5px 30px 5px 5px;
+  //     }
+  //   }
+  // }
 
   > .package-cards-container {
     margin: auto;
-    margin-top: -2px;
+    margin-top: -15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1617,7 +1624,7 @@ header {
 // ?SECTION TEN - CONTACT INFO........................................................................
 .contact-section-outer-container {
   margin-bottom: -2.5rem;
-  z-index: 9999;
+  z-index: 50;
   position: relative;
   // border: solid red;
   .contact-container {
@@ -1693,7 +1700,7 @@ header {
       > .close-button {
         margin-bottom: 1rem;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-right: 0.5rem;
         > .icon {
           font-size: 2rem;

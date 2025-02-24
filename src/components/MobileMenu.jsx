@@ -22,12 +22,12 @@ const MobileMenu = () => {
       </button>
       <div className="logo-container">
         <Link to="/" onClick={toggleMenu}>
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="stunning angles logo" />
         </Link>
       </div>
       <button className="phone-container">
         <FaPhone className="icon" />
-        954-415-8906
+        ‪(407) 815-4882‬
       </button>
       <nav className="menu-items">
         <ul>
@@ -36,14 +36,27 @@ const MobileMenu = () => {
               About
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/services" onClick={toggleMenu}>
               Services
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/portfolio" onClick={toggleMenu}>
               Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="https://portal.spiro.media/order/stunning/stunning-angles-order"
+              onClick={toggleMenu}
+            >
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link to="/rewards" onClick={toggleMenu}>
+              Rewards
             </Link>
           </li>
           <li>

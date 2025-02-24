@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import { useDispatch } from "react-redux";
-import { selectOption } from "../utils/packageOptionsSlice";
+// import { useDispatch } from "react-redux";
+// import { selectOption } from "../utils/packageOptionsSlice";
 
 function PackageCard(props) {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const name = props.data.name;
   const subHead = props.data.subHeadline;
@@ -28,10 +28,10 @@ function PackageCard(props) {
       </div>
 
       <Link
-        to="/#form"
-        onClick={() => {
-          dispatch(selectOption(name));
-        }}
+        to="https://portal.spiro.media/order/stunning/stunning-angles-order"
+        // onClick={() => {
+        //   dispatch(selectOption(name));
+        // }}
       >
         Order Package
       </Link>

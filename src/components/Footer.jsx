@@ -24,7 +24,7 @@ function Footer() {
             ‪(407) 815-4882‬
           </p>
           <p className="label">Email</p>
-          <p className="info">Danielr0007@yahoo.com</p>
+          <p className="info">stunningangleshomephotography@gmail.com</p>
         </div>
         <div>
           <p>Interested In Our Services?</p>

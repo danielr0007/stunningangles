@@ -100,12 +100,12 @@
       // display: flex;
       // justify-content: space-between;
       // align-items: center;
-      margin: 1rem 2.5rem 0 0.5rem;
+      // margin: 1rem 2.5rem 0 0.5rem;
     }
 
     .logo {
-      width: 200px;
-      margin: 0 0 0 0;
+      // width: 200px;
+      // margin: 0 0 0 0;
     }
 
     ul {
@@ -135,67 +135,67 @@
   // ?........................................................................
   // ?........................................................................
   // ?........................................................................
-  .banner-image-container {
-    // border: solid red;
-    position: relative;
-    height: 93vh;
-    display: block;
+  // .banner-image-container {
+  //   // border: solid red;
+  //   // position: relative;
+  //   // height: 93vh;
+  //   // display: block;
 
-    > div {
-      // height: 100%;
-      // border: solid red;
-    }
-  }
+  //   > div {
+  //     // height: 100%;
+  //     // border: solid red;
+  //   }
+  // }
 
-  .banner-text-container {
-    // width: 400px !important;
-    text-align: left;
-    // border: solid purple;
-    // align-self: center;
-    width: 92%;
-    margin: auto;
-    // margin-left: 0;
+  // .banner-text-container {
+  //   // width: 400px !important;
+  //   text-align: left;
+  //   // border: solid purple;
+  //   // align-self: center;
+  //   width: 95%;
+  //   margin: auto;
+  //   // margin-left: 0;
 
-    h1 {
-      font-size: 1.5rem;
-      // max-width: 100%;
-      margin-top: 6rem;
-      line-height: 1.4;
-      margin-bottom: 1.5rem;
-    }
+  //   h1 {
+  //     font-size: 1.4rem;
+  //     // max-width: 100%;
+  //     margin-top: 6rem;
+  //     line-height: 1.4;
+  //     margin-bottom: 1.5rem;
+  //   }
 
-    h2 {
-      font-size: 16px;
-      max-width: 100%;
-      margin: 0;
-      margin-bottom: 3.5rem;
-    }
+  //   h2 {
+  //     font-size: 16px;
+  //     max-width: 100%;
+  //     margin: 0;
+  //     margin-bottom: 3.5rem;
+  //   }
 
-    %button-shared {
-      // padding: 1rem 2rem 1rem 2rem;
-      width: 100%;
-      margin: auto;
-      display: block;
-      // border: none;
-      // font-size: 16px;
-    }
+  //   %button-shared {
+  //     // padding: 1rem 2rem 1rem 2rem;
+  //     width: 100%;
+  //     margin: auto;
+  //     display: block;
+  //     // border: none;
+  //     // font-size: 16px;
+  //   }
 
-    a:first-child {
-      // @extend %button-shared;
-      margin-bottom: 1rem;
-    }
+  //   a:first-child {
+  //     // @extend %button-shared;
+  //     margin-bottom: 1rem;
+  //   }
 
-    // button:last-child {
-    //   @extend %button-shared;
-    //   background-color: transparent;
-    //   border: solid white 1px;
-    //   color: white;
-    // }
-  }
+  //   // button:last-child {
+  //   //   @extend %button-shared;
+  //   //   background-color: transparent;
+  //   //   border: solid white 1px;
+  //   //   color: white;
+  //   // }
+  // }
 
-  %arrows-shared {
-    display: none;
-  }
+  // %arrows-shared {
+  //   display: none;
+  // }
 
   // ?SECTION ONE - TEAM.....................................................
   // ?........................................................................
@@ -212,7 +212,7 @@
       // border: solid red 1px;
       .left-images-container {
         // border: solid red;
-        margin-bottom: 12rem;
+        margin-bottom: 8rem;
         gap: 0.5rem;
 
         // Styiling for images of this section...............................
@@ -231,7 +231,7 @@
       .right-text-container {
         // border: solid red 2px;
         .overheading {
-          font-size: 15px;
+          font-size: 13px;
           margin-bottom: 0.2rem;
           font-weight: 500;
         }
@@ -275,7 +275,7 @@
     }
 
     .vid {
-      top: 16%;
+      top: 16.5%;
       left: 50%;
       transform: translate(-50%, 0%);
       width: 300px;
@@ -616,6 +616,7 @@
           font-size: 15px;
         }
         > img {
+          margin: 0;
           display: block;
         }
       }
@@ -644,11 +645,11 @@
         padding-right: 4.5rem;
         // border: solid blue;
         .pic-vic-div {
-          width: 180px;
+          width: 200px;
           .social-decor {
             width: 220px;
-            height: 280px;
-            left: -146px;
+            height: 260px;
+            left: -125px;
           }
           img {
             width: 165px;
@@ -777,7 +778,7 @@
       // margin-bottom: 1.5rem;
       // margin-top: 1.5rem;
       > p {
-        font-size: 14px;
+        // font-size: 14px;
         // text-align: center;
         // margin-bottom: 1rem;
         // font-family: variables.$informal-font;
@@ -785,7 +786,7 @@
 
       > div {
         > label {
-          margin-right: 0.7rem;
+          // margin-right: 0.7rem;
         }
         > input {
           // padding: 5px 30px 5px 5px;
@@ -1037,7 +1038,7 @@
         }
         > p {
           // text-align: center;
-          font-size: 1rem;
+          font-size: 14px;
           // color: #000000;
         }
       }
@@ -1143,7 +1144,7 @@
           margin-bottom: 0.8rem;
         }
         .info {
-          font-size: 1.1rem;
+          font-size: 14px;
         }
       }
       > div:nth-child(2) {

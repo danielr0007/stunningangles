@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { FaCheckCircle } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
-function thankyoupageone() {
+function thankyoupagetwo() {
   return (
     <>
       <Helmet>
@@ -46,18 +46,41 @@ function thankyoupageone() {
 
   gtag('config', 'AW-11418107590');`}
         </script>
+
+        {/* <!-- Google tag (gtag.js) event --> */}
+        <script>
+          {` gtag('event', 'conversion_event_purchase_1',
+          {
+            // <event_parameters>
+          }
+          );`}
+        </script>
       </Helmet>
       <div className="thankyou-body">
         <div className="message">
           <div>
-            <FaCheckCircle className="icon" />
+            <FaCheckCircle className="icon m-auto" />
           </div>
 
-          <h1>Thank You!</h1>
+          <h1>Thank You! Your purchase is complete.</h1>
 
           <p>
-            We will reach out to you shortly to go over the details of your
-            shoot.
+            To visit the booking page{" "}
+            <a
+              className=" text-indigo-800"
+              href="https://portal.spiro.media/order/stunning/valentine-special-offer"
+            >
+              ***click here***
+            </a>
+            . Once there, select the package and fill in the required
+            information. At the end you'll have a space to put in your coupon
+            code. <br />
+            <br />
+            Your code is:{" "}
+            <span className="text-xl text-pink-700">valentinesdeal</span> <br />
+            <br />
+            This will bring down the price to $0 and then proceed to finalize
+            the booking. <br /> Book over the phone by calling ‪(407) 815-4882‬
           </p>
         </div>
 
@@ -67,4 +90,4 @@ function thankyoupageone() {
   );
 }
 
-export default thankyoupageone;
+export default thankyoupagetwo;

@@ -16,7 +16,7 @@ const TeamAccordion = () => {
           className={`acc-1 ${expandedIndex === 0 ? "active" : ""}`}
           onClick={() => handleAccordionClick(0)}
         >
-          Punctuality and reliability define our service{" "}
+          Punctuality & Consistency Define Our Service{" "}
           <span>
             <TabArrow selected={expandedIndex === 0} />
           </span>
@@ -30,12 +30,11 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 0 && (
             <p>
-              We recognize how crucial timing is in real estate transactions.
-              That's why we've optimized our workflow to meet deadlines
-              consistently. From being punctual for every photoshoot appointment
-              to delivering the final photos (they are beautiful btw) at the
-              promised time, we've refined our process to not just meet but
-              exceed your expectations.
+              Sellers want their homes sold quickly, which is why we’ve
+              optimized our workflow to consistently meet deadlines. From
+              punctual photo sessions to delivering final media on time, our
+              streamlined process is built to match the fast pace of real
+              estate.
             </p>
           )}
         </div>
@@ -46,7 +45,7 @@ const TeamAccordion = () => {
           className={`acc-2 ${expandedIndex === 1 ? "active" : ""}`}
           onClick={() => handleAccordionClick(1)}
         >
-          Our DNA: Positive attitude and collaboration{" "}
+          Flexible & Accommodating{" "}
           <span>
             <TabArrow selected={expandedIndex === 1} />
           </span>
@@ -60,12 +59,10 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 1 && (
             <p>
-              Embracing a positive attitude is a non-negotiable when it comes to
-              rocking the Stunning Angles uniform. The truth is that we love
-              what we do. Many of us began with a camera as a mere hobby, which
-              has now blossomed into our fervent profession. Each photographer
-              within our team is carefully selected for their distinct talent
-              and innate ability to serve with attentiveness and boundless joy.
+              Life can be chaotic, especially in real estate. That’s why we
+              offer flexible scheduling. Need a photo session ASAP? We’ve got
+              you covered. Need to reschedule? No problem! Just let us know your
+              needs, and we’ll find a way to help
             </p>
           )}
         </div>
@@ -76,7 +73,7 @@ const TeamAccordion = () => {
           className={`acc-3 ${expandedIndex === 2 ? "active" : ""}`}
           onClick={() => handleAccordionClick(2)}
         >
-          Communication is the heartbeat of our partnership.
+          Communication is The Heartbeat of Our Partnership.
           <span>
             <TabArrow selected={expandedIndex === 2} />
           </span>
@@ -90,11 +87,11 @@ const TeamAccordion = () => {
         >
           {expandedIndex === 2 && (
             <p>
-              We take pride in our team's prompt responses, active listening,
-              and dedication to comprehending your requirements. Your feedback
-              is invaluable to us at every stage, ensuring our work seamlessly
-              aligns with your vision. Choose your preferred communication
-              method; we're ready to address your every need.
+              We take pride in prompt responses, active listening, and a deep
+              commitment to understanding your needs. Your feedback is
+              invaluable at every stage, helping us ensure our work aligns
+              perfectly with your vision. Reach out to us through your preferred
+              communication method—we’re always listening.
             </p>
           )}
         </div>

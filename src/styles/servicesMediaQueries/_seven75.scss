@@ -179,10 +179,14 @@
         // justify-items: center;
         // margin-bottom: 3rem;
         .video-div {
-          max-width: 500px;
-          min-width: 440px;
-          max-height: 285px;
-          //   background-color: red;
+          // max-width: 500px;
+          // min-width: 440px;
+          // max-height: 285px;
+          // background-color: red;
+          iframe {
+            height: 270px;
+            width: 480px;
+          }
         }
       }
 

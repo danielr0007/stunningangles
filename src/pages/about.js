@@ -32,16 +32,17 @@ function About() {
               <h2>ABOUT STUNNING</h2>
               <img src="/decoration-line.png" alt="" />
             </div>
-            <h4>Delivering the best quality media to high producing agents</h4>
+            <h4>
+              Helping Orlando, FL agents sell more homes with top quality media
+            </h4>
             <p>
-              Stunning Angles is a tight-knit group with more than 5 yrs of
-              expertise in visual marketing. It all started with Daniel, the
-              owner, who discovered his passion for photography back in 2015
-              while shooting for e-commerce. As his love for the craft deepened,
-              he delved into real estate photography around 2021. With a
-              portfolio boasting beautiful short films and numerous residential
-              photoshoots, the business flourished, largely thanks to
-              word-of-mouth recommendations.
+              Stunning Angles, led by Daniel, is a close-knit team with over 5
+              years of visual marketing expertise. Daniel's passion for
+              photography began in 2015 with e-commerce shoots, eventually
+              leading him to real estate photography in 2021. The business has
+              flourished, showcasing beautiful short films and residential
+              photoshoots, primarily growing through word-of-mouth
+              recommendations.
             </p>
             <div>
               <p>Daniel</p>
@@ -52,7 +53,7 @@ function About() {
           <div className="vision-mission-div">
             <div className="container">
               <div className="image-div">
-                <img src="/fancy1.jpg" alt="" />
+                <img src="/iran-home-1.jpg" alt="" />
               </div>
               <h4>Our Mission</h4>
               <p>
@@ -65,7 +66,7 @@ function About() {
 
             <div className="container">
               <div className="image-div">
-                <img src="/poggi-7.jpg" alt="" />
+                <img src="/irina-3.jpg" alt="" />
               </div>
               <h4>Our Vision</h4>
               <p>
@@ -95,7 +96,7 @@ function About() {
               </div>
 
               <div>
-                <h4>W're Specialized in Real Estate Photography:</h4>
+                <h4>We're Specialized in Real Estate Photography:</h4>
                 <p>
                   Our team consists of highly skilled and experienced
                   photographers who specialize in real estate.
@@ -111,7 +112,7 @@ function About() {
                 <h4>We Shoot W/ Professional Equipment</h4>
                 <p>
                   We invest in top-of-the-line camera equipment, lighting, and
-                  editing tools to produce the best.
+                  editing tools to produce the best quality.
                 </p>
               </div>
             </div>
@@ -121,10 +122,10 @@ function About() {
               </div>
 
               <div>
-                <h4>We Edit To Perfection With the Latest Software</h4>
+                <h4>Our Editing Style Grabs Attention And Creates Interest</h4>
                 <p>
-                  Along with a natural eye for quality, we use the best
-                  softwares to bring out the best out of every pic.
+                  Good quality is not enough, you must stand out. We edit images
+                  and video strategically to make them pop.
                 </p>
               </div>
             </div>
@@ -134,7 +135,7 @@ function About() {
               </div>
 
               <div>
-                <h4>Work Flow as Fast as a Flash Shot</h4>
+                <h4>Fast Delivery of Media</h4>
                 <p>
                   The instant the shoot is wrapped up, we get to editing,
                   delegating tasks to deliver the final product FAST!
@@ -147,7 +148,7 @@ function About() {
               </div>
 
               <div>
-                <h4>We Offer Exactly What You Need</h4>
+                <h4>Tailored Made Packages</h4>
                 <p>
                   We offer flexible packages tailored to your specific needs and
                   budget. Pick the one that matches your goals best.
@@ -160,7 +161,7 @@ function About() {
               </div>
 
               <div>
-                <h4>We're There For You, CONSITENTLY</h4>
+                <h4>We're There For You, CONSISTENTLY</h4>
                 <p>
                   Customer service so good you tell your friends, nothing less.
                 </p>

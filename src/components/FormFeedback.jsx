@@ -11,6 +11,9 @@ function FormFeedback(props) {
             onClick={() => {
               props.setShowFormFeedbackFunction(false);
             }}
+            onKeyDown={() => {
+              props.setShowFormFeedbackFunction(false);
+            }}
             className="formfeedback-close-button mb-8 flex justify-end"
           >
             <TfiClose className="icon" />

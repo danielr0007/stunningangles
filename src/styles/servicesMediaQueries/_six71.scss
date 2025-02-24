@@ -180,9 +180,10 @@
         // justify-items: center;
         // margin-bottom: 3rem;
         .video-div {
-          max-width: 310px;
-          min-width: 0;
-          max-height: 185px;
+          iframe {
+            height: 180px;
+            width: 320px;
+          }
           //   background-color: red;
         }
       }

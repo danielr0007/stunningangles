@@ -46,24 +46,32 @@ function TabsComponent() {
         <div
           className={`tab ${showSection.drone && "active-tab"}`}
           onClick={() => setDroneSect()}
+          onKeyDown={() => setDroneSect()}
+          role="presentation"
         >
           Drone Shots
         </div>
         <div
           className={`tab ${showSection.reels && "active-tab"}`}
           onClick={() => setReelsSect()}
+          onKeyDown={() => setReelsSect()}
+          role="presentation"
         >
           Reels Video
         </div>
         <div
           className={`tab ${showSection.twilight && "active-tab"}`}
           onClick={() => setTwilightSect()}
+          onKeyDown={() => setTwilightSect()}
+          role="presentation"
         >
           Twilight Photos
         </div>
         <div
           className={`tab ${showSection.staging && "active-tab"}`}
           onClick={() => setStagingSect()}
+          onKeyDown={() => setStagingSect()}
+          role="presentation"
         >
           Virtual Staging
         </div>
@@ -102,7 +110,7 @@ function TabsComponent() {
       )}
       {showSection.twilight && (
         <div className="sect">
-          <img src="/twilight.jpeg" alt="" />
+          <img src="/sick-dusk.jpg" alt="" />
           <h4>Twilight Photos</h4>
           <p>
             By capturing homes in the soft, ambient light of twilight, this

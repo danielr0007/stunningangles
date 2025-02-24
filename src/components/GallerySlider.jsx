@@ -39,7 +39,7 @@ function GallerySlider() {
   };
 
   return (
-    <div className="container">
+    <div>
       <Slider {...settings}>
         <LazyLoad offset={200} once>
           <div className="images-container">
@@ -56,8 +56,12 @@ function GallerySlider() {
                 onClick={() => {
                   expandImage(imagesData.id);
                 }}
+                onKeyDown={() => {
+                  expandImage(imagesData.id);
+                }}
                 key={imagesData.id}
                 src={imagesData.image}
+                role="presentation"
               />
             ))}
           </div>
@@ -77,6 +81,10 @@ function GallerySlider() {
                 onClick={() => {
                   expandImage(imagesData.id);
                 }}
+                onKeyDown={() => {
+                  expandImage(imagesData.id);
+                }}
+                role="presentation"
                 key={imagesData.id}
                 src={imagesData.image}
               />
@@ -98,6 +106,10 @@ function GallerySlider() {
                 onClick={() => {
                   expandImage(imagesData.id);
                 }}
+                onKeyDown={() => {
+                  expandImage(imagesData.id);
+                }}
+                role="presentation"
                 key={imagesData.id}
                 src={imagesData.image}
               />

@@ -17,23 +17,23 @@
   // ?........................................................................
   // ?........................................................................
 
-  .banner-image-container {
-    height: 97vh;
-  }
-  .banner-text-container {
-    h1 {
-      font-size: 3.3rem;
-      margin-bottom: 2.4rem;
-      max-width: 87%;
-    }
+  // .banner-image-container {
+  //   height: 97vh;
+  // }
+  // .banner-text-container {
+  //   h1 {
+  //     font-size: 3.3rem;
+  //     margin-bottom: 2.4rem;
+  //     max-width: 87%;
+  //   }
 
-    h2 {
-      font-size: 21px;
-      // width: 90%;
-      line-height: 1.7;
-      margin-bottom: 3rem;
-    }
-  }
+  //   h2 {
+  //     font-size: 21px;
+  //     // width: 90%;
+  //     line-height: 1.7;
+  //     margin-bottom: 3rem;
+  //   }
+  // }
 
   // ?SECTION ONE - TEAM.....................................................
   // ?........................................................................
@@ -99,8 +99,8 @@
     }
 
     .vid {
-      top: 53%;
-      left: 3rem;
+      top: 46%;
+      left: 5rem;
       width: 500px;
       height: 270px;
     }
@@ -147,6 +147,134 @@
   // ?........................................................................
   // ?........................................................................
   // ?........................................................................
+
+  // ?SECTION FIVE - PROCESS.....................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  // ?........................................................................
+  .process-section-outer-container {
+    > h3 {
+      // text-align: center;
+      // font-size: 2.2rem;
+      // margin-bottom: 1.5rem;
+      // font-family: variables.$formal-font;
+    }
+    > p {
+      // font-family: variables.$informal-font;
+      // border: solid red;
+      // text-align: center;
+      // width: 60%;
+      // line-height: 1.7;
+      // font-size: 1.1rem;
+      // margin: auto;
+      // color: #7c7c7c;
+      // margin-bottom: 3rem;
+    }
+    .process-cards-container {
+      // border: solid pink;
+      max-width: 87%;
+      // min-height: 400px;
+      // margin: auto;
+      // display: flex;
+      // justify-content: center;
+      gap: 0rem;
+      // flex-wrap: wrap;
+    }
+  }
+
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  // !CARD COMPONENT/////////////////////////////...................
+  .card {
+    // max-width: 33.3%;
+    // flex-basis: 30%;
+    // min-width: 390px;
+    // min-height: 420px;
+    // border: solid green;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // margin-bottom: 1.5rem;
+    // text-align: center;
+    .image-container {
+      // position: relative;
+      // background-color: #ffffff;
+      height: 180px;
+      width: 180px;
+      // margin: auto;
+      // border-radius: 100%;
+      // border: solid rgb(241, 241, 241) 1px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // margin-bottom: 2.3rem;
+      // transition: all 0.5s ease-out;
+
+      .number-circle {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // font-size: 1.2rem;
+        // font-weight: 600;
+        // font-family: variables.$informal-font;
+        // position: absolute;
+        // top: 12px;
+        // left: -8px;
+        // border-radius: 100%;
+        width: 25%;
+        height: 25%;
+        // background-color: #ffffff;
+        // border: solid rgb(241, 241, 241) 1px;
+        // transition: all 0.5s ease-out;
+      }
+
+      div {
+        height: 85%;
+        width: 85%;
+        // background-color: rgb(245, 245, 245);
+        // border-radius: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+      }
+      img {
+        width: 80px;
+      }
+    }
+    // .image-container:hover {
+    //   background-color: variables.$secondary-color;
+    //   transition: all 0.3s ease-in;
+    // }
+    // .number-circle:hover {
+    //   background-color: variables.$secondary-color;
+    //   transition: all 0.3s ease-in;
+    //   color: white;
+    // }
+    // .image-container:hover::before {
+    //   background-color: variables.$secondary-color;
+    //   transition: all 0.3s ease-in;
+    // }
+
+    h4 {
+      font-size: 1.1rem;
+      // font-family: variables.$informal-font;
+      // font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 15px;
+      // color: #7c7c7c;
+      // line-height: 1.7;
+      // width: 90%;
+      // margin: auto;
+      // font-family: variables.$informal-font;
+    }
+  }
 
   // ?SECTION SEVEN - EXTRA SERVICES........................................................................
   // ?........................................................................
@@ -327,7 +455,7 @@
         position: relative;
         flex-basis: 50%;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         // background-color: transparent;
         // border: solid blue;
@@ -345,7 +473,7 @@
             object-fit: cover;
             border-radius: 20px;
             height: 100%;
-            z-index: 9999;
+            // z-index: 9999;
 
             // background-color: transparent;
           }

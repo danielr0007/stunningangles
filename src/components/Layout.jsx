@@ -7,7 +7,19 @@ function Layout(props) {
   return (
     <>
       <Helmet>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.svg" />
+
+        {/* Title of page */}
+        <title>Stunning Angles Real Estate Photography Company</title>
+
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Stunning Angles is a professional real estate photography company in Orlando, offering high-quality images and videos to help sell your listings faster. Next-day delivery available."
+        />
+
+        <link rel="canonical" href="https://stunningangles.com/" />
+
         {/* HOTJAR........................... */}
         <script>
           {`
@@ -33,6 +45,19 @@ function Layout(props) {
           gtag('js', new Date());
 
           gtag('config', 'G-ZQLQGED39F');`}
+        </script>
+
+        {/* <!-- Google tag (gtag.js)......................... --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11418107590"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11418107590');`}
         </script>
 
         {/* FACEBOOK DOMAIN VERIFICATION............... */}

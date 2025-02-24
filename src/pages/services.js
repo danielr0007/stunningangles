@@ -26,18 +26,14 @@ function Services() {
       {/* ........................................................................................ */}
       <section className="overview-services-section section-spacing">
         <div className="width-div">
-          <h3>LISTING MEDIA</h3>
+          <h3>PREMIUM REAL ESTATE MEDIA</h3>
           <img src="/decoration-line-2.png" alt="" />
           <p>
-            In every piece of media we craft, expect two key elements: 1.
-            Exceptional, awe-inspiring quality. 2. Precision in conveying the
-            perfect message to sell your property at top price in record time.
-            Our success stems from this deliberate, laser-focused approach
-            coupled with an unwavering attention to detail. We leverage
-            top-notch equipment, seasoned photographers, meticulous editors, and
-            storytellers informed by market insights. Dive deeper into all our
-            home selling media services below to discover how we can elevate
-            your property's presentation.
+            We leverage top-notch equipment, seasoned photographers, meticulous
+            editors, and storytellers informed by market insights to craft the
+            perfect message to sell your property at top price fast. Dive deeper
+            into all our home selling media services below to discover how we
+            can level-up your property's presentation.
           </p>
           <div className="cards-div">
             <div className="service-card">
@@ -46,8 +42,8 @@ function Services() {
               </div>
               <h4>PHOTOS</h4>
               <p>
-                Detailed, punchy images that capture the eyes and hearts of
-                potential buyers
+                Bright, punchy images that capture the eyes and hearts of
+                potential buyers on MLS
               </p>
             </div>
             <div className="service-card">
@@ -57,7 +53,7 @@ function Services() {
               <h4>VIDEOS</h4>
               <p>
                 Creates the immersive illusion of touring the home through
-                breathtaking 4K film.
+                breathtaking 4K film w/ catchy music.
               </p>
             </div>
             <div className="service-card">
@@ -91,24 +87,20 @@ function Services() {
       <section id="services-photos" className="photos-section section-spacing">
         <h3>LISTING PHOTOS</h3>
         <p>
-          Our techniques leverage the power of 'High Dynamic Range' (HDR). This
-          approach guarantees that every image showcases a harmonious blend of
-          vibrant hues and nuanced shades. By employing HDR, we preserve every
-          detail, infusing our photographs with a mesmerizing lifelike quality
-          that captivates potential buyers. <br />
-          <br />
           Beyond just image quality, identifying those specific angles and
           standout features that deeply engage potential buyers is paramount.
           Through our expertise and planning, we have a knack for intuitively
           discovering these selling points. It's about going beyond the visuals
           to pinpoint those aspects that transform prospects into invested
-          leads, rendering your property irresistible.
+          leads.
         </p>
         <div className="width-div">
           <ServicesPhotoGallery />
         </div>
 
-        <Link to="/#booking">Book A Shoot</Link>
+        <Link to="https://portal.spiro.media/order/stunning/stunning-angles-order">
+          Book A Shoot
+        </Link>
       </section>
 
       {/* SECTION FOUR - VIDEO......................................................................... */}
@@ -117,25 +109,41 @@ function Services() {
       {/* ........................................................................................ */}
       <section id="services-video" className="video-section section-spacing">
         <div className="width-div">
-          <h3>CINEMATIC VIDEO TOUR</h3>
+          <h3>CINEMATIC VIDEO TOURS</h3>
           <p>
             Immersing viewers in the essence and allure of every room, our
             cinematic 4K videos masterfully encapsulate the charm of each space,
             showcasing its unique angles, textures, and the seamless flow of the
-            entire property. Beyond mere visuals, these videos serve as a
-            powerful pre-qualifier, engaging potential buyers at a deeper level.
-            By offering an unparalleled virtual walkthrough, we ensure that only
-            the most serious and genuinely interested buyers respond, having
-            already experienced the property's ambiance and flow.
+            entire property. These videos serve as a powerful pre-qualifier,
+            engaging potential buyers at a deeper level.
           </p>
 
           <div className="videos-div">
-            <div className="video-div"></div>
-            <div className="video-div"></div>
-            <div className="video-div"></div>
+            <div className="video-div">
+              <iframe
+                src="https://www.youtube.com/embed/xidgXMkjSkE?si=9eWuxTOv-bgAJfJ9"
+                title="YouTube video player"
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="video-div">
+              <iframe
+                src="https://www.youtube.com/embed/LJ4PcZMWrrY?si=dhvJzERJ85EJ_JWD"
+                title="YouTube video player"
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
 
-          <Link to="/#booking">Schedule A Video</Link>
+          <Link to="https://portal.spiro.media/order/stunning/stunning-angles-order">
+            Schedule A Video
+          </Link>
         </div>
       </section>
 
@@ -155,21 +163,21 @@ function Services() {
           <div className="text-content-div">
             <h3>VIRTUAL TOURS</h3>
             <p>
-              This isn't just a static presentation; it's an interactive journey
-              that invites exploration, allowing individuals to absorb the
-              ambiance, texture, and layout from the comfort of their own
-              screens. This technology bridges the gap between imagination and
-              reality, fostering a deeper connection between the property and
-              the prospective buyer. It's more than a walkthrough—it's an
-              opportunity for them to mentally move in, picturing their
-              lifestyle and making an emotional connection with what could be
-              their future home.
+              An interactive journey that invites exploration. It allows buyers
+              to absorb the ambiance, texture, and layout from the comfort of
+              their own screens. <br />
+              <br /> It's more than a walkthrough—it's an opportunity for them
+              to mentally move in, picturing their lifestyle and making an
+              emotional connection with what could be their future home.
             </p>
             <ul>
               {/* <li>3D Matterport Tour</li> */}
               <li>Zillow 3D Home Tour</li>
+              <li>Matterport 3D Home Tour</li>
             </ul>
-            <Link to="/#booking">Book A Shoot</Link>
+            <Link to="https://portal.spiro.media/order/stunning/stunning-angles-order">
+              Book A Shoot
+            </Link>
           </div>
         </div>
       </section>
@@ -189,7 +197,9 @@ function Services() {
               buyers said they were more likely to visit a home if the listing
               included a floor plan they like.”
             </p>
-            <Link to="/#booking">Book A Shoot</Link>
+            <Link to="https://portal.spiro.media/order/stunning/stunning-angles-order">
+              Book A Shoot
+            </Link>
           </div>
 
           <div className="image-div">
@@ -204,7 +214,7 @@ function Services() {
       {/* ........................................................................................ */}
       <section id="services-drone" className="more-services-section">
         <div className="width-div">
-          <h3>PLUS MUCH MORE SELLING POWER</h3>
+          <h3>ADD MORE SELLING POWER</h3>
 
           <TabsComponent />
         </div>

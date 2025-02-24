@@ -5,7 +5,7 @@ function ServiceCardComponent(props) {
   return (
     <div className="service-card-container">
       <div className="card-image-container">
-        <img src={props.cardData.image} alt="" />
+        <img src={props.cardData.image} alt="real estate media service" />
       </div>
       <div className="card-text-container">
         <h4>

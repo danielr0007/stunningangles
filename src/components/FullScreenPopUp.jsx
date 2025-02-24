@@ -11,6 +11,10 @@ function FullScreenPopUp(props) {
             onClick={() => {
               props.setShowServiceAreaFunction(false);
             }}
+            onKeyDown={() => {
+              props.setShowServiceAreaFunction(false);
+            }}
+            role="presentation"
             className="close-button mb-8 flex justify-end"
           >
             <TfiClose className="icon" />

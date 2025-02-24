@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import "../styles/styles.scss";
+// import "../styles/styles.scss";
 import Banner from "../components/Banner";
 import TeamHomeSection from "../components/TeamHomeSection";
 import Video from "../components/Video";
@@ -8,7 +8,7 @@ import ServiceCardComponent from "../components/ServiceCardComponent";
 import {
   services,
   process,
-  packages,
+  // packages,
   defaultPackage,
   testimonials,
 } from "../utils/data";
@@ -20,7 +20,6 @@ import MobileMenu from "../components/MobileMenu";
 import {
   FaPhoneAlt,
   FaLocationArrow,
-  FaLongArrowAltLeft,
   FaFilm,
   FaUserCheck,
   FaUsers,
@@ -29,46 +28,18 @@ import { PiTelevisionSimple } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import useFadeInOnScrollHook from "../utils/useFadeInOnScrollHook";
 import PackageCard from "../components/PackageCard";
-import BookingForm from "../components/BookingForm";
+// import BookingForm from "../components/BookingForm";
 import LazyLoad from "react-lazy-load";
 import RevealerSlider from "../components/RevealerSlider";
-import { useState } from "react";
-import FullScreenPopUp from "../components/FullScreenPopUp";
+// import { useState } from "react";
+// import FullScreenPopUp from "../components/FullScreenPopUp";
 import { Link } from "gatsby";
-import FormFeedback from "../components/FormFeedback";
+import PopUpGeneric from "../components/PopUpGeneric";
+// import FormFeedback from "../components/FormFeedback";
 
 export default function Home() {
   const { ref, isVisible } = useFadeInOnScrollHook();
-  const [showServiceArea, setShowServiceArea] = useState(false);
-  const [showFormFeedback, setShowFormFeedback] = useState(false);
-  const [serverFormAnswer, setServerFormAnswer] = useState("");
-
-  const [currentPackage, setCurrentPackage] = useState(defaultPackage);
-
-  function handleShowPackage(e) {
-    const value = e.target.value;
-
-    if (value == 0 || value == "") {
-      setCurrentPackage(defaultPackage);
-    } else if (value <= 1000) {
-      console.log("tier1");
-      setCurrentPackage(packages[0].packages);
-    } else if (value <= 2000) {
-      console.log("tier2");
-      setCurrentPackage(packages[1].packages);
-    } else if (value <= 3000) {
-      console.log("tier3");
-      setCurrentPackage(packages[2].packages);
-    } else if (value <= 4000) {
-      console.log("tier4");
-      setCurrentPackage(packages[3].packages);
-    } else if (value <= 5000) {
-      console.log("tier5");
-      setCurrentPackage(packages[4].packages);
-    } else {
-      setCurrentPackage(defaultPackage);
-    }
-  }
+  // const [showServiceArea, setShowServiceArea] = useState(true);
 
   return (
     <>
@@ -100,8 +71,8 @@ export default function Home() {
         <section className="services-section-outer-container section-spacing">
           <div>
             <div>
-              <h3>Skyrocket Listing Perceived Value With:</h3>
-              <img src="/decoration-line.png" alt="" />
+              <h3>All Your Real Estate Media Needs In One Place</h3>
+              <img src="/decoration-line.png" alt="yellow decoration lines" />
             </div>
 
             <div className="service-cards-container">
@@ -124,20 +95,12 @@ export default function Home() {
         >
           <div>
             <h3>
-              Our Images are <span className="text-gold">Swipe Right</span>{" "}
-              Worthy
+              Stop Letting Dull Photos <span className="text-gold">Lose</span>{" "}
+              You Business.
             </h3>
-            <p>
-              Top performers require top quality to remain kings and queens of
-              their market, and we deliver just that. Our method involves
-              careful planning so that every photo showcases the most visually
-              appealing and marketable features of a home. Flagship, dedicated
-              equipment and thousands of hours of experience all come together
-              to grant you delightful images that translate into more showings,
-              more referrals, multiple offers, and a shorter time on the market.
-            </p>
+            <p>We deliver next day while maintaining magazine like quality.</p>
 
-            <img src="/decoration-line-2.png" alt="" />
+            <img src="/decoration-line-2.png" alt="yellow decoration lines" />
           </div>
 
           <GallerySlider />
@@ -153,18 +116,16 @@ export default function Home() {
         <section className="revealer-section">
           <div className="revealer-section-container">
             <div className="revealer-text-div">
-              <h2>
-                Experience the power of our editing. Drag the divider from side
-                to side.
-              </h2>
+              <h2>Unleash Your Listing's Potential w/ Virtual Staging</h2>
               <p>
-                Beyond our expertise in capturing the most stunning angles of
-                your listing, our editing skills set us apart. We transform raw
-                HDR images into crisp, vibrant, and naturally evocative pieces
-                of art. Our meticulous approach ensures a balance, avoiding the
-                look of overly edited, AI-generated photos.
+                Allow potential buyers to visualize the space's potential. This
+                ultra realistic staging technology can make your listing more
+                appealing and increase its perceived value, all without the
+                expense of physical staging.
               </p>
-              <Link to="/#booking">Book A Shoot</Link>
+              <Link to="https://portal.spiro.media/order/stunning/stunning-angles-order">
+                Book A Shoot
+              </Link>
             </div>
 
             <div className="revealer-component-div">
@@ -200,11 +161,10 @@ export default function Home() {
         {/* ........................................................................................ */}
         {/* ........................................................................................ */}
         <section className="process-section-outer-container section-spacing">
-          <h3>Booking a Shoot, and What to Expect After</h3>
+          <h3>How It Works</h3>
           <p>
-            Your time is precious, for that reason we've streamlined our working
-            process to be as simple and concise as possible. It involves just
-            three easy steps outlined below.
+            Ready to begin? Our process is S-I-M-P-L-E. It involves just three
+            easy steps outlined below.
           </p>
 
           <div className="process-cards-container">
@@ -237,6 +197,7 @@ export default function Home() {
                 <TestimonialCard testi={testimonials[2]} />
                 <TestimonialCard testi={testimonials[3]} />
                 <TestimonialCard testi={testimonials[4]} />
+                <TestimonialCard testi={testimonials[5]} />
                 {/* <TestimonialCard />
                 <TestimonialCard />
                 <TestimonialCard />
@@ -250,6 +211,7 @@ export default function Home() {
                 <TestimonialCard testi={testimonials[2]} />
                 <TestimonialCard testi={testimonials[3]} />
                 <TestimonialCard testi={testimonials[4]} />
+                <TestimonialCard testi={testimonials[5]} />
               </Marquee>
             </div>
           </div>
@@ -266,7 +228,7 @@ export default function Home() {
                 <img
                   className="social-decor"
                   src="/socialmedias-decor.png"
-                  alt=""
+                  alt="yellow decoration lines"
                 />
                 <img src="/iphone-image.png" alt="" />
                 <LazyLoad className="lazy" offset={100} once>
@@ -291,15 +253,13 @@ export default function Home() {
                 <div>
                   <h4>
                     Leverage the addictive power of tiktok & Insta reels w/ the
-                    immersive power of video to make the sale
+                    immersive power of video
                   </h4>
                   <p className="first-para">
-                    We craft captivating 30-45 second vertical videos for your
-                    listings, showcasing their best features in a fun and trendy
-                    style set to music. This ensures maximum attention, glueing
-                    viewers to your new listing. It's a surefire method to make
-                    your property stand out and bring enough numbers to sell at
-                    top price!
+                    30-60 second vertical videos for your listings, showcasing
+                    their best features in a fun and trendy style set to music.
+                    It's a surefire method to make your property stand out and
+                    bring enough numbers to sell at top price!
                   </p>
                 </div>
               </div>
@@ -312,29 +272,29 @@ export default function Home() {
                   </h4>
                   <p>
                     Given TikTok and Instagram's emphasis on reels, these
-                    vertical, short videos offer the most assured path to
-                    achieve high organic reach. Additionally, due to their
-                    smaller file size and brevity, sharing these videos is
-                    incredibly fast and straightforward. Simply save the compact
-                    clip on your phone and effortlessly share it through any
-                    messaging platform.
+                    vertical, short videos offer the most assured path to high
+                    organic reach.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* WEBSITE SECT....................................................... */}
           <div className="website-section">
             <div className="pic-div">
               <div className="pic-vic-div">
-                <img src="/listing-site.png" alt="" />
+                <img
+                  src="/listing-site.png"
+                  alt="listing site in different device sizes"
+                />
               </div>
             </div>
 
             <div className="text-div">
               <h3>
-                A dedicated, easily shareable, high-end, hand-coded listing
-                website <span className="text-gold">FREE</span> with every shoot
+                A dedicated, easily shareable, listing website{" "}
+                <span className="text-gold">FREE</span> with every package.
               </h3>
               <div className="text">
                 <PiTelevisionSimple className="icon" />
@@ -345,11 +305,10 @@ export default function Home() {
                   </h4>
                   <p className="first-para">
                     MLS compresses all images upon upload, resulting in a
-                    scrunched and often blurry appearance. In contrast, a
-                    developer has invested hours in perfecting each listing site
-                    to ensure that all images and videos are showcased in full
-                    high-definition, presenting a sharp, detailed, and vivid
-                    visual experience.
+                    scrunched and often blurry appearance. In contrast, each
+                    listing site ensures that all images and videos are
+                    showcased in high-definition, presenting a detailed and
+                    vivid visual experience.
                   </p>
                 </div>
               </div>
@@ -361,40 +320,46 @@ export default function Home() {
                   </h4>
                   <p>
                     Due to the extensive data transfers on MLS, navigation can
-                    be slow and challenging. Our dedicated listing site focuses
-                    solely on one property, ensuring exceptional speed and
-                    responsiveness. Additionally, our site's navigation is
-                    highly intuitive, delivering a superb user experience
-                    sellers and buyers will be impressed by.
+                    be slow and challenging. Our listing site is light, focusing
+                    solely on one property; ensuring exceptional speed and
+                    responsiveness.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Marketing done for you sect.............................................. */}
           <div className="website-section">
             <div className="pic-div">
-              <div className="pic-vic-div">
-                <img src="/marketing-kit.png" alt="" />
-              </div>
+              <LazyLoad className="lazy" offset={200} once>
+                <div className="pic-vic-div">
+                  <img
+                    src="/marketing-kit.png"
+                    alt="flyers and social media posts"
+                  />
+                </div>
+              </LazyLoad>
             </div>
 
             <div className="text-div">
               <h3>
-                Marketing Done For You. Flyers, social media feed and story
-                posts <span className="text-gold">FREE</span> w/ every shoot.
+                Marketing Done for You: Attractive and Customizable{" "}
+                <span className="text-gold">
+                  Premade Flyers & Social Media Posts
+                </span>
               </h3>
               <div className="text">
                 <PiTelevisionSimple className="icon" />
                 <div>
                   <h4>
                     Spread the word about your new listing with beautiful flyers
-                    displaying the top photos from the shoot.
+                    displaying the top photos.
                   </h4>
                   <p className="first-para">
                     Expand your marketing by handing out flyers at your open
-                    houses, we make it easy by disigningthem for you. With every
-                    shoot you get 5 different beautiful designs to choose from.
+                    houses, we design them for you. With every shoot you get a
+                    ton of beautiful designs to choose from.
                   </p>
                 </div>
               </div>
@@ -402,15 +367,13 @@ export default function Home() {
                 <FaUserCheck className="icon" />
                 <div>
                   <h4>
-                    Get people to stop scrolling and focus on your new listing
-                    with engaging social media feed and story posts
+                    Choose from many pre-made social media posts. Easily
+                    customizable to fit stories, posts, or reels.
                   </h4>
                   <p>
-                    Due to the extensive data on MLS, navigation can be slow and
-                    challenging. Our dedicated listing site focuses solely on
-                    one property, ensuring exceptional speed and responsiveness.
-                    Additionally, our site's navigation is highly intuitive,
-                    ensuring a superb user experience.
+                    Our beautifully structured, color rich, movement packed
+                    social media posts are yours to show off your listing in a
+                    manner that will command attention and engagement.
                   </p>
                 </div>
               </div>
@@ -423,77 +386,30 @@ export default function Home() {
         {/* ........................................................................................ */}
         {/* ........................................................................................ */}
         <section id="booking" className="packages-section-outer-container">
-          <h1>Packages</h1>
-          <div className="sqft-input-div">
-            <p>Enter the square footage of the home for a price estimate</p>
-            <div>
-              <label htmlFor="sqft" id="sqft">
-                Square Footage:
-              </label>
-              <input
-                type="number"
-                placeholder="2345"
-                onChange={handleShowPackage}
-                // value={sqft}
-              />{" "}
-              <FaLongArrowAltLeft
-                style={{ fontSize: "1.5rem", color: "red" }}
-              />
-            </div>
-          </div>
+          <h3>Main Packages</h3>
+
           <div className="package-cards-container">
-            {currentPackage.map((p, i) => {
+            {defaultPackage.map((p, i) => {
               return <PackageCard key={i} data={p} />;
             })}
           </div>
 
           <div className="disclaimer-div">
             <p>
-              Our listed pricing reflects our professional real estate
-              photography packages tailored for most homes. Additional fees may
-              apply for properties with special features like extensive land,
-              unique landscapes, or exclusive amenities. Explore our available
-              add-on services detailed below. Reach out for homes over 5,000
-              sqft. <br />
-              <br /> NOTE: If you are trying to schedule a photo or video shoot
-              outside of our service area{" "}
-              <span onClick={() => setShowServiceArea(true)}>
-                (click here to see)
-              </span>
-              , please contact us. Travel fees will apply. For personalized
-              assistance or any inquiries, please reach out for the best
-              service.
+              Photos start at $145. Click to see our{" "}
+              <a
+                className="font-semibold text-yellow-600"
+                href="https://portal.spiro.media/order/stunning/stunning-angles-order"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ORDER PAGE
+              </a>
+              <br />
+              <br /> For personalized assistance or any inquiries, please don't
+              hesitate to reach out for the best service.
             </p>
           </div>
-        </section>
-
-        {/* SECTION NINE - BOOKING FORM......................................................................... */}
-        {/* ........................................................................................ */}
-        {/* ........................................................................................ */}
-        {/* ........................................................................................ */}
-        <section
-          id="form"
-          className="booking-section-outer-container section-spacing"
-        >
-          <div
-            className={`booking-container ${showFormFeedback ? "blur" : ""}`}
-          >
-            <p>Ready to Book?</p>
-            <h1>Schedule Online Today</h1>
-            <BookingForm
-              setServerFormAnswer={setServerFormAnswer}
-              setShowFormFeedback={setShowFormFeedback}
-            />
-          </div>
-          {/* POP UP............ */}
-          {showFormFeedback ? (
-            <FormFeedback
-              serverFormAnswer={serverFormAnswer}
-              setShowFormFeedbackFunction={setShowFormFeedback}
-            />
-          ) : (
-            ""
-          )}
         </section>
 
         {/* SECTION TEN - CONTACT SQUARE......................................................................... */}
@@ -504,11 +420,11 @@ export default function Home() {
           <div className="contact-container">
             <div className="phone-slice">
               <FaPhoneAlt />
-              <p>954-415-8906</p>
+              <p>‪(407) 815-4882‬</p>
             </div>
             <div className="address-slice">
               <MdEmail />
-              <p> StunningAngles@gmail.com</p>
+              <p>stunningangleshomephotography@gmail.com</p>
             </div>
             <div className="email-slice">
               <FaLocationArrow />
@@ -519,11 +435,7 @@ export default function Home() {
           </div>
         </section>
         {/* POP UP............ */}
-        {showServiceArea ? (
-          <FullScreenPopUp setShowServiceAreaFunction={setShowServiceArea} />
-        ) : (
-          ""
-        )}
+        <PopUpGeneric />
       </Layout>
     </>
   );

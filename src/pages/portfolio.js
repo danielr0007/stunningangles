@@ -47,6 +47,8 @@ function Portfolio() {
                   src={unit.image}
                   alt="real estate"
                   onClick={() => expandImage(unit.id)}
+                  onKeyDown={() => expandImage(unit.id)}
+                  role="presentation"
                 />
               </div>
             );
@@ -65,6 +67,8 @@ function Portfolio() {
               src={imagesData[7].image}
               alt=""
               onClick={() => expandImage(imagesData[7].id)}
+              onKeyDown={() => expandImage(imagesData[7].id)}
+              role="presentation"
             />
           </div>
           <div className="image2-containerr">
@@ -72,6 +76,8 @@ function Portfolio() {
               src={imagesData[8].image}
               alt="real estate"
               onClick={() => expandImage(imagesData[8].id)}
+              onKeyDown={() => expandImage(imagesData[8].id)}
+              role="presentation"
             />
           </div>
         </div>
@@ -88,8 +94,10 @@ function Portfolio() {
               <div key={unit.id} className="portfolio-image-container">
                 <img
                   src={unit.image}
-                  alt="real estate photo"
+                  alt="real estate home"
                   onClick={() => expandImage(unit.id)}
+                  onKeyDown={() => expandImage(unit.id)}
+                  role="presentation"
                 />
               </div>
             );
@@ -108,6 +116,8 @@ function Portfolio() {
               src={imagesData[19].image}
               alt=""
               onClick={() => expandImage(imagesData[19].id)}
+              onKeyDown={() => expandImage(imagesData[19].id)}
+              role="presentation"
             />
           </div>
           <div className="image2-containerr">
@@ -115,6 +125,8 @@ function Portfolio() {
               src={imagesData[18].image}
               alt=""
               onClick={() => expandImage(imagesData[18].id)}
+              onKeyDown={() => expandImage(imagesData[18].id)}
+              role="presentation"
             />
           </div>
         </div>
@@ -131,8 +143,10 @@ function Portfolio() {
               <div key={unit.id} className="portfolio-image-container">
                 <img
                   src={unit.image}
-                  alt="real estate photo"
+                  alt="real estate home"
                   onClick={() => expandImage(unit.id)}
+                  onKeyDown={() => expandImage(unit.id)}
+                  role="presentation"
                 />
               </div>
             );

@@ -14,6 +14,7 @@ function BookingForm(props) {
   const [selectedUrgency, setSelectedUrgency] = useState("");
   const [selectedTwilightPhotos, setSelectedTwilightPhotos] = useState(false);
   const [selectedFloorplan, setSelectedFloorplan] = useState(false);
+  const [selectedAirbnb, setSelectedAirbnb] = useState(false);
   const [selectedStaging, setSelectedStaging] = useState("none");
   const [selectedVirtualTour, setSelectedVirtualTour] = useState("none");
 
@@ -65,6 +66,15 @@ function BookingForm(props) {
     }
   };
 
+  // !handles option for airbnb addon........................................................
+  const handleAirbnb = () => {
+    if (!selectedAirbnb) {
+      setSelectedAirbnb(true);
+    } else {
+      setSelectedAirbnb(false);
+    }
+  };
+
   // !handles option for twilight photo addon.........................................................
   const handleStaging = (e) => {
     setSelectedStaging(e.target.value);
@@ -86,6 +96,7 @@ function BookingForm(props) {
       package: selectedPackage,
       twilight: selectedTwilightPhotos,
       floorplan: selectedFloorplan,
+      airbnb: selectedAirbnb,
       staging: selectedStaging,
       urgency: selectedUrgency,
       virtualTour: selectedVirtualTour,
@@ -125,6 +136,7 @@ function BookingForm(props) {
           setSelectedUrgency("");
           setSelectedTwilightPhotos(false);
           setSelectedFloorplan(false);
+          setSelectedAirbnb(false);
           setSelectedStaging("none");
           setSelectedVirtualTour("none");
           // setSelectedStaging("none");
@@ -257,9 +269,9 @@ function BookingForm(props) {
             onChange={handleTwilightPhoto}
           />
           <label htmlFor="addon1">
-            $55 - Twilight Photos{" "}
+            $20 - Twilight Photos{" "}
             <span className="text-gold">
-              (2 Daytime Photos converted to Twilight Photos.)
+              (1 Daytime Photo converted to a Twilight Photo.)
             </span>
           </label>
         </div>
@@ -282,6 +294,28 @@ function BookingForm(props) {
             </span>
           </label>
         </div>
+
+        {/* Airbnb Select...................................... */}
+        {/* Airbnb Select...................................... */}
+        {/* Airbnb Select...................................... */}
+        <div>
+          <input
+            type="checkbox"
+            id="addon3"
+            name="addons"
+            value="airbnb"
+            checked={selectedAirbnb}
+            onChange={handleAirbnb}
+          />
+          <label htmlFor="addon3">
+            $97 - AirBnb Supercharger{" "}
+            <span className="text-gold">
+              (Book more nights with extra photos of the details, living spaces,
+              in-unit amenities, and community features *pools, clubhouse, gyms,
+              tennis, etc* )
+            </span>
+          </label>
+        </div>
         {/* Virtual Staging Select...................................... */}
         {/* Virtual Staging Select...................................... */}
         {/* Virtual Staging Select...................................... */}
@@ -298,11 +332,11 @@ function BookingForm(props) {
             onChange={handleStaging}
           >
             <option value="none">none</option>
-            <option value="staging 1 room">$40 - 1 rooms</option>
-            <option value="staging 2 room">$80 - 2 rooms</option>
-            <option value="staging 3 room">$120 - 3 rooms</option>
-            <option value="staging 4 room">$160 - 4 rooms</option>
-            <option value="staging 5 room">$220 - 5 rooms</option>
+            <option value="staging 1 room">$30 - 1 rooms</option>
+            <option value="staging 2 room">$60 - 2 rooms</option>
+            <option value="staging 3 room">$90 - 3 rooms</option>
+            <option value="staging 4 room">$115 - 4 rooms</option>
+            <option value="staging 5 room">$145 - 5 rooms</option>
           </select>
         </div>
         {/* Virtual Tour Select...................................... */}

@@ -33,7 +33,7 @@ const ExpandedGallerySlider = (props) => {
             key={index}
           >
             {index === current && (
-              <img src={Data.image} alt="travel image" className="image" />
+              <img src={Data.image} alt="home space" className="image" />
             )}
           </div>
         );

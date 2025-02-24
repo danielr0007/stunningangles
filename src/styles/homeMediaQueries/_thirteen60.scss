@@ -9,15 +9,15 @@
   // ?........................................................................
   header {
     nav {
-      margin: 0.5rem 2rem 0 2rem;
+      // margin: 0.5rem 2rem 0 2rem;
     }
 
     .logo {
-      width: 320px;
+      // width: 320px;
     }
 
     ul {
-      gap: 4rem;
+      // gap: 4rem;
     }
   }
 
@@ -29,20 +29,20 @@
   // ?........................................................................
   // ?........................................................................
   // ?........................................................................
-  .banner-image-container {
-    height: 92vh;
-  }
-  .banner-text-container {
-    margin-left: 7rem;
-    h1 {
-      font-size: 2.4rem;
-      max-width: 70%;
-      line-height: 1.3;
-    }
-    h2 {
-      max-width: 80%;
-    }
-  }
+  // .banner-image-container {
+  //   height: 92vh;
+  // }
+  // .banner-text-container {
+  //   margin-left: 7rem;
+  //   h1 {
+  //     font-size: 2.4rem;
+  //     max-width: 70%;
+  //     line-height: 1.3;
+  //   }
+  //   h2 {
+  //     max-width: 80%;
+  //   }
+  // }
 
   // ?SECTION ONE - TEAM.....................................................
   // ?........................................................................
@@ -267,7 +267,7 @@
       width: 65%;
     }
     .process-cards-container {
-      // border: solid pink;
+      // border: solid green;
       max-width: 80%;
       gap: 1.8rem;
     }
@@ -326,7 +326,7 @@
         .pic-vic-div {
           // position: relative;
           // border: solid yellow;
-          width: 240px;
+          width: 280px;
           // display: flex;
           // justify-content: center;
           // align-items: center;
@@ -334,7 +334,7 @@
             // position: absolute;
             width: 290px;
             height: 370px;
-            left: -205px;
+            left: -175px;
             // z-index: 9999;
             // border: solid yellow;
           }
